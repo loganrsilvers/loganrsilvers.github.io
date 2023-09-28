@@ -27,8 +27,8 @@ body {
 #container {
 	border: 1px solid rgb(139,186,194);
 	  background: rgb(19,9,29);
-	  width: 90%;                            /* You can change this number */
-	  max-width: 1000px;                 /* You can change this number */
+	  width: 100%;                            /* You can change this number */
+	  max-width: 800px;                 /* You can change this number */
 	  margin: auto;
 	
 }
