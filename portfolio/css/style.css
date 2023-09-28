@@ -1,0 +1,66 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+body {
+	font-family: "Goudy Bookletter 1911", sans-serif;
+	  background: rgb(10,3,5);
+	  color: rgb(156,17,185);
+	  margin: 100px;    
+	
+	
+}
+
+
+#container {
+	border: 1px solid rgb(139,186,194);
+	  background: rgb(19,9,29);
+	  width: 90%;                            /* You can change this number */
+	  max-width: 1000px;                 /* You can change this number */
+	  margin: auto;
+	
+}
+
+ul {
+  list-style: none;
+  padding: 20px;
+}
+
+a {
+  color: rgb(100,190,80);
+}
+
+a:hover {
+  color: rgb(150,150,30);
+}
+
+figure {
+  margin: 10px;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption, footer {
+  font-size: 0.75em;
+}
+
+
+
+
+
+
+
