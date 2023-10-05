@@ -9,19 +9,54 @@ html {
 		/* Standard text-settings below */
 	font-size: 1em;
     line-height: 1.4em;
+    background-color: #101930;
+    color: #DDDDDD;
 }
 
 
 
 
 body {
+	font-family: "Lucida Console", "Courier New", monospace;
+	text-align: center;
 	
 	
 }
 
+header {
+	background-color: #313992;
+	font-family: Arial, Helvetica, sans-serif;
 
-#container {
-	
+	border: 5px dashed red;
+}
+
+p {
+	border: 3px double gold;
+	padding: 2px;
+	margin: 10px;
+}
+
+
+div#container {
+	background-color: #1134f1;
+	margin: auto;
+	width: 800px;
+	float: center;
+
+	padding: 25px;
+
+	border: 3px solid blue;
+
+}
+
+footer {
+
+	background-color: #123456;
+	font-size: 15px;
+
+	padding: 30px;
+
+	border: 30px dotted violet;
 }
 
 
