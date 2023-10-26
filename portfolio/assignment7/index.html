@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>logan silvers assignment 7</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+	
+	<script>
+
+	function someFunctionName() {
+	    var answers = [
+	    	"Twilight Sparkle says yes!",
+        "Rainbow Dash says nope!",
+        "Pinkie Pie suggests asking again later with a party!",
+        "Fluttershy thinks maybe...",
+        "Rarity cannot predict now, darling.",
+        "Applejack says don't count on it, partner.",
+        "Princess Celestia's outlook is not so good.",
+        "Spike says ask again, he's napping.",
+        "Discord says it's chaos, so who knows?",
+        "Princess Luna sees a very doubtful outcome.",
+        "Starlight Glimmer says certainly, and friendship is magic!"
+	        
+	    ];
+
+	    var createAnswer = answers[Math.floor(Math.random()*answers.length)];
+
+	    document.getElementById("message").innerText = createAnswer;
+
+	} //closes your function
+
+	</script>
+
+</head>
+
+
+<body>
+
+  <div id="container">
+
+  	<form>
+  		<img src="img/pony.jpeg">
+  	  <p id="question"> <strong>Ask the citizens of canterlot about your future...</strong></p>
+  	  <input type="text">
+  	  <input type="button" onclick="someFunctionName()" value="Send">
+  	  <p id="message"></p>
+  	</form>
+
+  
+
+
+
+  </div><!-- close "container" -->
+  
+
+</body>
+	
+</html> 
