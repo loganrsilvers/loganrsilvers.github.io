@@ -15,14 +15,18 @@ html {
  font-family: 'metalfont';
  src: url(font.ttf);
 }
+@font-face {
+ font-family: 'metalfont2';
+ src: url(font2.ttf);
+}
 
 
 body {
 	
 	  background: rgb(10,3,5);
-	  color: rgb(156,17,185);
+	  color: whitesmoke;
 	  margin: 100px;    
-	font-family: 'metalfont', Arial, sans-serif;
+	font-family: 'metalfont2', Arial, sans-serif;
 	
 }
 
