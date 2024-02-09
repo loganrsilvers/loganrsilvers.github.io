@@ -11,7 +11,10 @@ html {
     line-height: 1.4em;
 }
 
-
+@font-face {
+ font-family: 'metalfont';
+ src: url(font.ttf);
+}
 
 
 body {
@@ -19,7 +22,7 @@ body {
 	  background: rgb(10,3,5);
 	  color: rgb(156,17,185);
 	  margin: 100px;    
-	
+	font-family: 'metalfont', Arial, sans-serif;
 	
 }
 
@@ -34,6 +37,7 @@ body {
 }
 
 ul {
+	font-family: "Goudy Bookletter 1911", sans-serif;
   list-style: none;
   padding: 20px;
 }

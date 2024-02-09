@@ -1,0 +1,139 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+@font-face {
+ font-family: 'metalfont';
+ src: url(font.ttf);
+}
+@font-face {
+ font-family: 'metalfont2';
+ src: url(font2.ttf);
+}
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+
+	font-family: 'metalfont', Arial, sans-serif;
+	
+}
+
+
+#container {
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: darkmagenta;
+}
+
+main {
+	padding: 20px;
+	font-size: 30px;
+	background-color: black;
+		font-family: 'metalfont2', Arial, sans-serif;
+
+}
+
+header {
+    background-color: lightgoldenrodyellow;
+    color: purple;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+footer {
+    background-color: lightpink;
+    color: darkmagenta;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 30px;
+}
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for iPads and tablets.  */
+@media all and (min-width: 481px) {
+	
+#container {
+	    padding: 20px;
+	}
+	
+} /* closes 481px+ */
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+	
+	
+	
+} /* closes 769px+ */
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+	main {
+		margin: auto;
+		  
+		  border: 3px solid green;
+		  padding: 10px;
+	    max-width: 1024px;
+	}
+	
+	
+} /* closes 1024px+ */
+
+
+
+

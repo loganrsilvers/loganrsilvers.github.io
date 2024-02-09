@@ -1,0 +1,153 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+@font-face {
+	font-family: "CustomFont3";
+	src: url("Creepster/Creepster-Regular.ttf");
+}
+
+@font-face {
+	font-family: "CustomFont4";
+	src: url("Metal_Mania/MetalMania-Regular.ttf");
+}
+
+@font-face {
+font-family: "CustomFont5";
+	src: url("Rubik_Moonrocks/RubikMoonrocks-Regular.ttf");
+}
+
+
+body {
+		font-family: 'CustomFont4', Arial, sans-serif;
+		padding: 30px;
+}
+
+p {
+	font-family: 'CustomFont4', Arial, sans-serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+#there{
+	font-family: 'CustomFont4', Arial, sans-serif;
+	color: #000000;
+	position: absolute;
+	top: 90px; 
+	text-shadow: 5px 5px 5px darkred;
+	font-size: 70px;
+}
+
+#is{
+	font-family: 'CustomFont4', Arial, sans-serif;
+	color: #000000;
+	position: relative;
+	left: 70px;
+	font-size: 60px;
+	text-shadow: 5px 5px 5px darkred;
+
+
+}
+
+#no {
+	font-family: 'CustomFont4', Arial, sans-serif;
+	font-size: 200px;
+	color: #000000;
+	position: sticky;
+	left: 80px;
+	text-shadow: 5px 5px 5px red;
+}
+
+#logan1{
+	font-family: 'CustomFont5', Arial, sans-serif;
+	color: #8a8484;
+	font-size: 400px;
+		position: sticky;
+		top: 40px;
+
+}
+
+#dotdotdot{
+	font-family: 'CustomFont4', Arial, sans-serif;
+	color: #000000;
+	font-size: 445px;
+	position: sticky;
+	top: 20px;
+}
+
+#only {
+	font-family: 'CustomFont4', Arial, sans-serif;
+	color: #000000;
+	position: sticky;
+	top: 20px;
+}
+#evil{
+	font-family: 'CustomFont4', Arial, sans-serif;
+	color: #d10202;
+	font-size: 800px;
+	position: sticky;
+	top: 200px;
+	rotate: 10deg;
+}
+
+#logan2{
+	font-family: 'CustomFont3', Arial, sans-serif;
+	color: #8c0404;
+	font-size: 500px;
+	position: sticky;
+	top: 250px;
+	text-shadow: 20px 20px black;
+}
+
+#evillaugh {
+	font-family: 'CustomFont4',4Arial, sans-serif;
+	color: #000000;
+	font-size: 200px;
+	position: sticky;
+	text-shadow: 5px 5px red;
+	rotate: -5deg;
+
+	
+}
+
+table {
+	width: 100%;
+	background: black;
+}
+
+td {
+	border: 1px solid black;
+	  border-radius: 10px;
+	  padding: 0px;
+	  margin: 0px;
+	  background: white;
+}
+
+#nope {
+	border: 0px;
+}
+#one{
+	width: 30%;
+}
+#two{
+	width: 30%;
+}
+#three{
+	width: 30%;
+
+}
+
+
+
+
