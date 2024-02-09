@@ -33,11 +33,17 @@ body {
 
 #container {
 	border: 1px solid rgb(139,186,194);
+	padding: 10px;
 	  background: rgb(19,9,29);
 	  width: 100%;                            /* You can change this number */
 	  max-width: 800px;                 /* You can change this number */
 	  margin: auto;
 	
+}
+h1 {
+	font-family: 'metalfont', Arial, sans-serif;
+	text-align: center;
+	font-size: 50px;
 }
 
 ul {
