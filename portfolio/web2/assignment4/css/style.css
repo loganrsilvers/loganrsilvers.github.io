@@ -1,0 +1,242 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+	animation: rotate 20s infinite;
+	animation-delay: 30s;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+@keyframes blinds {
+	0% { transform: translateY(-50%) scaleY(0.01); }
+	50% { transform: translateY(-10%) scaleY(.7); }
+	70% { transform: translateY(5%) scaleY(1); }
+	100% { transform: translateY(5%) scaleY(1); }
+}
+
+@keyframes stretch {
+	0% { transform: scale(1, 1); }
+	25% { transform: scale(2, 1); }
+	50% { transform: scale(1,1); }
+	75% { transform: scale(1,2)  }
+	100% { transform: scale(1,1); }
+}
+@keyframes boomerang {
+	0% { transform: scale(0.08) translate(0, 0); }
+	5% { transform: scale(0.1) translate(50%, 10%); }
+	25% { transform: scale(0.25) translate(200%, -50%); }
+	50% { transform: scale(1) translate(0, 30%); }
+	75% {  transform: scale(0.25) translate(-200%, -50%); }
+	95% { transform: scale(0.05) translate(-50%, 5%); }
+	100% { transform: scale(0.05) translate(0, 0); }		
+}
+
+@keyframes mymove { 
+  0%   {top: 0px; left: 0px; background: red;}
+  25%  {top: 0px; left: 100px; background: blue;}
+  50%  {top: 100px; left: 100px; background: yellow;}
+  75%  {top: 100px; left: 0px; background: green;}
+  100% {top: 0px; left: 0px; background: red;}
+}
+@keyframes mymove2 {
+
+	0%   {}
+  92% {font-size: 20px;}
+  93% {font-size: 100px;}
+  97% {font-size: 20px;}
+  100%{font-size: 20px;}
+
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes heart1 {
+  0% {
+    size: 0.3;
+  }
+  100% {
+    size: 100;
+  }
+}
+@keyframes blink {
+	0% { opacity:0; }
+	50% { opacity:1; }
+	100% { opacity:0; }
+}
+@keyframes dark {
+	0% {background-color: darkgray;}
+	100% {background-color: black;}
+}
+
+.heart {
+  /* Modify size here: */
+  --size: 50px;
+
+  position: relative;
+  width: var(--size);
+  height: calc(var(--size) * 0.3);
+  animation: heart1 20s infinite;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: calc(var(--size) * 0.55);
+  top: 0;
+  width: calc(var(--size) * 0.55);
+  height: calc(var(--size) * 0.85);
+  background: #333;
+  border-radius: calc(var(--size) * 0.55) calc(var(--size) * 0.55) 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  animation: heart1 20s infinite;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+body {
+	font-family: Arial;
+  padding: 10px;
+  background: darkgray;
+  animation: dark 200sec infinite;
+  animation-delay: 10sec;
+  animation-name: blinds;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+
+	
+}
+
+
+#container {
+	animation: rotate 20s infinite;
+  animation-name: boomerang;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 50s;
+	
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  animation: mymove2 10s infinite;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+img {
+	animation-name: stretch;
+	animation-duration: 40s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 8s;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: darkgray;
+    animation: dark 200sec infinite;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  animation: mymove 6s infinite;
+  animation-delay: 20s;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: gray;
+  margin-top: 20px;
+  animation-name: blink;
+	animation-duration: .5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 5s;
+}
+
+
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+	
+	
+	
+} /* closes 769px+ */
+
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+	
+	
+	
+} /* closes 1024px+ */
+
+
+
