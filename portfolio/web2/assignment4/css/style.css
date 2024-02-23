@@ -12,6 +12,12 @@ html {
 	font-size: 1em;
     line-height: 1.4em;
 }
+
+@font-face {
+ font-family: 'murder';
+ src: url(murdercopy.otf);
+}
+
 @keyframes blinds {
 	0% { transform: translateY(-50%) scaleY(0.01); }
 	50% { transform: translateY(-10%) scaleY(.7); }
@@ -37,18 +43,18 @@ html {
 }
 
 @keyframes mymove { 
-  0%   {top: 0px; left: 0px; background: red;}
-  25%  {top: 0px; left: 100px; background: blue;}
-  50%  {top: 100px; left: 100px; background: yellow;}
-  75%  {top: 100px; left: 0px; background: green;}
-  100% {top: 0px; left: 0px; background: red;}
+  0%   {top: 0px; left: 0px; background: red; font-family: 'murder', Arial, sans-serif;}
+  25%  {top: 0px; left: 100px; background: blue; font-family: 'murder', Arial, sans-serif;}
+  50%  {top: 100px; left: 100px; background: yellow;font-family: 'murder', Arial, sans-serif;}
+  75%  {top: 100px; left: 0px; background: green; font-family: 'murder', Arial, sans-serif;}
+  100% {top: 0px; left: 0px; background: red; font-family: 'murder', Arial, sans-serif;}
 }
 @keyframes mymove2 {
 
 	0%   {}
-  92% {font-size: 20px;}
-  93% {font-size: 100px;}
-  97% {font-size: 20px;}
+  92% {font-size: 20px; font-family: Arial, sans-serif;}
+  93% {font-size: 100px; font-family: 'murder', Arial, sans-serif;}
+  97% {font-size: 20px;font-family: Arial, sans-serif;}
   100%{font-size: 20px;}
 
 }
@@ -69,9 +75,9 @@ html {
   }
 }
 @keyframes blink {
-	0% { opacity:0; }
-	50% { opacity:1; }
-	100% { opacity:0; }
+	0% { opacity:0; font-family: 'murder', Arial, sans-serif;}
+	50% { opacity:1; font-family: 'murder', Arial, sans-serif;}
+	100% { opacity:0; font-family: 'murder', Arial, sans-serif;}
 }
 @keyframes dark {
 	0% {background-color: darkgray;}
@@ -147,6 +153,8 @@ body {
 
 .header h1 {
   font-size: 50px;
+  animation: rotate 10s infinite;
+  animation-delay: 10s;
 }
 img {
 	animation-name: stretch;
