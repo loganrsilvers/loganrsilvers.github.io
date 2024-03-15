@@ -38,7 +38,7 @@ h1 {
 	font-size: 6vw;
 	font-family: 'murder', Arial, sans-serif;
 }
-}
+/*}*/  /*This extra bracket shouldn't be here! */
 
 @keyframes edit {
 	from {text-align: left; background-color: darkblue;}
@@ -54,10 +54,11 @@ h1 {
 #container {
 	padding: 30px;
 }
-#text {
+#text, #text2, #text3 {
 	font-family: 'murder3', Arial, sans-serif;
 	padding: 20px;
-	text-align: left; background-color: darkblue;;
+	text-align: left; 
+	background-color: darkblue;/*Extra bracket removed from here*/
 	color: lightcoral;
 	column-count: 3;
 	column-gap: 40px;
