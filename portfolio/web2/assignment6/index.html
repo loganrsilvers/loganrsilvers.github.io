@@ -25,6 +25,12 @@
 			} else {
 			$('body').removeClass('edit');
 			}
+
+			if( hmm > 100) {
+			$('body').addClass('blink');
+			} else {
+			$('body').removeClass('blink');
+			}
 			
 			
 			//var element = $('#fish').offset().scrollTop();
@@ -32,14 +38,14 @@
 			var element = $('#fish').offset().top;
 			var curelement = (element - hmm);//semi-colon added
 			
-			if(curelement < 30)
+			
+			if(curelement < 5)
 			{
-				$('#text').addClass('edit');
+				$('#text').addClass('mymove');
 			}
 			else {
-				$('#text').removeClass('edit');
+				$('#text').removeClass('mymove');
 			}
-			
 			
 			/*This next part is almost identical to the element-detection above, 
 			but pairing #fish2 with a (new) #text2.
@@ -55,15 +61,17 @@
 				$('#text2').removeClass('edit');
 			}
 
+
+
 			var element = $('#fish3').offset().top;
 			var curelement = (element - hmm);
 			
 			if(curelement < 30)
 			{
-				$('#text3').addClass('edit');
+				$('#text3').addClass('stretch');
 			}
 			else {
-				$('#text3').removeClass('edit');
+				$('#text3').removeClass('stretch');
 			}
 
 
