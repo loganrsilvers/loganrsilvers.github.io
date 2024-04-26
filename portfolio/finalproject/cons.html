@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>the cons</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+
+			//allows scroll detection in realtime
+			$(window).scroll(function() {
+				var hmm = $(window).scrollTop();
+
+			if( hmm > 40) {
+			$('body').addClass('edit');
+			} else {
+			$('body').removeClass('edit');
+			}
+
+			if( hmm > 100) {
+			$('body').addClass('blink');
+			} else {
+			$('body').removeClass('blink');
+			}
+			
+			
+			//var element = $('#fish').offset().scrollTop();
+			// the line above should use .top, not .scrollTop() -- see below
+			var element = $('#fish').offset().top;
+			var curelement = (element - hmm);//semi-colon added
+			
+			
+			if(curelement < 5)
+			{
+				$('#text').addClass('mymove');
+			}
+			else {
+				$('#text').removeClass('mymove');
+			}
+			
+			/*This next part is almost identical to the element-detection above, 
+			but pairing #fish2 with a (new) #text2.
+			You shouldn't have more than one element with the same ID name, because this will create confusion with JS/jQuery*/
+			var element = $('#fish2').offset().top;
+			var curelement = (element - hmm);
+			
+			if(curelement < 30)
+			{
+				$('#text2').addClass('edit');
+			}
+			else {
+				$('#text2').removeClass('edit');
+			}
+
+
+
+			var element = $('#fish3').offset().top;
+			var curelement = (element - hmm);
+			
+			if(curelement < 30)
+			{
+				$('#text3').addClass('stretch');
+			}
+			else {
+				$('#text3').removeClass('stretch');
+			}
+
+
+			}); //close .scroll
+
+
+
+</script>
+
+</head>
+
+
+<body>
+<h1><a href="index.html">The CONS of having a Baby</a></h1>
+
+	<div id="container21">
+		<img src="img/lyra.jpg" alt="picture of 7 year old interviewee" class="imageToChange">
+		<img src="img/suzy.jpg" alt="picture of 47 year old interviewee" class="imageToChange">
+		<img src="img/mimi.jpg" alt="picture of 77 year old interviewee" class="imageToChange">
+	</div>	
+
+  <div id="container12">
+  	<p>
+  		
+  	</p>
+
+  	<p>
+  		The first person I interviewed for this project was conducted with my friend's sister, who is a 7 year old named Lyra. She is a highly opinionated and incredibly smart child who makes rational decisions based on facts. </p>
+  		<p>When I first originally asked her about if she was going to have any babies when she grew up she put down a very heavy “NO!” She continued on with the fact that babies are often very messy - as in they often throw food on the ground during their toddler years and they also can knock down towers and stomp on things. This seemed to be a prominent issue for Lyra and one that she could resonate with personally as she is in the First grade, and thus has been able to spend time in daycares and have a closer memory experience to what it is like for other children to be in the daycare. </p>
+  		<p>Lyra during this interview also expressed that when she grows up she would like to have two jobs, an artist who sells paintings and a daycare teacher who watches over her classroom of younger students. When pressed further into providing more details as to why she desired to become a daycare attendant when she was older if she didn’t want to have any kids of her own, she expressed that when you have your own baby you do not get to decide if your baby is going to be an ugly messy stinky baby or a pretty well behaved one. But as a daycare attendant you have the ability to further control the situation to decide what kind of babies you want to be let into your school. I thought this was incredibly insightful to her, especially considering her own age, and it makes me want to investigate more into how other children her age perceive the pros and cons of having children. </p>
+  		<p>I asked a little further to try and see if she could provide any more details on if she might be open to changing her mind in the future. She expressed that if she grows up to be an adult without any babies she will never have to clean up any stinky diapers and she can do more “adult things” instead. I asked her what she considered adult things and Lyra started listing off hobbies such as making art and going out to restaurants. This shows that although she is quite a long way from adulthood, she is under the impression that when adults have babies they do not have a lot of free time to themselves to do things that they might enjoy - and that this was the primary reason - other than the fact that “babies are GROSS! And they poop in your face!” - that Lyra did not want to have any babies when she grew up, and even if she did want to be around children because she enjoys the experience, she would like to confine it to a controlled environment that is strictly within her desired 9-5. 
+  	</p>
+
+  	<p>
+  		The second interview that I conducted with my friend's mom, who is a 47 year old named Suzy. </p>
+  		<p>Her number one con for having a baby was expense, everyday expenses triple or sometimes quadruple for her in ways you would not normally expect. This includes money expenses such as more food ion the house, more gas in the car, more time off work, you need vaccines after the baby is born, insurance, and car seats, etc. She said the expenses were the number one concern before she had a baby and now that she has two babies it is still her number one concern about having the babies. </p> 
+  		<p>Secondly, Suzy said the second con about having a baby was time management. For example, everything you are doing you have to do with the baby, you cook with the baby, drive with the baby, go to the store with the baby, the baby goes everywhere. You don't have any alone time with the baby until they are able to spend time on their own. Her third con about having the baby was the permanence the decision had on her and the “life changing-ness” that having a baby provided for her. She said that thinking about it, she was incredibly unprepared for her first baby, but perfectly prepared with the second one. 
+  	</p>
+  	<p>
+  	The third interview that I conducted with my other friend's grandma, Mimi, who is a 77 year old woman who immigrated to the US from Cuba when she was in her early teens. </p>
+  	<p>Her first con of her three big cons were that 
+  		<ul><li><p>They cry all the time. She continued that she often could not figure out what was wrong with the baby or why it was crying and by the end of the day Mimi was exhausted because she would always have to go to work the next day without much sleep. </p></li>
+  			<li><p>Her second con didn't really relate to babies all that much, but I felt it should be highlighted, she stated that another big con about having babies was that when they grow up, they leave you. She knows it is a part of life, but it was still a little heartbreaking when her babies grew up and left her to start their own lives without her. </p></li>
+  			<li><p>She continued this train of thought by stating that she was not ready for the disappointment and roadblocks for the children that they would face sometimes in life. Mimi is an educator, and she said that sometimes you would think the babies are ready for certain activities and they were not, and it was really heartbreaking to see that her baby was not prepared for things.</p></li>
+  		</ul>
+  	</p>
+
+  	<h1><a href="conclusion.html">In conclusion...</a></h1>
+
+  </div><!-- close "container" -->
+  
+
+</body>
+	
+</html> 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>the pros</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+
+			//allows scroll detection in realtime
+			$(window).scroll(function() {
+				var hmm = $(window).scrollTop();
+
+			if( hmm > 40) {
+			$('body').addClass('edit');
+			} else {
+			$('body').removeClass('edit');
+			}
+
+			if( hmm > 100) {
+			$('body').addClass('blink');
+			} else {
+			$('body').removeClass('blink');
+			}
+			
+			
+			//var element = $('#fish').offset().scrollTop();
+			// the line above should use .top, not .scrollTop() -- see below
+			var element = $('#fish').offset().top;
+			var curelement = (element - hmm);//semi-colon added
+			
+			
+			if(curelement < 5)
+			{
+				$('#text').addClass('mymove');
+			}
+			else {
+				$('#text').removeClass('mymove');
+			}
+			
+			/*This next part is almost identical to the element-detection above, 
+			but pairing #fish2 with a (new) #text2.
+			You shouldn't have more than one element with the same ID name, because this will create confusion with JS/jQuery*/
+			var element = $('#fish2').offset().top;
+			var curelement = (element - hmm);
+			
+			if(curelement < 30)
+			{
+				$('#text2').addClass('edit');
+			}
+			else {
+				$('#text2').removeClass('edit');
+			}
+
+
+
+			var element = $('#fish3').offset().top;
+			var curelement = (element - hmm);
+			var currentImageSrc = $('#imageToChange').attr('src');
+      var newImageSrc = currentImageSrc.includes('img/mimi.jpg') ? 'img/suzy.jpg' : 'img/mimi.jpg';
+			
+			if(curelement < 30)
+			{
+				$('#text3').addClass('stretch');
+				$('#imageToChange').attr('src', newImageSrc);
+			}
+			else {
+				$('#text3').removeClass('stretch');
+				$('#imageToChange').attr('src', newImageSrc);
+			}
+
+
+			}); //close .scroll
+
+
+
+</script>
+	
+</head>
+
+
+<body>
+	<h1><a href="index.html">The PROS of having a Baby</a></h1>
+
+<div id="container2" class="menu2">
+	<p>
+  		The third interview that I conducted with my other friend's grandma, Mimi, who is a 77 year old woman who immigrated to the US from Cuba when she was in her early teens. </p>
+  		<p>Firstly, she started off the interview by listing that her first positive about having babies was that “babies are cute.” She said they are soft and cute, and what's more is that they rely on you full time to do everything for them. “It depends on your personality but I like it when the baby needs me.” </p>
+  		<p> Mimi said that the baby years were some of the best years of her life because she liked to buy the baby cute little outfits and toys and it gave her an experience to pamper a tiny human. </p>
+  		<p>Secondly, she continued by stating that it was incredibly exciting to see the journey as the babies developed. She said that the baby can learn a lot in the first couple of years, and seeing what they knew and when was very exciting for her and kept her days lively and interesting. Mimi continued that it is the most exciting when every day there is a new thing that they do. She says it was a motivator for her to roll out of bed and run straight to the baby and spend every moment possible with the baby so that she could see what they learned from the last day. </p>
+<p>
+  		The second interview that I conducted with my friend's mom, who is a 47 year old named Suzy. </p>
+  		<p>First, for the pros of having a baby, Suzy stated that her number one thought of why she had a baby was for connection. Something that really mattered to her having a baby decision was the benefit of being able to bond with her partner, it was able to bring them closer together and try out a new experience, and secondly it also brought her closer to her family. </p>
+  		<p>Her parents always wanted to re-experience babyhood so for her to give her parents the gift of becoming grandparents she found it brought her closer together with her loved ones. To add on to the connection milestone, Suzy found that there was an intense connection with the new being that she created after the baby was born. She found a large amount of joy and happiness with being around the baby. </p>
+  		
+
+</div>
+  <div id="container" class="main2">
+  	
+
+  	<img src="img/mimi.jpg" alt="picture of 77 year old interviewee" class="imageToChange">
+
+  	<img src="img/suzy.jpg" alt="picture of 77 year old interviewee" class="imageToChange">
+
+  </div><!-- close "container" -->
+  <div id="container3" class="right2">
+
+  		<p>She also liked the fact that the babies copy you, and that they can mimic your behaviors and like the same things that you like, they can copy your faces and laugh when you laugh and sing when you sing. </p>
+  		<p>Her third and final pro for babies was the passing of traditions and culture to the next generation. Mimi likes celebrating the holidays, it makes her feel closer and connected to her mom when she shows the baby her interests. She also told me that she likes when the baby likes her food, making food is very fun for Mimi and the kids and it is something that she is happy that her babies can share joy in doing. Food has always made her feel closer with her family and she was happy to spend so much time feeding her babies new foods. One of the pros she wanted to highlight was that “the baby eats all the time, and they are growing and sooner or later they feed themselves the food I made!”
+  	</p>
+  
+  	<p>Suzy’s second pro for having a baby was that it would provide a more immediate hope for the future. Suzy said that having a baby provides the opportunity to raise someone who can do good in the world, and add on to the positive impact you can leave for society. Finally, her third pro was that babies provide a shared love. She talked about this instant feedback loop (ex: i made baby happy, I love baby, baby loves me) that never ends when you have a baby. She says it brings joy and happiness into her life. She continues with shared love by stating that there is an immediate impact on someone's life, a happy impact, that you are making and you can instantly see it in the baby. 
+  	</p>
+</div>
+
+
+</body>
+<h1><a href="conclusion.html">In conclusion...</a></h1>
+	
+</html> 

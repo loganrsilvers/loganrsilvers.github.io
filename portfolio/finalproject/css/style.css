@@ -1,0 +1,198 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes edit {
+	/*from {text-align: left; background-color: darkblue;}
+	to 	{text-align: center; background-color: darkgreen;}*/
+}
+
+@keyframes stretch {
+	0% { transform: scale(1, 1); }
+	25% { transform: scale(2, 1); }
+	50% { transform: scale(1,1); }
+	75% { transform: scale(1,2)  }
+	100% { transform: scale(1,1); }
+}
+.stretch{
+	animation-name: stretch;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+
+
+.edit{
+	animation-name: edit;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  background-color: #93c47dff;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+.menu2 {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+
+.main2 {
+  float: left;
+  width: 20%;
+  padding: 0 20px;
+}
+
+.right2 {
+  background-color: #93c47dff;
+  float: left;
+  width: 40%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+#container21 {
+float: left;
+  width: 40%;
+  padding: 0 20px;
+}
+
+#container12 {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right, .menu2, .main2, .right2, #container21, #container12{
+    width: 100%;
+  }
+}
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+
+body {
+	
+	background-color: #93c47dff;
+}
+
+img {
+	border-width: 30px;
+	border-style: double;
+	width: 100%;
+	border-color: #3d85c6ff;
+}
+
+#container {
+}
+
+
+
+h1 {
+	padding: 20px;
+	align-content: center;
+	border: 4px;
+	border-color: #0097a7ff;
+	line-height: 40px;
+	border: double;
+	margin: 20px;
+	text-align: center;
+	text-shadow: 20;
+	color: #674ea7ff;
+	background-color: #0097a7ff;
+	background: radial-gradient(#0097a7ff, #0097a7ff, black);
+}
+#main {
+	margin-top: 20%;
+}
+
+p {
+	color: #674ea7ff;
+	padding: 10px;
+	margin: 10px;
+	border: solid;
+	border-width: 2px;
+	background-image: url('img/cloud2.png');
+}
+
+a {
+	color: #674ea7ff;
+	text-decoration: none;
+	padding: 10px;
+}
+a:hover {
+	background-color: #674ea7ff;
+	color: #3d85c6ff;
+}
+
+
+
+
+
+
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+
+
+/* Minimum width for laptops. */
+@media all and (max-width: 769px) {
+	
+	#main {
+	margin-top: 50%;
+}
+	
+	
+} /* closes 769px+ */
+
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+	
+	
+	
+} /* closes 1024px+ */
+
+
+

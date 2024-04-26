@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>conclusion</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+
+			//allows scroll detection in realtime
+			$(window).scroll(function() {
+				var hmm = $(window).scrollTop();
+
+			if( hmm > 40) {
+			$('body').addClass('edit');
+			} else {
+			$('body').removeClass('edit');
+			}
+
+			if( hmm > 100) {
+			$('body').addClass('blink');
+			} else {
+			$('body').removeClass('blink');
+			}
+			
+			
+			//var element = $('#fish').offset().scrollTop();
+			// the line above should use .top, not .scrollTop() -- see below
+			var element = $('#fish').offset().top;
+			var curelement = (element - hmm);//semi-colon added
+			
+			
+			if(curelement < 5)
+			{
+				$('#text').addClass('mymove');
+			}
+			else {
+				$('#text').removeClass('mymove');
+			}
+			
+			/*This next part is almost identical to the element-detection above, 
+			but pairing #fish2 with a (new) #text2.
+			You shouldn't have more than one element with the same ID name, because this will create confusion with JS/jQuery*/
+			var element = $('#fish2').offset().top;
+			var curelement = (element - hmm);
+			
+			if(curelement < 30)
+			{
+				$('#text2').addClass('edit');
+			}
+			else {
+				$('#text2').removeClass('edit');
+			}
+
+
+
+			var element = $('#fish3').offset().top;
+			var curelement = (element - hmm);
+			
+			if(curelement < 30)
+			{
+				$('#text3').addClass('stretch');
+			}
+			else {
+				$('#text3').removeClass('stretch');
+			}
+
+
+			}); //close .scroll
+
+
+
+</script>
+	
+</head>
+
+
+<body>
+<div id="container2" class="menu">
+	<p>
+		I would like to thank my interviews for this project.
+	</p>
+	<p>
+		Lyra B - 7 year old
+	</p>
+	<p>
+		Suzy S - 47 year old
+	</p>
+	<p>
+		and Esther (Mimi) S - 77 year old
+	</p>
+</div>
+
+  <div id="container" class="main">
+
+
+  	<h1><a href="index.html">In conclusion...</a></h1>
+
+  	<p>
+  		In conclusion, the decision to have a baby is a deeply personal one, influenced by factors ranging from emotional readiness to practical decisions. Through extensive research and interviews with individuals of varying ages and perspectives, it becomes evident that parenthood presents both a lot of joy and a lot of hardships. The declining birth rates observed in recent years, especially during covid, represent a shift for childcare, education, and economic decisions. Time becomes a precious commodity for parents, as highlighted by studies showing minimal "me time" for parents, especially mothers, and emotional resilience also becomes crucial, as demonstrated by discussions on miscarriage, premature births, and health challenges faced by newborns.
+  	</p>
+  	<p>
+  		However, the rewards of parenthood are endless. Connection, hope for the future, and shared love emerge as key motivators for those who choose to embark on the journey of raising children. The joy of witnessing a child's growth and development, passing down traditions, and experiencing the unique bond between parent and child are cherished aspects of parenthood. Yet, parenthood demands sacrifices, from financial burdens to time constraints and emotional vulnerability. Each stage of life brings its own set of joys and hardships, from the messiness of infancy to the bittersweet moments of watching children grow and eventually leave the nest.
+  	</p>
+  	<p>
+  		I want to start off by listing my incredible amount of research that I have done for this project - here in this conclusion section of the website I have outlined for you the highlights of the people I have read about and talked to. For starters, Peter Coy, who writes about economics, business and finance for NYT Opinion and has been covering the topics for four decades, writes that Birthrates, which have been falling for decades, declined even more during the Covid pandemic and they have continued to fall since then. The challenge for rich nations with low birthrates is to integrate new arrivals both economically and socially. That requires the public’s support for investment in housing, education and other things immigrants need. For understanding alternatives for declining birth rates, and also for the graphs, this article is useful for families who are new to the childbirth process as it is a guide on how to prepare for parenthood. I felt that this article really substantiated the fact that people have been having less babies during covid, which means that kids might be having smaller class sizes when they go to school. I can infer based off of this article that there might be some political drama (as there always is) about childcare varying across different countries depending on the wealth and commerce those countries have. It is something to think about concerning parents if they like to be involved in world news or politics. When you have children, it automatically gets parents involved / intrigued / interested in the world around their children. But will they have time for it?
+  	</p>
+  	<p>
+  		According to Laura Vanderkam, the author of “I Know How She Does It: How Successful Women Make the Most of Their Time” and “Juliet’s School of Possibilities”, parenting blogs and in mainstream publications, which is much of what is written about working parents and the time that they have to themselves, report that moms had just 17 minutes of “me time” per day. According to the Bureau of Labor Statistics’ American Time Use Survey — which asks tens of thousands of people to talk through how they spent the previous day, the average employed woman in a household with at least one child under the age of 6 sleeps 8.35 hours per day, while the average employed man in a household with a child under age 6 sleeps 8.38 hours per day. Employed men in households with a child under 6 average 3.5 hours of leisure time daily; while employed women in such households clock less (3.01 hours), it’s far more than 17 minutes. This article has been useful for those who want to know how parents can maximize their time to themselves and also analyzing what is real for parents and what is popularized by the media. It is something to consider when thinking about having children, because although there is much debate on to how little time exactly a parent can get to themselves after caring for a baby, the overall message though is that after you have a baby it severely limits the amount of personal time that people had before they had a baby.
+  	</p>
+  	<p>
+  		But time isn't the only factor to consider when thinking about changes to your personal life, Lori Vogt Rosone, who writes about mothers and their source for hormonal changes very often, published an article about the aftermath of mothers who have miscarriages. It is predominantly important because of how it leaves people who have tried to have babies and then it didn't work out - where it leaves them emotionally afterwards. It is useful for understanding how mothers are emotionally impacted after they have lost their babies. If you are not prepared for the emotional and hormonal highs and lows from childbirth or loss, then having a baby might be something you might want to ponder longer about. Especially because The World Health organization, highly respected as being unbiased and factual, recently published an article containing a wide amount of interesting facts and statistics about how common miscarriages and early child births have become in recent years. For example, 13.4 million babies were born prematurely in 2020, constituting about 1 in 10 live births globally. Premature birth is identified as the leading cause of early childhood mortality, we need improvements in care for preterm infants, maternal health and nutrition. There is no reduction observed over the past decade in any region for preterm births. Disparities between countries are pronounced, with sub-Saharan Africa and southern Asia bearing the highest burden. Article emphasizes the role of quality care and data collection. The content shows 10% of babies are born prematurely, it is a highly large number. 
+  	</p>
+  	<p>
+  		It's not just if you are emotionally capable to accept great loss or defeats either, Yael Goldstein-Love is a published author who has written many pieces for the Times, published this article about a mother who has to travel to the doctor after her baby was under some serious health hazards. It talks about how without the mothers quick-wittedness this baby would not have survived. This is useful for knowing how parents need to be reliable and resourceful to have healthy babies. If not resourceful and able to act fast for high pressure situations, having a baby might become more difficult for you (akin to the hormonal issues we were discussing prior).
+  	</p>
+  	<p>
+  		However, even if you do end up having these challenges, there will always be a numerous amount of assists and guides for parents to look upon, for example: Alex Bollen is a freelance research consultant who also taught history at Oxford University and was a research director for many years. In an article written by Alex, there is an exploration of challenges and changes in relationships that occur after having a baby, emphasizing communication and understanding between partners. Common stressors include fatigue, financial strain, and differences in parenting approaches, offering practical tips for addressing these issues. Additionally, it touches on the impact of the baby's arrival on wider relationships with friends and family, suggesting ways to navigate advice and support from others while maintaining parental autonomy. It provides insights and practical advice for individuals navigating the complexities of relationships after having a baby.
+  	</p>
+  	<p>
+  		As another example of the help parents can find from external resources: Ucla Health is written by doctors and physicians who have spent many years around families before and after childbirth, this one specifically is the published Dr. Misty Richards. Unlike the last article which discusses partner dynamics, this one discusses family dynamics. Dr. Misty Richards emphasizes the importance of understanding and adapting to changes as a couple, highlighting challenges like role adjustments, intimacy issues, and sibling transitions. Tips are provided including planning ahead, redistributing household duties, involving older siblings, prioritizing self-care, and maintaining open communication. Dr. Richards also suggests the three Rs approach (Regulate, Relate, Reason) to facilitate constructive communication and connection amidst the challenges of parenthood. The content covers aspects of family dynamics, parental roles, sibling transitions, self-care, and communication strategies, offering valuable advice.
+  	</p>
+
+  	<p>
+  		Ultimately, the decision to have a baby is deeply personal and complex, influenced by individual circumstances, values, and aspirations. While it may involve sacrifices and challenges, parenthood offers profound opportunities for growth, love, and connection. As individuals weigh the pros and cons, it is essential to reflect on both the practical realities and the profound joys that come with welcoming a new life into the world. But I would say with enough thought effort and organization, it is worth it.
+  	</p>
+
+
+
+
+  </div><!-- close "container" -->
+  
+<div id="container3" class="right">
+	<p>
+		I would like to thank my interviews for this project.
+	</p>
+	<p>
+		Lyra B - 7 year old
+	</p>
+	<p>
+		Suzy S - 47 year old
+	</p>
+	<p>
+		and Esther (Mimi) S - 77 year old
+	</p>
+</div>
+
+</body>
+	
+</html> 
