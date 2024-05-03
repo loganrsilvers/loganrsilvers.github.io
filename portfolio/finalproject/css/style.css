@@ -55,7 +55,6 @@ html {
 }
 
 .right {
-  background-color: #93c47dff;
   float: left;
   width: 20%;
   padding: 15px;
@@ -76,7 +75,6 @@ html {
 }
 
 .right2 {
-  background-color: #93c47dff;
   float: left;
   width: 40%;
   padding: 15px;
@@ -106,14 +104,14 @@ float: left;
 
 body {
 	
-	background-color: #93c47dff;
+	background: radial-gradient(#3d85c6ff, black);
 }
 
 img {
 	border-width: 30px;
 	border-style: double;
 	width: 100%;
-	border-color: #3d85c6ff;
+	border-color: #0097a7ff;
 }
 
 #container {
@@ -131,21 +129,22 @@ h1 {
 	margin: 20px;
 	text-align: center;
 	text-shadow: 20;
-	color: #674ea7ff;
+	color: #0097a7ff;
 	background-color: #0097a7ff;
-	background: radial-gradient(#0097a7ff, #0097a7ff, black);
+	background: radial-gradient(#93c47dff, #93c47dff,white);
 }
 #main {
 	margin-top: 20%;
 }
 
 p {
-	color: #674ea7ff;
+	color: #93c47dff;
 	padding: 10px;
 	margin: 10px;
 	border: solid;
 	border-width: 2px;
-	background-image: url('img/cloud2.png');
+	background: url(cloud.png) fixed center no-repeat;
+	background-size: cover;
 }
 
 a {
@@ -158,8 +157,14 @@ a:hover {
 	color: #3d85c6ff;
 }
 
-
-
+footer {
+      color: #fff;
+      text-align: center;
+      padding: 0px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
 
 
 
