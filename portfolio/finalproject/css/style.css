@@ -64,19 +64,19 @@ html {
 
 .menu2 {
   float: left;
-  width: 40%;
+  width: 33%;
   text-align: center;
 }
 
 .main2 {
   float: left;
-  width: 20%;
+  width: 33%;
   padding: 0 20px;
 }
 
 .right2 {
   float: left;
-  width: 40%;
+  width: 33%;
   padding: 15px;
   margin-top: 7px;
   text-align: center;
@@ -102,8 +102,21 @@ float: left;
 }
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
 
+@font-face {
+ font-family: 'murder';
+ src: url(musicals.ttf);
+}
+@font-face {
+ font-family: 'murder2';
+ src: url(font2.ttf);
+}
+@font-face {
+ font-family: 'murder3';
+ src: url(germs.ttf);
+}
+
 body {
-	
+
 	background: radial-gradient(#3d85c6ff, black);
 }
 
@@ -120,6 +133,7 @@ img {
 
 
 h1 {
+			font-family: 'murder', Arial, sans-serif;
 	padding: 20px;
 	align-content: center;
 	border: 4px;
@@ -138,13 +152,23 @@ h1 {
 }
 
 p {
+			font-family: 'murder3', Arial, sans-serif;
 	color: #93c47dff;
 	padding: 10px;
-	margin: 10px;
-	border: solid;
-	border-width: 2px;
-	background: url(cloud.png) fixed center no-repeat;
+	margin: -2px;
+	
+	background: url('../img/cloud4.png') center, no-repeat;
 	background-size: cover;
+}
+h2 {
+		text-align: center;
+		color: #93c47dff;
+					font-family: 'murder3', Arial, sans-serif;
+
+}
+h2 a {
+		text-align: center;
+		color: #93c47dff;
 }
 
 a {
@@ -164,11 +188,50 @@ footer {
       position: fixed;
       bottom: 0;
       width: 100%;
+      opacity: 0.7;
     }
+ footer a {
+ 	opacity: 1.0;
+ }
 
 
 
+#fish {
+ background: url('../img/mimi.jpg');
+ background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-width: 30px;
+	border-style: double;
+	width: 100%;
+	border-color: #0097a7ff;
+}
 
+#fish2{
+background: url('../img/suzy.jpg');
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-width: 30px;
+	border-style: double;
+	width: 100%;
+	border-color: #0097a7ff;
+}
+
+#fish3{
+background: url('../img/lyra.jpg');
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-width: 30px;
+	border-style: double;
+	width: 100%;
+	border-color: #0097a7ff;
+
+}
 
 
 /* ========================================
