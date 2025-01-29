@@ -1,0 +1,217 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+	background-color: lightgrey;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+@font-face {
+ font-family: 'drippy';
+ src: url(drippy.otf);
+}
+@font-face {
+ font-family: 'silver';
+ src: url(silver.ttf);
+}
+@font-face {
+ font-family: 'murder';
+ src: url(murder.otf);
+}
+@font-face {
+ font-family: 'balloon';
+ src: url(balloon.ttf);
+}
+@font-face {
+ font-family: 'skinny';
+ src: url(skinny.ttf);
+}
+@font-face {
+ font-family: 'furry';
+ src: url(furry.ttf);
+}
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+	font-family: 'drippy', Arial, sans-serif;
+	line-height: 45px;
+	
+}
+
+
+#container {
+	width:90%;
+	margin:auto;
+}
+
+
+figure {
+	margin:0px;
+}
+
+figure img {
+	width:100%;
+	max-height: 400px;
+}
+
+h1 {
+	font-family: 'furry', Arial, sans-serif;
+}
+.dude {
+	background-color: darkkhaki;
+}
+.dude2 {
+	background-color: darkgoldenrod;
+}
+h2 {
+	font-family: 'skinny', Arial, sans-serif;
+}
+p {
+	font-family: 'murder', Arial, sans-serif;
+}
+
+nav section {
+	border: 1px;
+	border-style: dashed;
+	font-family: 'silver', Arial, sans-serif;
+	height: 740px;
+	background-color: lightseagreen;
+}
+a {
+	font-family: 'drippy', Arial, sans-serif;
+}
+
+header {
+	background: mediumpurple;
+	border: solid;
+	border-width: 3px;
+	text-align: center;
+}
+.info 	{
+	font-size: 90px;
+	border: dashed;
+	text-align: center;
+margin: 4px;
+margin-bottom: 300px;
+}
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+footer {
+	text-align: right;
+	float: left;
+	font-family: 'balloon', Arial, sans-serif;
+	background-color: lightgrey;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+padding: 0px;
+line-height: 0px;
+opacity: 0.7;
+
+}
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for iPads and tablets.  */
+@media all and (min-width: 481px) {
+	
+	section {
+		float: left;
+		width: 100%;
+	}
+
+	.desktop {
+		visibility: hidden;
+		display: none;	}
+	.mobile {
+	 visibility: visible;
+
+		display: block;
+	}
+	figure img {
+		max-height: 500px;
+	}
+	
+	
+} /* closes 481px+ */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+	
+	section {
+		float: left;
+		width: 48%;
+	}
+	.desktop {
+		visibility: visible;
+		display: block;
+	}
+	.mobile {
+		visibility: hidden;
+		display: none;
+	}
+		
+	
+} /* closes 769px+ */
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+	section {
+		float: left;
+		width: 33%;
+	}
+	
+	
+} /* closes 1024px+ */
+
+
+
+
+
