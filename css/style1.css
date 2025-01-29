@@ -1,0 +1,238 @@
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url('img/jelly.png');
+                --body-bg-image: url('img/underwater.gif');
+
+                /* colors */
+                --content2: #8447ffff;
+                --content3: #fceaff;
+                --content4: #6ccff6ff;
+                --content5: #a49cba;
+                --content6: #d972ffff;
+                --content7: #001011ff;
+            }
+
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: var(--content2);
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size: 65px;
+                color: var(--content3);
+                background-size: 200px;
+                background-image: var(--body-bg-image);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            #container {
+                max-width: 900px;
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            #container a {
+                color: var(--content4);
+                font-weight: bold;
+            }
+
+            #header {
+                width: 100%;
+                background-color: var(--content2);
+                /* header color here! */
+                height: 150px;
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: var(--content2);
+                /* navbar color */
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+            #navbar li a {
+                color: var(--content4);
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: var(--content5);
+                text-decoration: underline;
+            }
+
+            #flex {
+                display: flex;
+            }
+            aside {
+                background-color: var(--content6);
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                background-color: var(--content2);
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+            h1,
+            h2,
+            h3 {
+                color: var(--content4);
+            }
+
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            #leftSidebar {
+                order: 1;
+                
+            }
+
+            #leftSidebar h1, h2, h3 {
+                color: var(--content7);
+            }
+
+            footer {
+                background-color: var(--content6);
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                color: var(--content7);
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: var(--content4);
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: var(--content7);
+                border: 1px solid var(--content4);
+                padding: 10px;
+                color: white;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box2 {
+                background-color: var(--content6);
+                border: 5px dashed var(--content4);
+                padding: 10px;
+                color: white;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: var(--content7);
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }

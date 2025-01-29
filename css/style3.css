@@ -1,0 +1,147 @@
+/* You can either copy the below and paste it between style tags on your HTML page, OR you can copy this to a file and name it .css and link it from your HTML page. */
+
+:root {
+  --header-bg:#F1F1F1;
+  --nav-bg:#F2F2F2;
+  --article-bg:#EDEDEF;
+  --border-color:#E0E0E0;
+  --sidebar-text-color:#6F7A79;
+  --article-text-color:#625F5F;
+  --article-heading-color:#929292;
+  --nav-link-color:#5f758c;
+  --darker-border-color:#C6C6C6;
+}
+html, body {
+  padding:0;
+  margin:0;
+}
+body {
+  font-size:12px;
+}
+body a {
+  color:var(--nav-link-color);
+}
+
+header, nav {
+  max-width:100%;
+}
+aside {
+  width:250px;
+  margin-top:30px;
+}
+.flex {
+  display:flex;
+  max-width:900px;
+}
+nav {
+  height:auto;
+  margin-bottom:10px;
+  background-color:var(--nav-bg);
+}
+header {
+  max-height:200px;
+  height:200px;
+  background-color:var(--header-bg);
+  background-image:url('https://learn.sadgrl.online/wp-content/uploads/2022/02/skyline-banner.png');
+  background-repeat:repeat-y;
+  background-size:600px;
+  background-position:fixed;
+}
+main {
+  width:100%;
+  margin-left:20px;
+  margin-right:20px;
+}
+section {
+  margin-bottom:10px;
+  color:var(--sidebar-text-color);
+}
+article { 
+  border:1px solid var(--darker-border-color);
+  margin-bottom:15px;
+  background-color:var(--article-bg);
+  color:var(--article-text-color);
+  padding:10px;
+}
+.subtitle {
+  border:1px solid var(--darker-border-color);
+  background-color:var(--nav-bg);
+}
+.links {
+  list-style-type:none;
+  padding-left:0;
+}
+.links li {
+  background-color:var(--nav-bg);
+  border:1px solid var(--border-color);
+  margin-bottom:3px;
+}
+.links li a {
+  text-decoration:none;
+  color:inherit;
+}
+.nav {
+  margin-top:10px;
+  margin-left:100px;
+}
+.nav li {
+  display:inline-block;
+  padding-left:30px;
+}
+.nav li a {
+  text-decoration:none;
+  text-transform:uppercase;
+  color:var(--nav-link-color);
+}
+.left-sidebar {
+  margin-left:50px;
+}
+.subtitle {
+  color:var(--article-text-color);
+  font-weight:bold;
+  letter-spacing:1px;
+}
+article .subtitle {
+  text-transform:uppercase;
+  font-size:16px;
+  color:var(--article-heading-color);
+  margin-top:10px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:10px;
+  
+}
+nav {
+  border:2px solid var(--darker-border-color);
+  border-left:none;
+  border-right:none;
+}
+footer {
+  max-width:800px;
+  text-align:center;
+  color:var(--sidebar-text-color);
+}
+footer a{
+  color:var(--navbar-link-color);
+}
+@media only screen and (max-width: 800px) {
+  .flex {
+    flex-wrap:wrap;
+  }
+  aside {
+    display:flex;
+    width:100%;
+    margin-left:20px;
+    margin-right:20px;
+  }
+  aside > section {
+    margin-right:10px;
+  }
+  .nav {
+    margin-left:0 !important;
+    margin-right:50px;
+  }
+  .nav li {
+    padding-bottom:5px;
+  }
+}
