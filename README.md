@@ -3,6 +3,32 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=loganrsilvers&label=Profile%20views&color=0e75b6&style=flat" alt="loganrsilvers" /> </p>
 
+<h2>Projects Overview</h2>
+
+<h3>Web Dev 1: Freshman Year Projects</h3>
+
+<ul>
+    <li><b>Evil Logan Typography</b>: An exploration of typography in web design.</li>
+    <li><b>Hover and Switch</b>: A project focusing on interactive elements using hover effects.</li>
+    <li><b>My Dog Ginger</b>: A personal website dedicated to my dog, showcasing basic web design principles.</li>
+    <li><b>MLP 8ball</b>: A fun project inspired by My Little Pony, featuring an interactive 8-ball.</li>
+</ul>
+
+<h3>Web Dev 2: Sophomore Year Projects</h3>
+
+<ul>
+    <li><b>Evil Potions</b>: A themed website that showcases my ability to create engaging content.</li>
+    <li><b>Website that Breaks Itself</b>: An experimental project demonstrating dynamic web interactions.</li>
+    <li><b>My BF is a Bug</b>: A whimsical site that highlights my creativity in storytelling through web design.</li>
+    <li><b>Fish Site with Big Pictures</b>: A visually appealing website featuring large images of fish.</li>
+</ul>
+
+<h3>Web Design Class Projects</h3>
+
+<ul>
+    <li><b>Bug Site</b>: A project from my web design class, focusing on creating an engaging and interactive bug-themed website.</li>
+</ul>
+
 - Im currently Working on [current project](project)
 
 - 🌱 I’m currently learning **framework,courses**
