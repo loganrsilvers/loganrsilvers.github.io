@@ -8,18 +8,18 @@
 <h3>Web Dev 1: Freshman Year Projects</h3>
 
 <ul>
-    <li><b>Evil Logan Typography</b>: An exploration of typography in web design.</li>
-    <li><b>Hover and Switch</b>: A project focusing on interactive elements using hover effects.</li>
-    <li><b>My Dog Ginger</b>: A personal website dedicated to my dog, showcasing basic web design principles.</li>
-    <li><b>MLP 8ball</b>: A fun project inspired by My Little Pony, featuring an interactive 8-ball.</li>
+    <li><b>a href="web1/assignment4/index.html">Evil Logan Typography</a></b>: An exploration of typography in web design.</li>
+    <li><b><a href="web1/assignment5/index.html">Hover and Switch</a></b>: A project focusing on interactive elements using hover effects.</li>
+    <li><b><a href="web1/assignment6/index.html">My Dog Ginger</a></b>: A personal website dedicated to my dog, showcasing basic web design principles.</li>
+    <li><b><a href="web1/assignment7/index.html">My Little Pony Magic 8-ball </a></b>: A fun project inspired by My Little Pony, featuring an interactive 8-ball.</li>
 </ul>
 
 <h3>Web Dev 2: Sophomore Year Projects</h3>
 
 <ul>
-    <li><b>Evil Potions</b>: A themed website that showcases my ability to create engaging content.</li>
-    <li><b>Website that Breaks Itself</b>: An experimental project demonstrating dynamic web interactions.</li>
-    <li><b>My BF is a Bug</b>: A whimsical site that highlights my creativity in storytelling through web design.</li>
+    <li><b><a href="web2/assignment3/index.html">Evil Potions</a></b>: A themed website that showcases my ability to create engaging content.</li>
+    <li><b><a href="web2/assignment4/index.html"> Website that Breaks Itself</a></b>: An experimental project demonstrating dynamic web interactions.</li>
+    <li><b> <a href="web2/assignment5/index.html">My BF is a Bug</a></b>: A whimsical site that highlights my creativity in storytelling through web design.</li>
     <li><b>Fish Site with Big Pictures</b>: A visually appealing website featuring large images of fish.</li>
 </ul>
 
