@@ -1,0 +1,175 @@
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+
+@font-face {
+    font-family: 'pixelfancy'; 
+    src: url('pixelout.ttf');
+}
+@font-face {
+    font-family: 'pixelnorm'; 
+    src: url('pixellari.ttf');
+}
+@font-face {
+    font-family: 'kiwi'; 
+    src: url('kiwisoda.ttf');
+}
+
+:root {
+    --primary-color: #390099; 
+    --secondary-color: #9e0059; 
+    --background-color: #ff0054; 
+    --border-color: #ff5400; 
+    --text-color: #ffbd00; 
+}
+
+html, body {
+    cursor: url("meow.cur"), default;
+    
+}
+
+body {
+    font-family: 'pixelnorm';
+    background-image: url('img/purpletexture.png');
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color); 
+}
+
+header {
+    background-color: var(--border-color); 
+    background-image: url('img/orangestripe.gif');
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-family: 'pixelfancy';
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+header h1:hover{
+    animation: shake 0.5s ease-in-out;
+}
+
+header h4 {
+    font-size: 18px;
+}
+
+article {
+    max-width: 800px; 
+    margin: auto;
+    padding: 20px;
+}
+
+a {
+    display: inline-block;
+    color: var(--text-color);
+    transition: transform 0.3s ease-in-out;
+}
+a:hover{
+    color: var(--primary-color);
+    animation: shake 0.5s ease-in-out;
+}
+
+
+table {
+    background-color: var(--secondary-color);
+    display: block;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+table h3 {
+    
+    color: var(--text-color);
+}
+
+table p i {
+    font-family: 'kiwi';
+    color: var(--text-color);
+}
+
+td {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    color: var(--background-color);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+pre {
+    background-color: var(--background-color); 
+    color: var(--text-color);
+    padding: 10px;
+    border: 1px solid var(--border-color); 
+}
+
+aside {
+    background-color: var(--secondary-color); 
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+aside h2 {
+    font-family: 'kiwi';
+}
+
+aside ul {
+    list-style: none; 
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    color: var(--text-color); 
+}
+aside a:hover{
+    color: var(--background-color); 
+}
+
+footer {
+    background-color: var(--border-color); 
+    background-image: url('img/orangestripe.gif');
+    color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+    clear: both; /* footer stays at the bottom */
+}
+
+
+@media (max-width: 768px) {
+    article {
+        padding: 10px;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    td {
+        display: block;
+    }
+}
+
