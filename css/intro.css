@@ -52,7 +52,7 @@ header h1 {
     display: inline-block;
     color: var(--secondary-color);
     font-family: 'pixelfancy';
-    font-size: 24px;
+    font-size: 4vw;
     margin-bottom: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -61,11 +61,12 @@ header h1:hover{
 }
 
 header h4 {
-    font-size: 18px;
+    color: var(--secondary-color);
+    font-size: 2vw;
 }
 
 article {
-    max-width: 800px; 
+    max-width: 1500px; 
     margin: auto;
     padding: 20px;
 }
@@ -112,6 +113,12 @@ section {
 h3 {
     margin-top: 0;
 }
+#banner{
+    background-color: var(--background-color); 
+    width: 99.9%;
+    color: var(--text-color);
+    border: 1px solid var(--border-color); 
+}
 
 pre {
     background-color: var(--background-color); 
@@ -153,6 +160,7 @@ footer {
     background-image: url('img/orangestripe.gif');
     color: var(--secondary-color);
     padding: 10px;
+    font-size: 2vw;
     text-align: center;
     clear: both; /* footer stays at the bottom */
 }
