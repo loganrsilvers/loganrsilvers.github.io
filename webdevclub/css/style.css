@@ -1,0 +1,156 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+@font-face {
+    font-family: 'GallaeciaForte'; 
+    src: url('fonts/GallaeciaForte.ttf');
+}
+@font-face {
+    font-family: 'BirchLeaf'; 
+    src: url('fonts/BirchLeaf.ttf');
+}
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	background-color: #333;
+	background-image: url('img/blacktexture.jpg');
+	font-family: 'GallaeciaForte';
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+.nav {
+	background-color: #444;
+	background-image: url('img/blacktexture.jpg');
+	padding: 10px;
+	font-family: 'BirchLeaf';
+	text-align: center;
+}
+
+.nav a {
+	color: white;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.about-site {
+	padding: 20px;
+	font-family: 'BirchLeaf';
+	background-color: #f0f0f0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	font-family: 'BirchLeaf';
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+}
+
+th {
+	font-family: 'GallaeciaForte';
+	background-color: #f0f0f0;
+}
+
+.footer {
+	font-family: 'GallaeciaForte';
+	background-color: #333;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	background-image: url('img/blacktexture.jpg');
+}
+
+@media only screen and (max-width: 600px) {
+	table {
+		border: 0;
+	}
+	
+	table caption {
+		font-size: 1.3em;
+	}
+	
+	table thead {
+		display: none;
+	}
+	
+	table td {
+		display: block;
+		padding: .6em;
+	}
+	
+	table th {
+		display: block;
+		padding: .6em;
+	}
+	
+	table td:before {
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		width: 200px;
+	}
+	
+	table th[data-label]:before {
+		content: attr(data-label);
+	}
+}
+
+
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+	
+	
+	
+} /* closes 769px+ */
+
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+	
+	
+	
+} /* closes 1024px+ */
+
+
+
