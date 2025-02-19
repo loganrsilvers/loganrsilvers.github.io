@@ -1,0 +1,279 @@
+/* Variable Declarations */
+@font-face {
+    font-family: 'BlackWolf';
+    src: url(BlackWolf.ttf);
+}
+@font-face {
+    font-family: 'PixelOperator';
+    src: url(PixelOperator.ttf);
+}
+:root {
+    /* Color Palette */
+    --background-color: #490e24;
+    --text-color: #bb9457;
+    --link-color: #e09f3e;
+    --link-visited-color: #335c67;
+    --link-hover-color: #4BCEFF;
+    --bold-text-color: #335c67;
+    --bold-text-background: #e09f3e;
+    --italics-color: #51C2C8;
+    --underline-color: #51C2C8;
+    --header-color: #e09f3e;
+    --header-background: #490e24;
+    --scrollbar-thumb-color: #e09f3e;
+    --scrollbar-track-color: #335c67;
+    --select-text-color: #335c67;
+    --select-background-color: #51C2C8;
+    --button-text-color: #51C2C8;
+    --button-background-color: #335c67;
+    --button-hover-color: #335c67;
+    --button-hover-background: #e09f3e;
+    --ha-color: #51C2C8;
+    --ah-color: #335c67;
+    --eh-color: #e09f3e;
+  
+    /* Font Variables */
+    --main-font: 'PixelOperator';
+    --font-size: 14px;
+    --header-font: 'BlackWolf';
+  
+    /* Image Variables */
+    --background-image: url('aboutmeimg/purpletile.png');
+    --image-path: url('css/aboutmeimg/me.PNG'); /* make sure this exists */
+  }
+  
+  /* General Body Styles */
+  body {
+    background-image: var(--background-image);
+  }
+  
+  /* Layout Styles */
+  .wrap {
+    top: 110px;
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  
+  /* Bar Styles */
+  #bar {
+    top: -10px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    padding: 1px;
+    background: var(--background-color);
+    margin-top: 3px;
+    text-align: left;
+    font: var(--font-size) var(--main-font);
+    line-height: 8px;
+    color: var(--text-color);
+  }
+  
+  /* Info Section Styles */
+  #info {
+    z-index: 7 !important;
+    position: absolute;
+    margin-top: 90px;
+    left: 70px;
+    width: 345px;
+    height: 870px;
+    overflow: auto;
+    overflow-x: hidden;
+    background: var(--background-color);
+    text-align: left;
+    font: var(--font-size) var(--main-font);
+    line-height: 8px;
+    padding-top: 5px;
+    color: var(--text-color);
+  }
+  
+  /* Navigation Styles */
+  #nav {
+    position: absolute;
+    width: 800px;
+    left: 70px;
+    top: 68px;
+    height: 50px;
+    z-index: 1 !important;
+  }
+  
+  /* Image Styles */
+  #image {
+    position: absolute;
+    width: 800px;
+    left: 50px;
+    top: 0px;
+    z-index: 9999 !important;
+    height: 1000px;
+    pointer-events: none;
+  }
+  
+  /* Special Text Styles */
+  .ha,
+  .ah,
+  .eh {
+    font: 20px arial;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-weight: bold;
+  }
+  
+  .ha {
+    color: var(--ha-color);
+  }
+  
+  .ah {
+    color: var(--ah-color);
+  }
+  
+  .eh {
+    color: var(--eh-color);
+  }
+  
+  /* Link Styles */
+  a:link,
+  a:active {
+    color: var(--link-color);
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+  
+  a:visited {
+    font: var(--font-size) var(--main-font);
+    color: var(--link-visited-color);
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+  
+  a:hover {
+    color: var(--link-hover-color);
+    text-transform: lowercase;
+  }
+  
+  /* Special Link Styles */
+  a.one:link,
+  a.one:visited {
+    font-family: var(--main-font);
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20;
+  }
+  
+  a.one:hover {
+    color: var(--link-hover-color);
+    text-decoration: none !important;
+    cursor: crosshair;
+    font-size: 19.5;
+  }
+  
+  /* Bold Text Styles */
+  b {
+    font-weight: bold;
+    color: var(--bold-text-color);
+    background: var(--bold-text-background);
+  }
+  
+  /* Italics Styles */
+  i {
+    font: var(--font-size) var(--main-font);
+    font-style: italic;
+    color: var(--italics-color);
+  }
+  
+  /* Underline Styles */
+  u {
+    font: var(--font-size) var(--main-font);
+    font-style: underline;
+    color: var(--underline-color);
+  }
+
+  header {
+    font: 48px var(--header-font);
+    color: var(--header-color);
+    margin-left: 30px;
+  }
+  
+  /* Header Styles */
+  h1,
+  h2 {
+    font: 24px var(--header-font);
+    color: var(--header-color);
+    background: var(--header-background);
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+    border-bottom: 5px solid #51C2C8;
+    line-height: 14px;
+    margin-top: -1;
+    margin-bottom: 0;
+  }
+  
+  h1 {
+    text-align: left;
+  }
+  
+  h2 {
+    text-align: right;
+  }
+  
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 11px;
+    border: 3px none #a8bbff;
+  }
+  
+  /* Styles for the select element */
+  .morelinks {
+    color: var(--select-text-color);
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    background-color: var(--select-background-color);
+    border-style: none;
+    border-color: #FF77AC;
+    border-width: 1px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+  }
+  
+  /* Styles for the button element */
+  .btnmorelinks {
+    color: var(--button-text-color);
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    background-color: var(--button-background-color);
+    border-style: none;
+    border-color: #FFFFFF;
+    cursor: crosshair;
+  }
+  
+  .btnmorelinks:hover {
+    color: var(--button-hover-color);
+    background-color: var(--button-hover-background);
+  }
+  
+  .btnmorelinks:active {
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
+  }
+  
