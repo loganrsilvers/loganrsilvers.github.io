@@ -164,13 +164,13 @@
 
             #meshamus {
                 background-image: url('img/meshamus2.PNG');
-                background-size: contain;
+                background-size: cover;
                 background-repeat: no-repeat;
                 height: 900px;
             }
             #meshamus:hover {
                 background-image: url('img/meshamus1.PNG');
-                background-size: contain;
+                background-size: cover;
                 background-repeat: no-repeat;
                 height: 900px;
             }
