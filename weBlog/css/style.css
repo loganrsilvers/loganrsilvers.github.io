@@ -162,6 +162,36 @@
                 color: var(--content4);
             }
 
+            #meshamus {
+                background-image: url('img/meshamus2.PNG');
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 900px;
+            }
+            #meshamus:hover {
+                background-image: url('img/meshamus1.PNG');
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 900px;
+            }
+
+              /* Info Section Styles */
+  #info {
+    z-index: 7 !important;
+    position: absolute;
+    margin-top: 90px;
+    left: 70px;
+    width: 345px;
+    height: 870px;
+    overflow: auto;
+    overflow-x: hidden;
+    background: var(--background-color);
+    text-align: left;
+    font: var(--font-size) var(--main-font);
+    line-height: 8px;
+    padding-top: 5px;
+    color: var(--text-color);
+  }
 
             /* what's this "order" stuff about??
     allow me to explain!
@@ -191,6 +221,15 @@
             h1 {
                 font-size: 25px;
             }
+             #todo{
+                overflow: scroll; 
+                height:120px; 
+                background-color:  var(--content7); 
+                padding: 10px; 
+                padding-top: 0px;
+                border: dashed var(--content4) 8px;
+                scrollbar-color: var(--content6);
+             }
 
             strong {
                 /* this styles bold text */
