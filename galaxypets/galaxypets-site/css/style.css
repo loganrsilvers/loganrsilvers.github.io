@@ -46,7 +46,7 @@ body {
 }
 
 header {
-    background-color: #1a1a2e;
+    background-color: black;
     padding: 1rem;
 }
 
@@ -87,7 +87,7 @@ nav ul li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #1a1a2e;
+    background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -138,7 +138,7 @@ figcaption {
 }
 
 footer {
-    background-color: #1a1a2e;
+    background-color: black;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
