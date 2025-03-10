@@ -125,6 +125,19 @@ figure {
     text-align: center;
 }
 
+button#joinchat{
+    width: 100%;
+    background-color: #ff1791;
+    border: solid #16213e;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+button#joinchat:hover{
+    background-color: #fff017;
+}
+
 figure img {
     max-width: 100%;
     height: auto;
