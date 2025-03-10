@@ -140,3 +140,32 @@ footer ul li a {
     color: #00ffff;
     text-decoration: none;
 }
+
+
+.alien-container {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+  }
+  .alien-image {
+    width: 100%;
+    height: auto;
+  }
+  .color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+  }
+  .color-circle[data-color="lightpurple"] { background-color: #cc17ff; }
+  .color-circle[data-color="blue"] { background-color: #00ffff; }
+  .color-circle[data-color="green"] { background-color: #17ffc4; }
+  .color-circle[data-color="darkpurple"] { background-color: #6917d0; }
+  .color-circle[data-color="pink"] { background-color: #ff69b4; }
