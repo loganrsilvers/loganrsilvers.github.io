@@ -141,7 +141,6 @@ button#joinchat:hover{
 figure img {
     max-width: 100%;
     height: auto;
-    border: 2px solid var(--blue);
     border-radius: 5px;
 }
 
