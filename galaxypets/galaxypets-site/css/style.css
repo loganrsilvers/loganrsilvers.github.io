@@ -46,7 +46,7 @@ body {
 }
 
 header {
-    background-color: #1a1a2e;
+    background-color: black;
     padding: 1rem;
 }
 
@@ -87,7 +87,7 @@ nav ul li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #1a1a2e;
+    background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -125,10 +125,22 @@ figure {
     text-align: center;
 }
 
+button#joinchat{
+    width: 100%;
+    background-color: #ff1791;
+    border: solid #16213e;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+button#joinchat:hover{
+    background-color: #fff017;
+}
+
 figure img {
     max-width: 100%;
     height: auto;
-    border: 2px solid var(--blue);
     border-radius: 5px;
 }
 
@@ -138,11 +150,11 @@ figcaption {
 }
 
 footer {
-    background-color: #1a1a2e;
+    background-color: black;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
 }

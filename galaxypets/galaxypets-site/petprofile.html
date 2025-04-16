@@ -9,11 +9,17 @@
 <body>
     <header>
         <nav>
-            <div class="logo">GalaxyPets</div>
+            <div class="logo"><a href="index.html" style="text-decoration: none;">GalaxyPets</a></div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Games</a></li>
+                <li><a href="index.html">Back to Home</a></li>
+                <li class="dropdown">
+                    Community
+                    <div class="dropdown-content">
+                        <a href="clubs.html">Clubs</a>
+                        <a href="#">Users</a>
+                    </div>
+                </li>
+                <li><a href="games.html">Games</a></li>
                 <li><a href="#">Shop</a></li>
             </ul>
         </nav>
@@ -24,7 +30,28 @@
             <h1>MyGalaxyPet Profile</h1>
             <div class="pet-info">
                 <div class="pet-image">
-                    <img src="https://placeholder.com/300" alt="Your GalaxyPet">
+                    <div class="alien-container">
+                        <img id="alienImage" class="alien-image" src="img/jelly/pink.png" alt="Image of your Pet">
+                      </div>
+                      <div class="color-options">
+                        <div class="color-circle" data-color="lightpurple"></div>
+                        <div class="color-circle" data-color="blue"></div>
+                        <div class="color-circle" data-color="green"></div>
+                        <div class="color-circle" data-color="darkpurple"></div>
+                        <div class="color-circle" data-color="pink"></div>
+                      </div>
+                      
+                      <script>
+                        const alienImage = document.getElementById('alienImage');
+                        const colorCircles = document.querySelectorAll('.color-circle');
+                      
+                        colorCircles.forEach(circle => {
+                          circle.addEventListener('click', () => {
+                            const selectedColor = circle.getAttribute('data-color');
+                            alienImage.src = `img/jelly/${selectedColor}.png`; 
+                          });
+                        });
+                      </script>
                 </div>
                 <div class="pet-details">
                     <h2>Your Pet Name Here</h2>
@@ -39,6 +66,8 @@
                     </blockquote>
                 </div>
             </div>
+
+            
         </section>
     </main>
 

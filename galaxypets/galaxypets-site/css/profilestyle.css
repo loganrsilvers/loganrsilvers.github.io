@@ -27,13 +27,13 @@ body {
     font-family: var(--main-font);
     margin: 0;
     padding: 0;
-    background-color: #0c0c1d;
+    background-color: black;
     background-image: url(../img/aquagalaxy_small.gif);
     color: #ffffff;
 }
 
 header {
-    background-color: #1a1a2e;
+    background-color: black;
     padding: 1rem;
 }
 
@@ -64,6 +64,29 @@ nav ul li a {
 
 main {
     padding: 2rem;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .pet-profile {
@@ -117,7 +140,7 @@ blockquote {
 }
 
 footer {
-    background-color: #1a1a2e;
+    background-color: black;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
@@ -140,3 +163,32 @@ footer ul li a {
     color: #00ffff;
     text-decoration: none;
 }
+
+
+.alien-container {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+  }
+  .alien-image {
+    width: 100%;
+    height: auto;
+  }
+  .color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+  }
+  .color-circle[data-color="lightpurple"] { background-color: #cc17ff; }
+  .color-circle[data-color="blue"] { background-color: #00ffff; }
+  .color-circle[data-color="green"] { background-color: #17ffc4; }
+  .color-circle[data-color="darkpurple"] { background-color: #6917d0; }
+  .color-circle[data-color="pink"] { background-color: #ff69b4; }
