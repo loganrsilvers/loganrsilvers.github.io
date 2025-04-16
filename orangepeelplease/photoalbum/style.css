@@ -10,6 +10,7 @@ body {
     padding: 0;
     background-color: var(--primary-color); 
     color: var(--text-color);
+    background-image: url('../img/denim.png');
 }
 
 

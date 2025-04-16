@@ -22,6 +22,7 @@ a:hover{
 body {
     margin: 0;
     padding: 0;
+    background-image: url('img/denim.png');
     background-color: var(--primary-color); 
     color: var(--text-color);
 }
@@ -114,18 +115,19 @@ main {
     justify-content: space-between;
     align-items: stretch;
     padding: 20px;
-    background-color: var(--primary-color);
 }
 .section {
-    background-color: var(--border-color);
     padding: 20px;
-    color: var(--primary-color);
+    color: var(--background-color);
 }
 .section h3 {
-    color: var(--text-color);
+    color: var(--background-color);
     font-family: 'blackwolf';
     font-size: 2vw;
     margin-bottom: 10px;
+}
+.section a {
+    color: var(--background-color);
 }
 section {
     padding: 20px;
