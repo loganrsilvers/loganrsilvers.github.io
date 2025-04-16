@@ -40,7 +40,7 @@ html, body {
     left: 0;
     right: 0;
     transform:rotate(-5deg);
-    poisition:relative;
+    position:relative;
   }
   .note-one-fg::before {
           content: "";
