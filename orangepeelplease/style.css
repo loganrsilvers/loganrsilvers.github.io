@@ -20,7 +20,6 @@ a:hover{
     animation: shake 0.5s ease-in-out;
 }
 body {
-    font-family: 'pixelnorm';
     margin: 0;
     padding: 0;
     background-color: var(--primary-color); 
