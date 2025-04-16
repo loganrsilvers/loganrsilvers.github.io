@@ -61,3 +61,68 @@ ul {
 li {
     margin: 0 10px;
 }
+li a:hover {
+    color: var(--border-color);
+}
+li a:active {
+    color: var(--secondary-color);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--border-color);
+    font-family: 'kiwi';
+    font-size: 2vw;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+#logoimg{
+    width: 120px;
+    height: 100px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0 10px;
+    background-color: var(--background-color);
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: spin 6s linear infinite;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+section {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'kiwi';
+    font-size: 2vw;
+    margin: 0 auto;
+    max-width: 60%;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+aside {
+    float: right;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'kiwi';
+    font-size: 2vw;
+    margin: 0 auto;
+    max-width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
