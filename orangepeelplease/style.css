@@ -16,9 +16,10 @@ html, body {
     cursor: url("cursor.cur"), default;
 }
 header {
+    font-family: 'blackwolf';
     text-align: left;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -29,7 +30,7 @@ header {
 header h1 {
     display: block;
     color: var(--border-color);
-    font-family: 'pixelfancy';
+    padding-left: 20px;
     font-size: 4vw;
     margin-bottom: 10px;
     transition: transform 0.3s ease-in-out;
@@ -45,7 +46,7 @@ nav {
 nav a {
     color: var(--text-color);
     text-decoration: none;
-    font-family: 'kiwi';
+    font-family: 'blackwolf';
     font-size: 2vw;
     margin: 0 10px;
     transition: color 0.3s ease-in-out;
@@ -77,6 +78,10 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+@font-face {
+    font-family: 'blackwolf';
+    src: url('BlackWolf.ttf');
 }
 @keyframes spin{
     0%{transform:rotate(0deg);}
@@ -114,6 +119,17 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+section h2 {
+    color: var(--text-color);
+    font-family: 'blackwolf';
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
+section p {
+    color: var(--text-color);
+    font-size: 2vw;
+    margin-bottom: 10px;
+}
 aside {
     float: right;
     padding: 20px;
@@ -125,4 +141,10 @@ aside {
     max-width: 30%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+aside h3 {
+    color: var(--text-color);
+    font-family: 'blackwolf';
+    font-size: 2vw;
+    margin-bottom: 10px;
 }
