@@ -19,6 +19,8 @@ html, body {
 header {
     font-family: 'blackwolf';
     text-align: left;
+    background-image: url('../img/peeltexture.jpg');
+    text-shadow: #2F4858 5px 3px 2px;
     margin: 0;
     padding: 20px;
     overflow: hidden;
