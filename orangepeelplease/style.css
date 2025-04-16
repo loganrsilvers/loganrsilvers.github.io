@@ -5,6 +5,20 @@
     --border-color: #86BBD8; 
     --text-color: #33658A; 
 }
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+a{
+    display: inline-block;
+    color: var(--text-color);
+}
+a:hover{
+    animation: shake 0.5s ease-in-out;
+}
 body {
     font-family: 'pixelnorm';
     margin: 0;
@@ -51,6 +65,10 @@ nav a {
     margin: 0 10px;
     transition: color 0.3s ease-in-out;
 }
+nav a:hover {
+    color: var(--border-color);
+    animation: shake 0.8s ease-in-out;
+}
 ul {
     list-style-type: none;
     padding: 0;
@@ -63,6 +81,7 @@ li {
     margin: 0 10px;
 }
 li a:hover {
+    animation: shake 0.8s ease-in-out;
     color: var(--border-color);
 }
 li a:active {
