@@ -68,17 +68,6 @@ li a:hover {
 li a:active {
     color: var(--secondary-color);
 }
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--secondary-color);
-    color: var(--border-color);
-    font-family: 'kiwi';
-    font-size: 2vw;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 @font-face {
     font-family: 'blackwolf';
     src: url('BlackWolf.ttf');
@@ -106,6 +95,17 @@ main {
     align-items: stretch;
     padding: 20px;
     background-color: var(--primary-color);
+}
+.section {
+    background-color: var(--border-color);
+    padding: 20px;
+    color: var(--primary-color);
+}
+.section h3 {
+    color: var(--text-color);
+    font-family: 'blackwolf';
+    font-size: 2vw;
+    margin-bottom: 10px;
 }
 section {
     padding: 20px;
@@ -142,9 +142,20 @@ aside {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-aside h3 {
+aside h3,
+aside h2 {
     color: var(--text-color);
     font-family: 'blackwolf';
     font-size: 2vw;
     margin-bottom: 10px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--border-color);
+    font-size: 20px;
+    position: static;
+    bottom: 0;
+    width: 100%;
 }
