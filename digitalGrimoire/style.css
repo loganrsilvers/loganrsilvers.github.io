@@ -1,0 +1,228 @@
+/*
+  :root holds your color, font, and image variables.
+  Change these to easily update your grimoire's theme!
+*/
+:root {
+  /* FOR THE BACKGROUNDS */
+    --bg-color: #1a1a2e;
+    --header-bg: #282846;
+    --sidebar-bg: #22223b;
+    --content-bg: #232946;
+
+    /* FOR THE TEXT */
+    --secondary-text: #e0b1cb;
+    --text-main: #f6f6f6;
+
+    /* BACKGROUND IMAGES */
+    --bg-image: url('img/mosaic.jpg');
+    --header-bg-image: url('img/carpet.jpg');
+    --main-bg-image: url('img/carpet2.png');
+    --sidebar-bg-image: url('img/carpet.jpg');
+  
+    /* FONTS */
+    --font-header: 'Font2';
+    --font-body: 'Font';
+  
+    /* CALL OF THE CAULDRON LOGO */
+    --logo-url: url('img/cotclogo.png');
+  }
+  
+
+
+
+
+/* THIS IS WHERE THE FONTS R INPUTED */
+  @font-face {
+    /* this is the KEYWORD the code uses to look ath your font */
+    font-family: 'Font';
+    /* this is the FILE PATH or the LOCATION of the font file (relative to this css file) */
+    src: url(fonts/font.ttf);
+}  
+@font-face {
+    font-family: 'Font2';
+    src: url(fonts/font2.ttf);
+}  
+
+
+
+
+
+
+
+body {
+    background: var(--bg-color);
+    background-image: var(--bg-image);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    min-height: 100%;
+  }
+
+
+
+
+
+
+
+  
+  /* Header styles */
+  header {
+    background: var(--header-bg);
+    color: var(--text-main);
+    background-image: var(--header-bg-image);
+    text-align: center;
+    padding: 16px;
+  }
+  
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  header h1 {
+    font-family: var(--font-header);
+    font-size: 40px;
+    margin: 8px 0 8px 0;
+    letter-spacing: 2px;
+  }
+  
+  header p {
+    font-size: 18px;
+    color: var(--secondary-text);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+
+
+
+
+  
+/* THIS IS THE THING THAT CONTAINS THE TWO COLUMNS : ASIDE AND SECTION */
+  main {
+    display: flex;
+    flex-direction: row;
+    margin: 32px;
+    gap: 32px;
+    padding: 16px;
+  }
+  
+
+
+
+
+
+  /* Aside (sidebar navigation) */
+  aside {
+    background: var(--sidebar-bg);
+    background-image: var(--sidebar-bg-image);
+    padding: 25px;
+    border-radius: 16px;
+    width: 25%;
+  }
+  
+  aside h2 {
+    font-family: var(--font-header);
+    font-size: 22px;
+  }
+  
+  /* the Unordered List of links */
+  aside ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  /* the LIne itself where the link is typed */
+  aside li {
+    margin-bottom: 12px;
+  }
+  
+/*  text that is also a link  in the sidebar*/
+  aside a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+  }
+  
+  /* when the link is hovered over, it can change color */
+  aside a:hover {
+    color: var(--text-main);
+  }
+  
+
+
+
+
+
+
+  /* Section (main content area) */
+  section {
+    background: var(--content-bg);
+    background-image: var(--main-bg-image);
+    padding: 24px;
+    border-radius: 16px;
+    width: 75%;
+  }
+  
+  section h2 {
+    font-family: var(--font-header);
+    color: var(--secondary-text);
+  }
+  
+  section article {
+    /* space between the articles */
+    margin-bottom: 40px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE JUNK (when you resize the browser it changes the size of the items */
+  @media (max-width: 800px) {
+    main {
+      flex-direction: column;
+      gap: 16px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    aside, section {
+      width: 100%;
+      min-width: 0;
+      border-radius: 12px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    header h1 {
+      font-size: 28px;
+    }
+  }
+  
+/* FOR PHONE SIZES */
+  @media (max-width: 500px) {
+    header {
+      padding-top: 12px;
+      padding-bottom: 8px;
+    }
+    section, aside {
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    header h1 {
+      font-size: 20px;
+    }
+  }
+  

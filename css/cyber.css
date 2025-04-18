@@ -63,16 +63,20 @@ header h1:hover{
     animation: shake 0.5s ease-in-out;
 }
 .moonphaselink,
-.homelink,
 .questionlink,
 .starlink,
 .heartlink,
 .websiteslink {
     border: 3px solid var(--border-color); 
+    width: 12.5%;
+}
+.homelink {
+    border: 3px solid var(--border-color); 
+    width: 37.5%;
 }
 i {
     color: var(--border-color);
-    font-size: 20px;
+    font-size: 100%;
 }
 main {
     display: flex;
