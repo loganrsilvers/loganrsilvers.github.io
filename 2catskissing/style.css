@@ -1,0 +1,324 @@
+:root {
+    --dark-color: #243010;
+    --dark-secondary-color: #2A3C24;
+    --mid-color: #87A330;
+    --light-color: #CAD593;
+    --light-secondary-color: #A1C349;
+
+
+    --title-text-color: #2A3C24;
+    --main-text-color: #243010;
+
+
+    --title-text-font: 'title-text-font', 'Ariel', sans-serif;
+    --main-text-font: 'main-text-font', 'Arial', sans-serif;
+
+
+    --header-bg: url('img/foresttexture.png');
+    --body-bg: url('img/.png');
+
+
+    --overlay-bg: #243010;
+    --overlay-text: #CAD593;
+    --overlay-transition: 0.3s;
+  }
+
+
+@font-face {
+    font-family: 'main-text-font';
+    src: url('fonts/pixellari.ttf');
+}
+@font-face {
+    font-family: 'title-text-font';
+    src: url('fonts/pixellari.ttf');
+}
+  
+  /* Reset and base styles */
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--body-bg) var(--light-color);
+    font-family: var(--main-text-font);
+    color: var(--main-text-color);
+  }
+  
+  header {
+    background: var(--header-bg) var(--dark-color);
+    color: var(--light-color);
+    padding: 24px 0 12px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0 0 10px 0;
+    font-family: var(--title-text-font);
+    font-size: 600%;
+    letter-spacing: 2px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    background: var(--dark-secondary-color);
+    padding: 8px 0;
+  }
+  
+  nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--main-text-font);
+    transition: color 0.2s;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    color: var(--mid-color);
+  }
+  
+  main > section {
+    padding: 32px 10% 16px 10%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  main > section > h2 {
+    font-family: var(--title-text-font);
+    color: var(--title-text-color);
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+  
+  /* Illustration Gallery */
+  #illustration > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  #illustration figure {
+    position: relative;
+    width: 260px;
+    margin: 0;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--light-secondary-color);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: box-shadow 0.2s;
+    outline: none;
+  }
+  
+  #illustration figure:focus {
+    box-shadow: 0 0 0 3px var(--mid-color);
+  }
+  
+  #illustration img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  #illustration figcaption {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background: var(--overlay-bg);
+    color: var(--overlay-text);
+    font-size: 22px;
+    font-family: var(--title-text-font);
+    transition: opacity var(--overlay-transition);
+    pointer-events: none;
+  }
+  
+  #illustration figure:hover figcaption,
+  #illustration figure:focus figcaption,
+  #illustration figure.active figcaption {
+    opacity: 1;
+    animation: overlayIn 0.5s;
+    pointer-events: auto;
+  }
+  
+  @keyframes overlayIn {
+    from { opacity: 0; transform: scale(1.1);}
+    to { opacity: 1; transform: scale(1);}
+  }
+  
+  /* Blog Section */
+  #blog main {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  #blog main section {
+    background: var(--light-secondary-color);
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    outline: none;
+  }
+  
+  #blog main section:focus {
+    box-shadow: 0 0 0 3px var(--mid-color);
+  }
+  
+  #blog figure {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0;
+    padding: 16px;
+  }
+  
+  #blog figure img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  #blog figure figcaption {
+    font-family: var(--title-text-font);
+    font-size: 20px;
+    color: var(--title-text-color);
+  }
+  
+  #blog article {
+    display: none;
+    padding: 18px 24px 24px 24px;
+    font-size: 18px;
+    color: var(--main-text-color);
+  }
+  
+  #blog main section[style*="display: block"] article,
+  #blog main section article[style*="display: block"] {
+    display: block;
+  }
+  
+  /* About Me Section */
+  #about > div {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  
+  #about > div > div {
+    flex: 1 1 220px;
+  }
+  
+  #about img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex: 0 0 180px;
+  }
+  
+  #about footer {
+    background: var(--light-secondary-color);
+    padding: 24px;
+    border-radius: 8px;
+  }
+  
+  #about form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  #about input, #about textarea {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid var(--mid-color);
+    border-radius: 4px;
+    font-family: var(--main-text-font);
+  }
+  
+  #about button {
+    background: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: var(--title-text-font);
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  
+  #about button:hover, #about button:focus {
+    background: var(--mid-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    main > section {
+      padding: 24px 4% 12px 4%;
+    }
+    #illustration > div {
+      gap: 14px;
+    }
+    #illustration figure {
+      width: 48%;
+      min-width: 160px;
+    }
+    #about > div {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    #about img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 24px;
+    }
+    nav {
+      gap: 12px;
+      font-size: 16px;
+      flex-wrap: wrap;
+    }
+    #illustration figure {
+      width: 98%;
+      min-width: 120px;
+    }
+    #about > div {
+      gap: 10px;
+    }
+    #about img {
+      width: 90px;
+      height: 90px;
+    }
+    main > section > h2 {
+      font-size: 22px;
+    }
+    #blog figure img {
+      width: 56px;
+      height: 56px;
+    }
+    #blog figure figcaption {
+      font-size: 16px;
+    }
+    #blog article {
+      font-size: 15px;
+      padding: 10px 8px 16px 8px;
+    }
+  }
+  

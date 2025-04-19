@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Art Illustration Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Eloise Park</h1>
+  </header>
+  <nav>
+    <a href="#illustration">Illustration</a>
+    <a href="#shop" target="_blank" rel="noopener">Shop</a>
+    <a href="#blog">Blog</a>
+    <a href="#about">About Me</a>
+  </nav>
+
+  <main>
+    <!-- Illustration Section -->
+    <section id="illustration">
+      <h2>Illustrations</h2>
+      <div>
+        <figure tabindex="0">
+          <img src="img/sushiriso.png" alt="Sushi Riso Print" />
+          <figcaption>
+            <span>Sushi Riso Print</span>
+          </figcaption>
+        </figure>
+        <figure tabindex="0">
+          <img src="img/pillbug.png" alt="Pill Bug Print" />
+          <figcaption>
+            <span>Pill Bug Print</span>
+          </figcaption>
+        </figure>
+        <figure tabindex="0">
+          <img src="img/fruits.png" alt="Fruit bunch sticker pack" />
+          <figcaption>
+            <span>Fruit bunch sticker pack</span>
+          </figcaption>
+        </figure>
+
+        <!-- Add more figures as needed -->
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <main>
+        <section tabindex="0">
+          <figure>
+            <img src="img/fruits.png" alt="Blog Post 1" />
+            <figcaption>Blog Post Title 1</figcaption>
+          </figure>
+          <article>
+            <h3>Blog Post Title 1</h3>
+            <p>Your blog content goes here...</p>
+          </article>
+        </section>
+        <section tabindex="0">
+          <figure>
+            <img src="img/fruits.png" alt="Blog Post 2" />
+            <figcaption>Blog Post Title 2</figcaption>
+          </figure>
+          <article>
+            <h3>Blog Post Title 2</h3>
+            <p>Your blog content goes here...</p>
+          </article>
+        </section>
+        <section tabindex="0">
+          <figure>
+            <img src="img/fruits.png" alt="Blog Post 3" />
+            <figcaption>Blog Post Title 3</figcaption>
+          </figure>
+          <article>
+            <h3>Blog Post Title 3</h3>
+            <p>Your blog content goes here...</p>
+          </article>
+        </section>
+        <section tabindex="0">
+          <figure>
+            <img src="img/fruits.png" alt="Blog Post 4" />
+            <figcaption>Blog Post Title 4</figcaption>
+          </figure>
+          <article>
+            <h3>Blog Post Title 4</h3>
+            <p>Your blog content goes here...</p>
+          </article>
+        </section>
+        <!-- Add more sections as needed -->
+      </main>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div>
+        <div>
+          <p>
+            Hi, I'm Eloise, an illustrator passionate about visual storytelling. I specialize in digital and traditional media, bringing ideas to life with color and imagination. Let's connect!
+          </p>
+        </div>
+        <img src="img/fruits.png" alt="Your portrait" />
+      </div>
+      <footer>
+        <h3>Contact Me</h3>
+        <form action="mailto:eepark.88@gmail.com" method="POST" enctype="text/plain">
+          <label>
+            Name:<br>
+            <input type="text" name="name" required>
+          </label><br>
+          <label>
+            Email:<br>
+            <input type="email" name="email" required>
+          </label><br>
+          <label>
+            Message:<br>
+            <textarea name="message" rows="4" required></textarea>
+          </label><br>
+          <button type="submit">Send</button>
+        </form>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Illustration overlay for mobile tap
+    document.querySelectorAll('#illustration figure').forEach(function(figure) {
+      figure.addEventListener('click', function(e) {
+        if(window.innerWidth <= 900) {
+          this.classList.toggle('active');
+        }
+      });
+      figure.addEventListener('keypress', function(e) {
+        if(window.innerWidth <= 900 && (e.key === 'Enter' || e.key === ' ')) {
+          this.classList.toggle('active');
+        }
+      });
+    });
+
+    // Blog expand/collapse
+    document.querySelectorAll('#blog main section').forEach(function(section) {
+      section.querySelector('article').style.display = 'none';
+      section.addEventListener('click', function(e) {
+        if(e.target.tagName === 'FIGURE' || e.target.tagName === 'SECTION') {
+          let art = this.querySelector('article');
+          let expanded = art.style.display === 'block';
+          document.querySelectorAll('#blog main section article').forEach(function(a) {
+            a.style.display = 'none';
+          });
+          art.style.display = expanded ? 'none' : 'block';
+        }
+      });
+      section.addEventListener('keypress', function(e) {
+        if(e.key === 'Enter' || e.key === ' ') {
+          let art = this.querySelector('article');
+          let expanded = art.style.display === 'block';
+          document.querySelectorAll('#blog main section article').forEach(function(a) {
+            a.style.display = 'none';
+          });
+          art.style.display = expanded ? 'none' : 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
