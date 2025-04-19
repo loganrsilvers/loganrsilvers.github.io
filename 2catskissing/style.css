@@ -15,7 +15,7 @@
 
 
     --header-bg: url('img/foresttexture.png');
-    --body-bg: url('img/.png');
+    --body-bg: url('img/transparentgridtexture.png');
 
 
     --overlay-bg: #243010;
@@ -77,9 +77,14 @@
     color: var(--mid-color);
   }
   
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
   main > section {
     padding: 32px 10% 16px 10%;
-    max-width: 1100px;
+    background-color: var(--light-color);
     margin: 0 auto;
   }
   
@@ -90,6 +95,11 @@
     margin-bottom: 24px;
   }
   
+
+
+
+
+  
   /* Illustration Gallery */
   #illustration > div {
     display: flex;
@@ -97,7 +107,7 @@
     gap: 24px;
     justify-content: center;
   }
-  
+
   #illustration figure {
     position: relative;
     width: 260px;
@@ -202,7 +212,12 @@
   #blog main section[style*="display: block"] article,
   #blog main section article[style*="display: block"] {
     display: block;
+    
   }
+
+
+
+
   
   /* About Me Section */
   #about > div {
@@ -261,6 +276,12 @@
   #about button:hover, #about button:focus {
     background: var(--mid-color);
   }
+  
+
+
+
+
+
   
   /* Responsive Design */
   @media (max-width: 900px) {
