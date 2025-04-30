@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan's Digital Oddities</title>
+    <link rel="stylesheet" href="shelf.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Digital Oddities</h1>
+            <p class="subtitle">A collection of memories & curious things</p>
+            <div>
+                <span class="decorator">✦</span>
+                <span class="decorator">✿</span>
+                <span class="decorator">☆</span>
+                <span class="decorator">✧</span>
+                <span class="decorator">꒰</span>
+            </div>
+        </header>
+        
+        <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="index.html" class="nav-item">Teaching</a>
+            <a href="index.html" class="nav-item">Artist</a>
+            <a href="index.html" class="nav-item">Lifestyle</a>
+            <a href="shelf.html" class="nav-item">Memories</a>
+            <a href="index.html" class="nav-item">Reflection</a>
+        </nav>
+        
+        <div class="shelves-container">
+            <!-- Shelf 1 -->
+            <div class="shelf">
+                <!-- Decoration elements -->
+                <span class="shelf-decoration" style="left: 10%; top: 30%;">✧</span>
+                <span class="shelf-decoration" style="left: 30%; top: 10%;">☆</span>
+                <span class="shelf-decoration" style="right: 20%; top: 40%;">✦</span>
+                
+                <!-- Oddity 1 -->
+                <div class="oddity" data-item="bear">
+                    <div class="oddity-icon"><img src="oddityimg/bear.png" alt="bear"></div>
+                    <div class="speech-bubble">This stuffed bear...</div>
+                </div>
+                
+                <!-- Oddity 2 -->
+                <div class="oddity" data-item="berry">
+                    <div class="oddity-icon"><img src="oddityimg/berry.png" alt="berry"></div>
+                    <div class="speech-bubble">Nestled in a tiny glass case...</div>
+                </div>
+                
+                <!-- Oddity 3 -->
+                <div class="oddity" data-item="sandstone">
+                    <div class="oddity-icon"><img src="oddityimg/sandstone.png" alt="sandstone"></div>
+                    <div class="speech-bubble">This piece of sandstone is...</div>
+                </div>
+                
+                <!-- Oddity 4 -->
+                <div class="oddity" data-item="yarn">
+                    <div class="oddity-icon"><img src="oddityimg/yarn.png" alt="yarn"></div>
+                    <div class="speech-bubble">Given to me by a neighbor...</div>
+                </div>
+            </div>
+            
+            <!-- Shelf 2 -->
+            <div class="shelf">
+                <!-- Decoration elements -->
+                <span class="shelf-decoration" style="left: 15%; top: 20%;">꒰</span>
+                <span class="shelf-decoration" style="left: 45%; top: 30%;">✿</span>
+                <span class="shelf-decoration" style="right: 10%; top: 20%;">☆</span>
+                
+                <!-- Oddity 5 -->
+                <div class="oddity" data-item="scissors">
+                    <div class="oddity-icon"><img src="oddityimg/scissors.png" alt="scissors"></div>
+                    <div class="speech-bubble">These ornate scissors were...</div>
+                </div>
+                
+                <!-- Oddity 6 -->
+                <div class="oddity" data-item="macbook">
+                    <div class="oddity-icon"><img src="oddityimg/macbook.png" alt="macbook"></div>
+                    <div class="speech-bubble">This battered laptop has stickers...</div>
+                </div>
+                
+                <!-- Oddity 7 -->
+                <div class="oddity" data-item="blanket">
+                    <div class="oddity-icon"><img src="oddityimg/blanket.png" alt="blanket"></div>
+                    <div class="speech-bubble">Each square of this handmade blanket...</div>
+                </div>
+                
+                <!-- Oddity 8 -->
+                <div class="oddity" data-item="dumdum">
+                    <div class="oddity-icon"><img src="oddityimg/dumdum.svg" alt="dumdum"></div>
+                    <div class="speech-bubble">Inside this...</div>
+                </div>
+            </div>
+            
+            <!-- Shelf 3 -->
+            <div class="shelf">
+                <!-- Decoration elements -->
+                <span class="shelf-decoration" style="left: 25%; top: 15%;">✧</span>
+                <span class="shelf-decoration" style="left: 60%; top: 35%;">✦</span>
+                <span class="shelf-decoration" style="right: 30%; top: 25%;">✿</span>
+                
+                <!-- Oddity 9 -->
+                <div class="oddity" data-item="fish">
+                    <div class="oddity-icon"><img src="oddityimg/fish.png" alt="fish"></div>
+                    <div class="speech-bubble">This little fish was my favorite...</div>
+                </div>
+                
+                <!-- Oddity 10 -->
+                <div class="oddity" data-item="notebook">
+                    <div class="oddity-icon"><img src="oddityimg/diary.gif" alt="diary"></div>
+                    <div class="speech-bubble">This notebook contains my earliest attempts at...</div>
+                </div>
+                
+                <!-- Oddity 11 -->
+                <div class="oddity" data-item="stick">
+                    <div class="oddity-icon"><img src="oddityimg/godseye.webp" alt="stick"></div>
+                    <div class="speech-bubble">This dreamcatcher was made at summer camp....</div>
+                </div>
+                
+                <!-- Oddity 12 -->
+                <div class="oddity" data-item="strange-plant">
+                    <div class="oddity-icon"><img src="oddityimg/plant.webp" alt="plant"></div>
+                    <div class="speech-bubble">This plant started as a tiny cutting from someone...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Description Panel -->
+    <div class="description-panel" id="description-panel">
+        <button class="description-close" id="close-description">✕</button>
+        <h2 class="description-title" id="description-title">Item Name</h2>
+        <p class="description-text" id="description-text">Detailed description will appear here when you hover over an item.</p>
+    </div>
+    
+    <footer>
+        <p>Logan's Collection of Digital Oddities - A Journey Through Memories</p>
+    </footer>
+
+    <script>
+        // Create star field
+        const starsContainer = document.getElementById('stars');
+        function createStars() {
+            starsContainer.innerHTML = '';
+            const numStars = Math.floor(window.innerWidth * window.innerHeight / 1000);
+            
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                const size = Math.random() * 2 + 1;
+                
+                star.style.position = 'absolute';
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.backgroundColor = `rgba(255, 255, 255, ${Math.random() * 0.7 + 0.3})`;
+                star.style.borderRadius = '50%';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animation = `twinkle ${Math.random() * 5 + 3}s ease-in-out infinite`;
+                
+                const keyframes = `
+                @keyframes twinkle {
+                    0% { opacity: ${Math.random() * 0.5 + 0.3}; }
+                    50% { opacity: ${Math.random() * 0.5 + 0.5}; }
+                    100% { opacity: ${Math.random() * 0.5 + 0.3}; }
+                }`;
+                
+                const style = document.createElement('style');
+                style.innerHTML = keyframes;
+                document.head.appendChild(style);
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Initialize stars
+        createStars();
+        
+        // Handle window resize
+        window.addEventListener('resize', createStars);
+        
+        // Item descriptions database
+        const itemDetails = {
+            'bear': {
+                title: 'Worn Plush Bear',
+                description: 'This stuffed bear has been my silent companion for as long as I can remember. Its fur is patchy and one button eye is a little loose, but it still carries the faint scent of my childhood room. When I hug it, I’m instantly transported back to nights filled with whispered secrets and comforting lullabies.'
+            },
+            'berry': {
+                title: 'Pressed Summer Berry',
+                description: 'Nestled in a tiny glass case, this berry was picked on a sun-drenched afternoon in 2008. Its color has faded but the memory it holds is vivid: laughter echoing across a field, sticky fingers, and the taste of a perfect summer day captured forever in a single, delicate fruit.'
+            },
+            'sandstone': {
+                title: 'Weathered Sandstone Fragment',
+                description: 'This piece of sandstone is smooth from centuries of wind and water. I found it on a family hike, marveling at its ancient origins. Holding it reminds me that some things endure far longer than a single lifetime, quietly carrying the stories of the earth itself.'
+            },
+            'yarn': {
+                title: 'Ball of Rainbow Yarn',
+                description: 'Given to me by a neighbor who claimed it could predict the future, this vibrant yarn is now tangled and worn. I’ve used it for crafts, repairs, and even as a makeshift bookmark. Its colors still catch the light, reminding me of creativity, comfort, and the magic of possibility.'
+            },
+            'scissors': {
+                title: 'Vintage Sewing Scissors',
+                description: 'These ornate scissors were passed down from my great-aunt, who used them to snip threads and trim fabric for countless projects. Though a little dull now, they still fit perfectly in my hand, a quiet testament to the care and love stitched into every handmade gift.'
+            },
+            'macbook': {
+                title: 'Old Laptop',
+                description: 'This battered laptop has stickers peeling off and a keyboard that no longer lights up, but it contains years of memories: photos, stories, and late-night chats. Booting it up is like opening a time capsule of my digital life, full of nostalgia and forgotten adventures.'
+            },
+            'blanket': {
+                title: 'Patchwork Blanket',
+                description: 'Each square of this handmade blanket tells a story-scraps from old clothes, gifts from friends, and remnants of my childhood pajamas. I don’t remember when I started it, or who finished it, but wrapping myself in its warmth feels like being embraced by all my happiest memories.'
+            },
+            'dumdum': {
+                title: 'Candy Wrapper Snow Globe',
+                description: 'Inside this homemade snow globe, a swirl of glitter and tiny candy wrappers floats around a miniature scene. I made it as a child, and though the water is a little cloudy now, shaking it still fills me with delight as memories of sweet treats and playful afternoons dance inside.'
+            },
+            'fish': {
+                title: 'Plastic Toy Fish',
+                description: 'This little fish was my favorite bath-time companion, its paint chipped from countless adventures. I remember inventing elaborate stories as I sailed it across the water, making even the most ordinary moments feel magical and full of possibility.'
+            },
+            'notebook': {
+                title: 'Childhood Journal',
+                description: 'This notebook contains my earliest attempts at storytelling-complete with spelling errors, elaborate illustrations, and plotlines that make little sense to my adult mind. The handwriting evolves as I flip through the pages, a physical timeline of my growth. I still reference it sometimes when I need creative inspiration.'
+            },
+            'stick': {
+                title: 'Handmade Dreamcatcher',
+                description: 'This dreamcatcher was made at summer camp when I was twelve. The string pattern is uneven in places, and a few of the beads are missing, but it has hung above my bed through nightmares and sweet dreams alike. The feathers are worn but still dance in the slightest breeze, as if responding to invisible currents of memory.'
+            },
+            'strange-plant': {
+                title: 'Resilient Plant Cutting',
+                description: 'This plant started as a tiny cutting from someone important to me. Against all odds and despite my inconsistent care, it has thrived and grown. Now it’s large enough to take cuttings of its own, continuing a living legacy that connects my past to my future and reminds me of my own capacity for growth.'
+            }
+        };
+        
+        // Set up oddity interactions
+        const oddities = document.querySelectorAll('.oddity');
+        const descriptionPanel = document.getElementById('description-panel');
+        const descriptionTitle = document.getElementById('description-title');
+        const descriptionText = document.getElementById('description-text');
+        const closeDescription = document.getElementById('close-description');
+        
+        // Show description panel when clicking on an oddity
+        oddities.forEach(oddity => {
+            oddity.addEventListener('click', () => {
+                const itemId = oddity.getAttribute('data-item');
+                const details = itemDetails[itemId];
+                
+                if (details) {
+                    descriptionTitle.textContent = details.title;
+                    descriptionText.textContent = details.description;
+                    descriptionPanel.classList.add('active');
+                }
+            });
+        });
+        
+        // Close description panel
+        closeDescription.addEventListener('click', () => {
+            descriptionPanel.classList.remove('active');
+        });
+        
+        // Create shooting stars occasionally
+        function createShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.style.position = 'absolute';
+            shootingStar.style.width = '2px';
+            shootingStar.style.height = '2px';
+            shootingStar.style.backgroundColor = 'white';
+            shootingStar.style.borderRadius = '50%';
+            shootingStar.style.left = `${Math.random() * 100}%`;
+            shootingStar.style.top = `${Math.random() * 100}%`;
+            shootingStar.style.boxShadow = '0 0 10px 2px white';
+            
+            const angle = Math.random() * Math.PI * 2;
+            const distance = Math.min(window.innerWidth, window.innerHeight) / 2;
+            const duration = Math.random() * 2 + 1;
+            
+            shootingStar.style.animation = `shoot ${duration}s linear forwards`;
+            
+            const keyframes = `
+            @keyframes shoot {
+                0% { 
+                    transform: translate(0, 0); 
+                    opacity: 1; 
+                }
+                100% { 
+                    transform: translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px); 
+                    opacity: 0; 
+                }
+            }`;
+            
+            const style = document.createElement('style');
+            style.innerHTML = keyframes;
+            document.head.appendChild(style);
+            
+            starsContainer.appendChild(shootingStar);
+            
+            setTimeout(() => {
+                shootingStar.remove();
+                style.remove();
+            }, duration * 1000);
+        }
+        
+        // Create shooting stars at random intervals
+        setInterval(createShootingStar, 3000);
+        
+        // Add a subtle parallax effect to oddities
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            oddities.forEach(oddity => {
+                const offsetX = (mouseX - 0.5) * 10;
+                const offsetY = (mouseY - 0.5) * 5;
+                oddity.style.transform = `translateX(${offsetX}px) translateY(${offsetY}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

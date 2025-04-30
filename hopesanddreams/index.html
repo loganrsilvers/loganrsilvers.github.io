@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan's Dreaming in Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Logan's Dreaming in Code</h1>
+            <p class="subtitle">A visual journey through my hopes & dreams</p>
+            <div>
+                <span class="decorator">✦</span>
+                <span class="decorator">✿</span>
+                <span class="decorator">☆</span>
+                <span class="decorator">✧</span>
+                <span class="decorator">꒰</span>
+            </div>
+        </header>
+        
+        <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="#teaching" class="nav-item">Teaching</a>
+            <a href="#artist" class="nav-item">Artist</a>
+            <a href="#lifestyle" class="nav-item">Lifestyle</a>
+            <a href="shelf.html" class="nav-item">Memories</a>
+            <a href="#reflection" class="nav-item">Reflection</a>
+        </nav>
+
+        
+        
+        <div class="dreams-container">
+            <div class="dream-card" id="teaching">
+                <span class="dream-icon">🧠</span>
+                <h2>Teaching Dreams</h2>
+                <div class="decoration-bar">ˊ-꒷‧₊˚﹆✿੭︰☆꒰꒰✦・┊꒱🦢๑‧˚₊꒷୭୧₊˚⊹</div>
+                <div class="dream-details">
+                    <ul>
+                        <li>Create immersive science websites for kids</li>
+                        <li><a href="https://wornoutproject.com/" target="_blank">Example</a></li>
+                        <li>Design interactive digital museum exhibits</li>
+                        <li>Teach middle aged kids aged 8-13</li>
+                        <li><a href="https://pin.it/2WIlYIiZK" target="_blank">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="dream-card" id="artist">
+                <span class="dream-icon">🎨</span>
+                <h2>Artist Vision</h2>
+                <div class="decoration-bar">𓂅 ₊˚୨୧ ★₊˚୭ ॱ˖</div>
+                <div class="dream-details">
+                    <ul>
+                        <li>Code creative interactive projects</li>
+                        <li>Create games as artistic expressions</li>
+                        <li>Blend technology with artistic vision</li>
+                        <li><a href="https://webdevclub.github.io/webdevclub.io/">Example</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="dream-card" id="lifestyle">
+                <span class="dream-icon">✨</span>
+                <h2>Pinterest Dreams</h2>
+                <div class="decoration-bar">⊹₊ ⋆˙✩ °˖🫐 ⋆｡˚꩜ ݁₊ ⊹ . ݁˖ . ݁༉‧₊˚. ₊ ˚ʚᗢ₊˚✧ﾟ.</div>
+                <div class="dream-details">
+                    <ul>
+                        <li>Live in a spacious, creative house</li>
+                        <li>Cultivate an aesthetic lifestyle</li>
+                        <li>Have pets as companions</li>
+                        <li>Express myself through whimsical clothing</li>
+                        <li><a href="https://www.pinterest.com/loganrsilvers/apartment/" target="_blank">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="reflection" id="reflection">
+            <h2>Reflection</h2>
+            <p>
+                My hopes and dreams website represents the convergence of my passions for teaching, coding, and aesthetics. 
+                I've always been drawn to creating immersive digital experiences that can educate and inspire others, 
+                particularly children exploring the wonders of science. By building interactive websites and digital exhibits, 
+                I hope to spark curiosity and make learning accessible and engaging.
+            </p>
+            <p>
+                The artistic side of my coding aspirations represents my belief that technology can be both functional and beautiful. 
+                I dream of creating experiences that aren't just tools but works of art that move people emotionally. 
+                This intersection of art and technology represents who I truly am - someone who values both logical thinking and creative expression.
+            </p>
+            <p>
+                The aesthetic lifestyle elements reflect my desire for a harmonious, intentional way of living where my physical 
+                space and personal expression align with my inner values. This website itself, with its interactive elements and 
+                dreamlike design, embodies these aspirations - teaching through code while creating something visually beautiful.
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created by Logan for E12 - Hopes & Dreams Assignment</p>
+    </footer>
+
+    <script>
+        // Create star field
+        const starsContainer = document.getElementById('stars');
+        function createStars() {
+            starsContainer.innerHTML = '';
+            const numStars = Math.floor(window.innerWidth * window.innerHeight / 1000);
+            
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                const size = Math.random() * 2 + 1;
+                
+                star.style.position = 'absolute';
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.backgroundColor = `rgba(255, 255, 255, ${Math.random() * 0.7 + 0.3})`;
+                star.style.borderRadius = '50%';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animation = `twinkle ${Math.random() * 5 + 3}s ease-in-out infinite`;
+                
+                const keyframes = `
+                @keyframes twinkle {
+                    0% { opacity: ${Math.random() * 0.5 + 0.3}; }
+                    50% { opacity: ${Math.random() * 0.5 + 0.5}; }
+                    100% { opacity: ${Math.random() * 0.5 + 0.3}; }
+                }`;
+                
+                const style = document.createElement('style');
+                style.innerHTML = keyframes;
+                document.head.appendChild(style);
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Initialize stars
+        createStars();
+        
+        // Handle window resize
+        window.addEventListener('resize', createStars);
+        
+        // Make dream cards interactive
+        const dreamCards = document.querySelectorAll('.dream-card');
+        dreamCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const details = card.querySelector('.dream-details');
+                if (details.style.maxHeight) {
+                    details.style.maxHeight = null;
+                } else {
+                    details.style.maxHeight = details.scrollHeight + 'px';
+                }
+            });
+        });
+        
+        // Create shooting stars occasionally
+        function createShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.style.position = 'absolute';
+            shootingStar.style.width = '2px';
+            shootingStar.style.height = '2px';
+            shootingStar.style.backgroundColor = 'white';
+            shootingStar.style.borderRadius = '50%';
+            shootingStar.style.left = `${Math.random() * 100}%`;
+            shootingStar.style.top = `${Math.random() * 100}%`;
+            shootingStar.style.boxShadow = '0 0 10px 2px white';
+            
+            const angle = Math.random() * Math.PI * 2;
+            const distance = Math.min(window.innerWidth, window.innerHeight) / 2;
+            const duration = Math.random() * 2 + 1;
+            
+            shootingStar.style.animation = `shoot ${duration}s linear forwards`;
+            
+            const keyframes = `
+            @keyframes shoot {
+                0% { 
+                    transform: translate(0, 0); 
+                    opacity: 1; 
+                }
+                100% { 
+                    transform: translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px); 
+                    opacity: 0; 
+                }
+            }`;
+            
+            const style = document.createElement('style');
+            style.innerHTML = keyframes;
+            document.head.appendChild(style);
+            
+            starsContainer.appendChild(shootingStar);
+            
+            setTimeout(() => {
+                shootingStar.remove();
+                style.remove();
+            }, duration * 1000);
+        }
+        
+        // Create shooting stars at random intervals
+        setInterval(createShootingStar, 3000);
+        
+        // Add interactive parallax effect
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            dreamCards.forEach(card => {
+                const offsetX = (mouseX - 0.5) * 15;
+                const offsetY = (mouseY - 0.5) * 15;
+                card.style.transform = `translateX(${offsetX}px) translateY(${offsetY}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

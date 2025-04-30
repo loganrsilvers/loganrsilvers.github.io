@@ -1,0 +1,214 @@
+:root {
+    --primary: #9d8cff;
+    --secondary: #ffadd6;
+    --accent: #57c7ff;
+    --background: #13111a;
+    --text: #e9e4ff;
+}
+
+@font-face {
+    font-family: 'GallaeciaForte';
+    src: url('fonts/GallaeciaForte.ttf');
+}
+@font-face {
+    font-family: 'kiwisoda';
+    src: url('fonts/kiwisoda.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'GallaeciaForte', sans-serif;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: var(--accent);
+}
+a:hover{
+    color: var(--secondary);
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(157, 140, 255, 0.3);
+}
+
+li {
+    font-family: 'kiwisoda', sans-serif;
+}
+
+p{
+    font-family: 'kiwisoda', sans-serif;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(233, 228, 255, 0.7);
+}
+
+.decorator {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.dreams-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.dream-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.dream-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(157, 140, 255, 0.2);
+}
+
+.dream-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.dream-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.dream-details {
+    margin-top: 1rem;
+}
+
+.dream-details ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.dream-details li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.dream-details li::before {
+    content: "★";
+    position: absolute;
+    left: -1.5rem;
+    color: var(--accent);
+}
+
+.decoration-bar {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    color: var(--secondary);
+    letter-spacing: 2px;
+}
+
+.reflection {
+    background: rgba(87, 199, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 3rem;
+    border: 1px solid rgba(87, 199, 255, 0.2);
+}
+
+.reflection h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.nav-item {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav-item:hover {
+    background: rgba(157, 140, 255, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    color: rgba(233, 228, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .dreams-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
