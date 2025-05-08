@@ -1,0 +1,184 @@
+:root{
+    --bg-color: #ef798a;
+    --header-bg: #f7a9a8;
+    --sidebar-bg: #613f75;
+    --content-bg: #e5c3d1;
+    
+    /* FOR THE TEXT */
+    --secondary-text: #e5c3d1;
+    --text-main: #613f75;
+    
+    /* BACKGROUND IMAGES */
+    --bg-image: url('img/mosaic.jpg');
+    --header-bg-image: url('img/carpet.jpg');
+    --main-bg-image: url('img/carpet2.png');
+    --sidebar-bg-image: url('../img/bg/hearts-transparent.png');
+    --content-bg-image: url('../img/art/QueenofHearts.jpeg');
+    
+    /* FONTS */
+    --font-header: 'Font2';
+    --font-body: 'Font';
+
+}
+@font-face {
+    font-family: 'Font';
+    src: url(PWStrokes.ttf);
+}
+@font-face {
+    font-family: 'Font2';
+    src: url(Boingo.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: var(--bg-color);
+    background-image: var(--bg-image);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    min-height: 100%;
+}
+
+header {
+    background: var(--header-bg);
+    background-image: var(--header-bg-image);
+    color: var(--text-main);
+    font-family: var(--font-header);
+    padding: 1px;
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex: 3;;
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    height: 100%;
+    flex: 3;
+    background: var(--content-bg);
+    background-image: var(--content-bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    background: var(--sidebar-bg);
+    background-image: var(--main-bg-image);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    padding: 20px;
+    overflow-y: auto;
+    flex: 2;
+
+    border: 60px solid transparent;
+    border-image-source: url('../img/borders/lace-white.png');
+    border-image-slice: 84;
+    border-image-repeat: round;
+    border-image-outset: 0;
+}
+
+aside {
+    background: var(--sidebar-bg);
+    background-image: var(--sidebar-bg-image);
+    color: var(--secondary-text);
+    font-family: var(--font-body);
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+nav {
+    background: var(--sidebar-bg);
+    background-image: var(--sidebar-bg-image);
+    color: var(--secondary-text);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: var(--font-body);
+    overflow-y: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    
+}
+nav li {
+    margin: 0;
+}
+nav a {
+    color: var(--bg-color);
+    background-color: var(--sidebar-bg);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.2s, color 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+nav a:hover {
+    color: var(--text-main);
+    background-color: var(--header-bg);
+}
+
+#home, #art, #contact {
+    position: relative;
+    text-align: center;
+}
+
+#homeimg, #artimg, #contactimg {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+#home:hover #homeimg, 
+#contact:hover #contactimg 
+{
+    transform: rotate(5deg);
+    transition: transform 0.2s;
+}
+#home:hover a, 
+#contact:hover a 
+{
+    transform: scale(1.2) translate(-50%, -50%) rotate(-5deg);
+    transition: transform 0.2s;
+}
+#art:hover #artimg{
+    transform: rotate(-5deg);
+    transition: transform 0.2s;
+}
+#art:hover a{
+    transform: scale(1.2) translate(-50%, -50%) rotate(5deg);
+    transition: transform 0.2s;
+}
+
+#projects a {
+    color: var(--bg-color);
+    background-color: var(--sidebar-bg);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+}
+#projects a:hover {
+    color: var(--header-bg);
+    text-decoration: underline;
+}
