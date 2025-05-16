@@ -4,14 +4,14 @@
 */
 :root {
   /* FOR THE BACKGROUNDS */
-    --bg-color: #1a1a2e;
-    --header-bg: #282846;
-    --sidebar-bg: #22223b;
-    --content-bg: #232946;
+    --bg-color: #001524;
+    --header-bg: #15616D;
+    --sidebar-bg: #FF7D00;
+    --content-bg: #78290F;
 
     /* FOR THE TEXT */
-    --secondary-text: #e0b1cb;
-    --text-main: #f6f6f6;
+    --secondary-text: #FFECD1;
+    --text-main: #FFECD1;
 
     /* BACKGROUND IMAGES */
     --bg-image: url('img/mosaic.jpg');
@@ -24,7 +24,7 @@
     --font-body: 'Font';
   
     /* LITTLE LOGO IMAGE THING */
-    --logo-url: url('img/cotclogo.png');
+    --logo-url: url('img/cat.jpg');
   }
   
 
@@ -36,7 +36,7 @@
     /* this is the KEYWORD the code uses to look ath your font */
     font-family: 'Font';
     /* this is the FILE PATH or the LOCATION of the font file (relative to this css file) */
-    src: url(fonts/font.ttf);
+    src: url(fonts/GallaeciaForte.ttf);
 }  
 @font-face {
     font-family: 'Font2';
