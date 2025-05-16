@@ -23,7 +23,7 @@
     --font-header: 'Font2';
     --font-body: 'Font';
   
-    /* CALL OF THE CAULDRON LOGO */
+    /* LITTLE LOGO IMAGE THING */
     --logo-url: url('img/cotclogo.png');
   }
   
@@ -188,6 +188,7 @@ body {
 
 
 /* RESPONSIVE JUNK (when you resize the browser it changes the size of the items */
+/* FOR TABLETS AND IPADSSSSSS SIZES */
   @media (max-width: 800px) {
     main {
       flex-direction: column;
@@ -209,7 +210,7 @@ body {
     }
   }
   
-/* FOR PHONE SIZES */
+/* FOR IPHONES OR REGULAR SUPER TINY PHONESSSS SIZES */
   @media (max-width: 500px) {
     header {
       padding-top: 12px;
