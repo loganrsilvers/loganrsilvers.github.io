@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Logan's version of DJ Music</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome for icons (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="img/LOGO-VECTOR.png" alt="Logo" class="logo">
+    </div>
+    <ul class="navbar-links">
+      <li><a href="#">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Signup</a></li>
+    </ul>
+    <div class="navbar-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="about.html"><i class="fas fa-search"></i></a>
+    </div>
+  </nav>
+
+  <!-- Slideshow -->
+  <section class="slideshow">
+    <button class="slide-arrow left">&#10094;</button>
+    <div class="slides">
+      <div class="slide active" style="background-image: url('img/home1.jpg');">
+        <div class="slide-title">You Control the Music</div>
+      </div>
+      <div class="slide" style="background-image: url('img/home2.jpg');">
+        <div class="slide-title">You're the DJ</div>
+      </div>
+      <div class="slide" style="background-image: url('img/home3.jpg');">
+        <div class="slide-title">DJ Music</div>
+      </div>
+      <div class="slide" style="background-image: url('img/home4.jpg');">
+        <div class="slide-title">All Things Music</div>
+      </div>
+    </div>
+    <button class="slide-arrow right">&#10095;</button>
+  </section>
+
+  <!-- Main Content 1 -->
+  <main class="main-section">
+    <aside class="main-aside">
+      <img src="img/folder.jpg" alt="Pirate Ship">
+    </aside>
+    <section class="main-content">
+      <h2>Music Lovers</h2>
+      <ol>
+        <li>Join: Store your Music Library</li>
+        <li>Archive: Create custom radio channels</li>
+        <li>Stream: Stream commercial free music</li>
+      </ol>
+      <p>It's that easy!</p>
+    </section>
+  </main>
+
+  <!-- Main Content 2 (Darker) -->
+  <main class="main-section darker">
+    <section class="main-content">
+      <h2>Our Mission</h2>
+      <p>To provide a platform for music lovers to connect, share, and enjoy their favorite tunes without interruptions.</p>
+      <p>We believe in the power of music to bring people together and create unforgettable experiences.</p>
+      <p>Join us in our mission to make music accessible to everyone, everywhere.</p>
+    </section>
+    <aside class="main-aside">
+      <img src="img/collection.png">
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="img/LOGO-VECTOR2.png" alt="Logo" class="logo">
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Signup</a></li>
+    </ul>
+  </footer>
+
+  <!-- Slideshow JS (basic) -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+      });
+    }
+    document.querySelector('.slide-arrow.left').onclick = () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    };
+    document.querySelector('.slide-arrow.right').onclick = () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    };
+    // Optional: auto-slide
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+  </script>
+</body>
+</html>

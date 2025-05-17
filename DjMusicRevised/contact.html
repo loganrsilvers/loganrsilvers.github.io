@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- FontAwesome for icons (CDN) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --color-bg: #f7f7f9;
+      --color-bg-darker: #e0e0e5;
+      --color-white: #fff;
+      --color-black: #111;
+      --color-footer: #000;
+      --color-primary: #111;
+      --color-secondary: #444;
+      --font-main: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      --font-size: 1rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-main);
+      background: var(--color-bg);
+      color: var(--color-black);
+      font-size: var(--font-size);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-white);
+      padding: 0.75rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar-left .logo { height: 40px; width: auto; }
+    .navbar-links { display: flex; gap: 2rem; list-style: none; }
+    .navbar-links a {
+      color: var(--color-black);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar-links a:hover { color: var(--color-secondary); }
+    .navbar-social { display: flex; gap: 1rem; }
+    .navbar-social a {
+      color: var(--color-black);
+      font-size: 1.2rem;
+      transition: color 0.2s;
+    }
+    .navbar-social a:hover { color: var(--color-secondary); }
+    .main-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 100%;
+      max-width: 900px;
+      margin: 2rem auto 2rem auto;
+      background: var(--color-white);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+      border-radius: 1rem;
+      overflow: hidden;
+      min-height: 400px;
+    }
+    .main-aside, .main-content {
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+    }
+    .main-aside {
+      flex-direction: column;
+      background: var(--color-bg-darker);
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+    .main-aside img {
+      max-width: 100%;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+    }
+    .main-aside .aside-desc {
+      margin-top: 1.5rem;
+      color: var(--color-secondary);
+      font-size: 1rem;
+      text-align: left;
+    }
+    .main-aside .aside-socials {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+      justify-content: center;
+    }
+    .main-aside .aside-socials a {
+      color: var(--color-black);
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .main-aside .aside-socials a:hover {
+      color: var(--color-secondary);
+    }
+    .main-content {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    /* Contact Form Styles */
+    .contact-form {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .contact-form label {
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-family: var(--font-main);
+      background: var(--color-bg);
+      color: var(--color-black);
+      transition: border 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 1.5px solid var(--color-secondary);
+      outline: none;
+    }
+    .contact-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+      align-self: flex-end;
+    }
+    .contact-form button:hover {
+      background: var(--color-secondary);
+    }
+    /* Footer */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-footer);
+      color: var(--color-white);
+      padding: 1.5rem 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-left .logo { height: 32px; width: auto; }
+    .footer-social { display: flex; gap: 1.2rem; }
+    .footer-social a {
+      color: var(--color-white);
+      font-size: 1.2rem;
+      transition: color 0.2s;
+    }
+    .footer-social a:hover { color: var(--color-bg-darker); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      color: var(--color-white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--color-bg-darker); }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .main-section { flex-direction: column; margin: 1rem; }
+      .main-aside, .main-content { padding: 1.2rem; }
+    }
+    @media (max-width: 700px) {
+      .navbar, .footer { flex-direction: column; gap: 1rem; padding: 1rem; }
+      .navbar-links, .footer-links { gap: 1rem; }
+      .main-section { margin: 0.5rem; border-radius: 0.5rem; }
+    }
+    @media (max-width: 500px) {
+      .main-content h2 { font-size: 1.1rem; }
+      .main-content p { font-size: 0.95rem; }
+      .contact-form { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="img/LOGO-VECTOR.png" alt="Logo" class="logo">
+    </div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Signup</a></li>
+    </ul>
+    <div class="navbar-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="about.html"><i class="fas fa-search"></i></a>
+    </div>
+  </nav>
+
+  <!-- Main Contact Section -->
+  <main class="main-section">
+    <!-- Contact Form (Left) -->
+    <section class="main-content">
+      <h2>Contact Us</h2>
+      <form class="contact-form" action="mailto:contact@djmusic.com" method="POST" enctype="text/plain" id="contactForm">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="off">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="off">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <!-- Aside (Right) -->
+    <aside class="main-aside">
+      <img src="img/LOGO-VECTOR.png" alt="Logo">
+      <div class="aside-desc">
+        <p>We're always looking to connect and reach out to support our users.</p>
+        <p>Feel free to reach out to us with any questions or concerns.</p>
+        <p>We will get back to you as soon as possible.</p>
+        <p>Thank you for your support!</p>
+      </div>
+      <div class="aside-desc" style="margin-top:1rem;">
+        <strong>More ways to connect:</strong>
+        <div class="aside-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="img/LOGO-VECTOR2.png" alt="Logo" class="logo">
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Signup</a></li>
+    </ul>
+  </footer>
+
+  <!-- JS for form popup -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your submission!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
