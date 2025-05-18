@@ -2,23 +2,17 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=loganrsilvers&label=Profile%20views&color=0e75b6&style=flat" alt="loganrsilvers" /> </p>
 
-- Im currently Working on [current project](project)
+- Im currently Working on [a KILLER fish dating sim](https://loganrsilvers.itch.io/fish-marry-kill)
 
-- 🌱 I’m currently learning **framework,courses**
+- 🌱 I’m currently learning **p5.js, codecademy**
 
 - 👯 I’m looking to collaborate on [project](project)
 
-- 🤝 I’m looking for help with [project](project)
+- 🤝 I’m looking for help with [Galaxy Pets (similar to neocities)](https://galaxypets-d0cb3cf799c8.herokuapp.com/)
 
-- 👨‍💻 All of my projects are available at [portfolio](portfolio)
-
-- 📝 I regularly write articles on [blog](blog)
-
-- 💬 Ask me about **things u know**
+- 📝 I regularly write articles on [my blog](https://loganrsilvers.github.io/blog/blog.html)
 
 - 📫 How to reach me **loganrsilvers@gmail.com**
-
-- 📄 Know about my experiences [resume](resume)
 
 - ⚡ Fun fact **I love to craft! (Crochet,Stationary, etc)**
 
