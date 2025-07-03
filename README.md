@@ -6,8 +6,6 @@
 
 - 🌱 I’m currently learning **p5.js, codecademy**
 
-- 👯 I’m looking to collaborate on [project](project)
-
 - 🤝 I’m looking for help with [Galaxy Pets (similar to neocities)](https://galaxypets-d0cb3cf799c8.herokuapp.com/)
 
 - 📝 I regularly write articles on [my blog](https://loganrsilvers.github.io/blog/blog.html)
