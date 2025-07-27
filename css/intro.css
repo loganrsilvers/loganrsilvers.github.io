@@ -32,6 +32,10 @@ html, body {
     
 }
 
+#countdown {
+    color: var(--text-color);
+}
+
 body {
     font-family: 'pixelnorm';
     background-image: url('img/purpletexture.png');
