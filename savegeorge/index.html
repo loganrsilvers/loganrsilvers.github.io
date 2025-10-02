@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save King George</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        let score = 0;
+        function posChoice(points) {
+            score += points;
+        }
+        function negChoice(points) {
+            score -= points;
+        }
+        function goToScene(sceneId) {
+            const allScenes = document.querySelectorAll('.story');
+            allScenes.forEach(scene => {
+                scene.classList.remove('active');
+            });
+
+            const targetScene = document.getElementById(sceneId);
+            if (targetScene) {
+                targetScene.classList.add('active');
+            }
+        }
+
+        function goToEnding() {
+            if (score >= 1) {
+                goToScene('goodEnding');
+            } 
+            else if (score === 0) {
+                goToScene('neutralEnding');
+            }
+            else {
+                goToScene('badEnding');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            goToScene('intro');
+        });
+    </script>
+    <header>
+        <h1>Save King George</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Restart</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="intro" class="story active">
+            <h2>Intro</h2>
+            <figure>
+                <img src="king_george.jpg" alt="King George" width="300">
+                <figcaption>This is George.</figcaption>
+            </figure>
+            <p>George is a scottish terrier. He is sick with a mysterious disease. You are an alien from outer space. You don't know dog science.</p>
+            <button onclick="goToScene('examine'); ">SAVE HIM</button>
+        </section>
+        <section id="examine" class="story">
+            <h2>Examine</h2>
+            <figure>
+                <img src="king_george.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>How would you like to begin doctor?</p>
+            <button onclick="goToScene('diagnose'); alert('Dog Barks at you.')">Ask dog what is wrong</button>
+            <button onclick="goToScene('diagnose'); negChoice(1); alert('Dog has radiation poisoning')">Scan dog in xray machine</button>
+            <button onclick="goToScene('diagnose'); posChoice(1); alert('Dog has lumps and bumps on his tumps')">Roll dog over and look for imperfections</button>
+        </section>
+        <section id="diagnose" class="story">
+            <h2>Diagnose</h2>
+            <figure>
+                <img src="king_george.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>What is wrong with dog?</p>
+            <button onclick="goToScene('treatment'); posChoice(1)">Not talking disorder</button>
+            <button onclick="goToScene('treatment'); negChoice(1)">Radiation Poisoning</button>
+            <button onclick="goToScene('treatment');">Rash</button>
+        </section>
+        <section id="treatment" class="story">
+            <h2>Treatment</h2>
+            <figure>
+                <img src="king_george.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>How do you treat dog?</p>
+            <button onclick="goToEnding(); posChoice(1)">Teach dog human language</button>
+            <button onclick="goToEnding(); negChoice(1)">Equip cyborg components on dog</button>
+            <button onclick="goToEnding();">Prescribe outer space goo for skincare</button>
+        </section>
+        <section id="goodEnding" class="story">
+            <h2>Good Ending</h2>
+            <figure>
+                <img src="king_george.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>You fixed him! Owner Eloise is very happy.</p>
+            <button onclick="goToScene('intro'); score = 0;">Play Again</button>
+        </section>
+        <section id="neutralEnding" class="story">
+            <h2>Neutral Ending</h2>
+            <figure>
+                <img src="king_george.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>Hmmm... Eloise will find a new doctor.</p>
+            <button onclick="goToScene('intro'); score = 0;">Play Again</button>
+        </section>
+        <section id="badEnding" class="story">
+            <h2>Bad Ending</h2>
+            <figure>
+                <img src="king_george.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>... What... happened ?</p>
+            <button onclick="goToScene('intro'); score = 0;">Play Again</button>
+        </section>
+    </main>
+</body>
+</html>

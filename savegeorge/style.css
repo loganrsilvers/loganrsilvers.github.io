@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'bot';
+    src: url(fonts/bot.ttf);
+}
+
+@font-face {
+    font-family: 'typewriter';
+    src: url(fonts/king.ttf);
+}
+
+body {
+    font-family: 'typewriter', monospace;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.story {
+    display: none;
+}
+
+.story.active {
+    display: block;
+}
