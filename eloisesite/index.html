@@ -7,60 +7,135 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header>
         <h1>Eloise Park</h1>
     </header>
+
+
+
     <nav>
         <ul>
             <li><a href="index.html">Portfolio</a></li>
             <li><a href="about.html">About</a></li>
+            <li><span onclick="openNav()">Contact</span></li>
         </ul>
     </nav>
+
+
+
     <main>
         <section>
-            <button onclick="one()">1</button>
-            <button onclick="two()">2</button>
-            <button onclick="four()">4</button>
-            <div class="row">
-                <div class="column">
-                    <img src="img/art/castle.png">
-                    <img src="img/art/deerbat.png">
-                    <img src="img/art/eloiseplantart.webp">
-                    <img src="img/art/eloisestore.webp">
-                    <img src="img/art/fire.png">
-                    <img src="img/art/fruits.png">
-                    <img src="img/art/goatinked.png">
+
+            <div class="image-grid">
+                <div class="img-container">
+                    <img src="img/art/castle.png" alt="Castle">
+                    <div class="caption">Castle</div>
                 </div>
-                <div class="column">
-                    <img src="img/art/goatsketch.png">
-                    <img src="img/art/graphitepfp.png">
-                    <img src="img/art/landscape.png">
-                    <img src="img/art/matcha.png">
-                    <img src="img/art/landscapeinked.png">
-                    <img src="img/art/metamorphosis.png">
+                <div class="img-container">
+                    <img src="img/art/deerbat.png" alt="Deerbat">
+                    <div class="caption">Deerbat</div>
                 </div>
-                <div class="column">
-                    <img src="img/art/moodeng.png">
-                    <img src="img/art/nosferatu.png">
-                    <img src="img/art/nosferatuhands.png">
-                    <img src="img/art/penpfp.png">
-                    <img src="img/art/pillbug.png">
-                    <img src="img/art/robot.png">
-                    <img src="img/art/storyboard.png">
+                <div class="img-container">
+                    <img src="img/art/eloiseplantart.webp" alt="Eloise Plant Art">
+                    <div class="caption">Eloise Plant Art</div>
                 </div>
-                <div class="column">
-                    <img src="img/art/sheep.png">
-                    <img src="img/art/sushiriso.png">
-                    <img src="img/art/warrior.png">
-                    <img src="img/art/warrorinked.png">
-                    <img src="img/art/penpfp.png">
-                    <img src="img/art/eloiseplantart.webp">
+                <div class="img-container">
+                    <img src="img/art/eloisestore.webp" alt="Eloise Store">
+                    <div class="caption">Eloise Store</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/fire.png" alt="Fire">
+                    <div class="caption">Fire</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/fruits.png" alt="Fruits">
+                    <div class="caption">Fruits</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/goatinked.png" alt="Goat Inked">
+                    <div class="caption">Goat Inked</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/goatsketch.png" alt="Goat Sketch">
+                    <div class="caption">Goat Sketch</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/graphitepfp.png" alt="Graphite PFP">
+                    <div class="caption">Graphite PFP</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/landscape.png" alt="Landscape">
+                    <div class="caption">Landscape</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/matcha.png" alt="Matcha">
+                    <div class="caption">Matcha</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/landscapeinked.png" alt="Landscape Inked">
+                    <div class="caption">Landscape Inked</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/metamorphosis.png" alt="Metamorphosis">
+                    <div class="caption">Metamorphosis</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/moodeng.png" alt="Moodeng">
+                    <div class="caption">Moodeng</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/nosferatu.png" alt="Nosferatu">
+                    <div class="caption">Nosferatu</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/nosferatuhands.png" alt="Nosferatu Hands">
+                    <div class="caption">Nosferatu Hands</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/penpfp.png" alt="Pen PFP">
+                    <div class="caption">Pen PFP</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/pillbug.png" alt="Pillbug">
+                    <div class="caption">Pillbug</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/robot.png" alt="Robot">
+                    <div class="caption">Robot</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/storyboard.png" alt="Storyboard">
+                    <div class="caption">Storyboard</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/sheep.png" alt="Sheep">
+                    <div class="caption">Sheep</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/sushiriso.png" alt="Sushi Riso">
+                    <div class="caption">Sushi Riso</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/warrior.png" alt="Warrior">
+                    <div class="caption">Warrior</div>
+                </div>
+                <div class="img-container">
+                    <img src="img/art/warrorinked.png" alt="Warrior Inked">
+                    <div class="caption">Warrior Inked</div>
                 </div>
             </div>
         </section>
-        <aside>
-            <img src="images/eloise_art.jpg" alt="Artwork by Eloise Park" width="200">
-            <p>Eloise Park is a digital artist and illustrator known for her vibrant and imaginative
+
+
+
+        <aside id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h2>Eloise Park</h2>
+            <img id="pfpimg" src="img/art/eloiseplantart.webp" alt="Artwork by Eloise Park" width="200">
+            <p>
+                Hello! I am a Chicago native and an <i>environmental and sustainability</i> studies and <i>illustration</i> double major at <i>Columbia College Chicago</i>. I am captivated by scientific illustration and I love meeting new people and hearing about their passions. Feel free to say hi!
+            </p>
             <form action="mailto:eepark.88@gmail.com" method="post" enctype="text/plain">
             Name:<br>
             <input type="text" name="name"><br>
@@ -72,9 +147,12 @@
             <input type="reset" value="Reset">
             </form>
         </aside>
+
+
+
     </main>
     <footer>
-
+        
     </footer>
 
 

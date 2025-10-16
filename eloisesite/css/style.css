@@ -7,6 +7,9 @@
     --white : #ffffff;
     --black : #000000;
 }
+
+
+
 @font-face {
     font-family: 'paper';
     src: url(fonts/paper.ttf);
@@ -15,6 +18,9 @@
     font-family: 'cursive';
     src: url(fonts/cursive.ttf);
 }
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -35,7 +41,10 @@ nav {
     justify-content: space-evenly;
     flex-direction: row;
     background-color: var(--white);
-    border: solid 2px;
+    border-top: solid 2px var(--secondary-dark-color);
+    border-bottom: solid 2px var(--secondary-dark-color);
+    border-left: none;
+    border-right: none;
     color: var(--secondary-dark-color);
     padding: 10px 0;
 }
@@ -52,28 +61,157 @@ nav a {
     text-decoration: none;
     margin: 0 100px;
 }
-main {
-    padding: 20px;
-}
 
 
-* {
-  box-sizing: border-box;
-}
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
+
+
+
+/* images in the grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
   padding: 0 4px;
 }
 
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+.img-container {
+  position: relative;
   width: 100%;
+  display: block;
+  transition: box-shadow 0.5s;
+}
+
+.img-container.expanded-img {
+  grid-column: span 2;
+  z-index: 2;
+  box-shadow: 0 8px 32px var(--secondary-dark-color);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.img-container img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 8px;
+  border-radius: 4px;
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.caption {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: var(--light-color);
+  background: var(--dark-color);
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 0.98rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 0 0 8px 8px;
+  pointer-events: none; 
+}
+
+.img-container.expanded-img .caption {
+  display: block;
+  opacity: 1;
+}
+
+
+
+
+
+/* side navigation thing */
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    right: 0;
+    background-color: var(--dark-color); 
+    color: var(--med-color);
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+    padding: 10px;
+    display: block;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--white);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: var(--secondary-dark-color);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* contact in the aside */
+
+#pfpimg{
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+aside h2 {
+    font-family: 'cursive', sans-serif;
+    color: var(--white);
+}
+
+i {
+    color: var(--white);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+form input, form textarea {
+    padding: 8px;
+    border: 1px solid var(--dark-color);
+    border-radius: 4px;
+    font-family: 'paper', sans-serif;
+}
+form input[type="submit"] {
+    background-color: var(--dark-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+form input[type="submit"]:hover {
+    background-color: var(--secondary-dark-color);
 }
