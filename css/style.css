@@ -20,14 +20,24 @@ html {
  src: url(font2.ttf);
 }
 
+@font-face {
+	font-family: 'font';
+	src: url(pixellari.ttf);
+}
 
 body {
 	
 	  background: rgb(10,3,5);
+	  background-image: url(img/bagle.gif);
 	  color: whitesmoke;
-	  margin: 100px;    
+	  margin: 80px;    
 	font-family: 'metalfont2', Arial, sans-serif;
 	
+}
+
+p {
+	font-family: 'font', Arial, sans-serif;
+
 }
 
 
@@ -57,7 +67,14 @@ a {
 }
 
 a:hover {
-  color: rgb(150,150,30);
+  color: rgb(229, 66, 229);
+}
+
+a:visited {
+  color: rgb(113, 122, 6);
+}
+a:visited:hover {
+  color: rgb(180, 30, 180);
 }
 
 figure {
