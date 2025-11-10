@@ -3,7 +3,6 @@
     --secondary-dark-color: #847996;
     --med-color: #88b7b5;
     --secondary-light-color: #a7cab1;
-    --light-color: #f4ecd6;
     --white : #ffffff;
     --black : #000000;
 }
@@ -19,6 +18,17 @@
     src: url(fonts/cursive.ttf);
 }
 
+::-webkit-scrollbar{
+width: 6px; 
+}
+ 
+::-webkit-scrollbar-track{
+background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb{
+background-color: var(--black);
+}
 
 
 body {
@@ -27,6 +37,9 @@ body {
     font-family: 'paper', sans-serif;
     background-color: var(--white);
     color: var(--dark-color);
+}
+img{
+    width: 100%;
 }
 header {
     background-color: var(--white);
@@ -62,9 +75,10 @@ nav a {
     margin: 0 100px;
 }
 
-
-
-
+a:hover{
+font-style: italic;
+color: var(--secondary-dark-color);
+}
 
 
 /* images in the grid */
@@ -132,7 +146,6 @@ nav a {
 
 
 
-/* side navigation thing */
 .sidenav {
     height: 100%; 
     width: 0; 
@@ -141,6 +154,8 @@ nav a {
     top: 0; 
     right: 0;
     background-color: var(--dark-color); 
+    scrollbar-color: var(--black) var(--med-color);
+    scrollbar-width: thin;
     color: var(--med-color);
     overflow-x: hidden; 
     padding-top: 60px; 
