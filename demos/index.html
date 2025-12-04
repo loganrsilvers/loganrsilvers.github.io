@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <style>
+.audio-demos {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.audio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: green;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(40,40,60,0.06);
+  padding: 1.2em 1.5em 0.9em 1.5em;
+}
+
+.audio-controls {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+.play-btn, .download-btn {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 1px 4px black;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.play-btn:hover, .download-btn:hover {
+  background: wheat;
+  color: black;
+}
+
+.download-btn {
+  text-decoration: none;
+}
+
+.audio-item audio {
+  width: 100%;
+  margin-top: 0.25em;
+  outline: none;
+  accent-color: red; 
+}
+    </style>
+</head>
+<body>
+    <section class="audio-demos">
+  <div class="audio-item">
+    <div class="audio-controls">
+      <button class="play-btn" data-index="0">
+        <i class="fa fa-play"></i>
+      </button>
+      <a href="audio1.mp3" download title="Download" class="download-btn">
+        <i class="fa fa-download"></i>
+      </a>
+    </div>
+    <audio src="audio1.mp3" preload="none"></audio>
+  </div>
+  <div class="audio-item">
+    <div class="audio-controls">
+      <button class="play-btn" data-index="1">
+        <i class="fa fa-play"></i>
+      </button>
+      <a href="audio2.mp3" download title="Download" class="download-btn">
+        <i class="fa fa-download"></i>
+      </a>
+    </div>
+    <audio src="audio2.mp3" preload="none"></audio>
+  </div>
+</section>
+
+<!-- JavaScript (Place before </body>) -->
+<script>
+  const playBtns = document.querySelectorAll('.play-btn');
+  const audios = document.querySelectorAll('.audio-item audio');
+  playBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      // Pause all other audios
+      audios.forEach((audio, aidx) => {
+        if(aidx !== idx) {
+          audio.pause();
+          audio.currentTime = 0;
+          playBtns[aidx].querySelector('i').classList.remove('fa-pause');
+          playBtns[aidx].querySelector('i').classList.add('fa-play');
+        }
+      });
+      const audio = audios[idx];
+      if(audio.paused || audio.ended) {
+        audio.play();
+        btn.querySelector('i').classList.remove('fa-play');
+        btn.querySelector('i').classList.add('fa-pause');
+      } else {
+        audio.pause();
+        btn.querySelector('i').classList.remove('fa-pause');
+        btn.querySelector('i').classList.add('fa-play');
+      }
+    });
+    // Reset button icon on audio end
+    audios[idx].addEventListener('ended', ()=>{
+      btn.querySelector('i').classList.remove('fa-pause');
+      btn.querySelector('i').classList.add('fa-play');
+    });
+  });
+</script>
+</body>
+</html>
