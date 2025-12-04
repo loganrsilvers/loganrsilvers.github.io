@@ -41,6 +41,26 @@ body {
 img{
     width: 100%;
 }
+
+#icons {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    margin-bottom: -50px;
+    z-index: 1;
+}
+
+#icons img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+#icons img:hover {
+    transform: scale(1.2);
+    border-bottom: var(--dark-color) 1px solid;
+}
+
 header {
     background-color: var(--white);
     border-color: var(--dark-color);
