@@ -57,7 +57,7 @@ img{
     transition: transform 0.3s;
 }
 #icons img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) ;
     border-bottom: var(--dark-color) 1px solid;
 }
 
