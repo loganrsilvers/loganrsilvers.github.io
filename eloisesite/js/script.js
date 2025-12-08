@@ -18,11 +18,13 @@ allContainers.forEach(container => {
 });
 
 function openNav() {
+     document.getElementById("mySidenav").style.opacity = "1";
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("tab").style.display = "none";
 }
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.opacity = "0";
     document.getElementById("tab").style.display = "block";
 }
 

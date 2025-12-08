@@ -8,17 +8,6 @@
     --black : #000000;
 }
 
-#aboutsection{
-    display:flex;
-    flex-direction:row;
-    align-items:flex-start;
-    margin:40px;
-    gap:20px;
-}
-
-#bigimg{
-    border-radius: 100px;
-}
 #littleimgs{
     display:flex;
     flex-direction:row;
@@ -83,15 +72,23 @@
 
 
 
-
-
-
-
+#aboutsection{
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
+    margin:40px;
+    gap:20px;
+}
 
 #aboutimg{
     width:30%;
-    height:auto;
     flex-shrink:0;
+}
+#aboutimg img{
+    width:100%;
+    border-radius:20px;
+    height:100%;
+    object-fit:cover;
 }
 
 #abouttext{
