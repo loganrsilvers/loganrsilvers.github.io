@@ -23,3 +23,29 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+
+function filterPortfolio(category) {
+  const items = document.querySelectorAll('.img-container');
+
+  items.forEach(item => {
+    // Always show items when 'all' is selected
+    if (category === 'all') {
+      item.style.display = 'block';
+    } else {
+      // Check if item’s data-category includes the selected category
+      const dataCategory = item.getAttribute('data-category').split(' ');
+      if (dataCategory.includes(category)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    }
+  });
+
+  // Optionally highlight the active dropdown link
+  const links = document.querySelectorAll('.dropdown-content a');
+  links.forEach(link => link.classList.remove('active'));
+  const activeLink = [...links].find(link => link.getAttribute('onclick').includes(category));
+  if (activeLink) activeLink.classList.add('active');
+}
