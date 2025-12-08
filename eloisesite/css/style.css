@@ -17,15 +17,7 @@
 }
 
 ::-webkit-scrollbar{
-width: 6px; 
-}
- 
-::-webkit-scrollbar-track{
-background-color: transparent;
-}
- 
-::-webkit-scrollbar-thumb{
-background-color: var(--black);
+width: 0px; 
 }
 
 * {
@@ -34,6 +26,41 @@ background-color: var(--black);
     auto 
     !important;
 }
+
+
+
+
+
+
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+
+
+
+
+
+
+
+
 
 body {
     margin: 0;
@@ -78,6 +105,14 @@ img{
     cursor: pointer;
     font-family: 'cursive', sans-serif;
     z-index: 2;
+    animation: slide-in 1000ms;
+}
+
+#tab:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--white);
+    color: var(--secondary-light-color);
+    transition: color 0.25s ease-in-out;
 }
 
 header {
@@ -328,8 +363,14 @@ aside h2 {
     color: var(--white);
 }
 
+
 i {
+    display: inline-block;
     color: var(--white);
+}
+i:hover{
+    animation: bounce 0.3s ease-out;
+    animation-fill-mode: none;
 }
 
 form {
@@ -363,8 +404,12 @@ form input[type="submit"]:hover {
 
 a {
     color: inherit;
+    display: inline-block;
 }
-
+a:hover{
+    animation: bounce 0.3s ease-out;
+    animation-fill-mode: none;
+}
 
 
 
@@ -374,8 +419,10 @@ footer {
     text-align: center;
     margin-top: 20px;
     position: relative;
-    bottom: 0;
+    left: 0;
+    bottom: -10px;
     width: 100%;
     padding: 10px 0;
+    padding-bottom: 10px;
 }
 
