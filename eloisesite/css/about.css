@@ -100,3 +100,21 @@
 #aboutimg, #abouttext{
     padding:20px;
 }
+
+
+
+#softwareicons{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+#softwareicons img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    margin-bottom: 50px;
+}

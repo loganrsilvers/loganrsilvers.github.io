@@ -28,6 +28,13 @@ background-color: transparent;
 background-color: var(--black);
 }
 
+* {
+    cursor: url(https://cur.cursors-4u.net/others/oth-1/oth3.ani), 
+    url(https://cur.cursors-4u.net/others/oth-1/oth3.png), 
+    auto 
+    !important;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -63,7 +70,7 @@ img{
 #tab {
     position: fixed;
     right: 0;
-    bottom: 10px;
+    top: 10px;
     background-color: var(--dark-color);
     color: var(--white);
     padding: 10px;
@@ -90,6 +97,16 @@ header h3  {
     font-family: 'paper', sans-serif;
 }
 
+
+
+
+
+
+
+
+
+
+
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -102,10 +119,23 @@ nav {
     color: var(--secondary-dark-color);
     padding: 10px 0;
 }
+
+nav span {
+    cursor: pointer;
+}
+
+nav span:hover {
+    color: var(--med-color);
+    font-style: italic;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 nav li {
     display: inline;
@@ -113,13 +143,62 @@ nav li {
 nav a {
     color: var(--dark-color);
     text-decoration: none;
-    margin: 0 100px;
+    margin: 0;
 }
 
 a:hover{
 font-style: italic;
 color: var(--secondary-dark-color);
 }
+
+.dropdown {
+  float: none;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0;
+  font-size: 16px;
+  color: var(--dark-color);
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--secondary-light-color);
+}
+/* dropdown in index */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  text-decoration: none;
+  display: block;
+  padding: 4px;
+  margin: 0px;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--secondary-light-color);
+  color: var(--dark-color);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
 
 
 /* images in the grid */
@@ -276,6 +355,9 @@ form input[type="submit"]:hover {
 
 
 
+a {
+    color: inherit;
+}
 
 
 
@@ -290,3 +372,4 @@ footer {
     width: 100%;
     padding: 10px 0;
 }
+
