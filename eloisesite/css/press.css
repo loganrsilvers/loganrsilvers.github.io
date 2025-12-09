@@ -38,6 +38,7 @@ a{
     min-width: 200px;
     height: 100%;
     object-fit:cover;
+    border: var(--secondary-dark-color) solid 2px;
 }
  
 .main{
@@ -48,10 +49,12 @@ a{
     justify-content: space-between;
     gap: 1rem;
 }
- 
+
+/* thing the image and text is in */
 .box{
     display: flex;
     gap: 1rem;
+    border: var(--secondary-dark-color) solid 2px;
 }
  
 .boximg{
@@ -59,7 +62,6 @@ a{
     object-fit:cover;
     width: 200px;
     height: 100%;
-    border-radius: 20px;
 }
  
 .content{
@@ -69,7 +71,7 @@ a{
     height: 220px;
     padding: 1rem;
     scrollbar-width: thin;
-    scrollbar-color: var(--dark-color) var(--secondary-light-color);
+    scrollbar-color: var(--dark-color) var(--secondary-dark-color);
     overflow-x: hidden;
     text-align: justify;
     line-height: 1.1;
@@ -86,7 +88,7 @@ a{
     font-size: 20px;
     text-align: right;
     font-weight: normal;
-    border-bottom: 2px dotted ;
+    border-bottom: 2px dashed var(--secondary-dark-color);
 }
  
  

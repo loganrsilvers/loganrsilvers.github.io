@@ -8,66 +8,6 @@
     --black : #000000;
 }
 
-#littleimgs{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:top;
-    width: 100%;
-    gap:10px;
-    margin: 10px 0;
-}   
-
-
-
-
-#littleimgs img{
-    display:block;
-    border-radius: 20px;
-    width: 100px;
-    object-fit: cover;
-}
-
-
-
-
-/* viewport */
-.carousel-window{
-  overflow:hidden;
-  width: 90%;
-}
-
-/* track of all images */
-.carousel-track{
-  display:flex;
-  transition: transform 0.4s ease;
-}
-
-/* each image takes 1/3 of window */
-.carousel-track img{
-  flex: 0 0 calc(100% / 3);
-  width: 100%;
-  border-radius:20px;
-  object-fit:cover;
-}
-
-/* buttons */
-#prev, #next{
-  border:none;
-  background: var(--secondary-dark-color);
-  padding:8px 12px;
-  cursor:pointer;
-  border-radius:4px;
-  font-size:20px;
-}
-#prev:hover, #next:hover{
-  background: var(--med-color);
-  color: var(--dark-color);
-}
-
-
-
-
 
 
 
@@ -76,7 +16,7 @@
     display:flex;
     flex-direction:row;
     align-items:stretch;
-    margin:40px;
+    margin-bottom:40px;
     gap:20px;
 }
 
@@ -87,6 +27,7 @@
 #aboutimg img{
     width:100%;
     border-radius:20px;
+    border: solid 2px var(--secondary-dark-color);
     height:100%;
     object-fit:cover;
 }
@@ -103,6 +44,12 @@
 #aboutimg, #abouttext{
     padding:20px;
 }
+
+
+
+
+
+
 
 #softwareicons{
     display: flex;
@@ -129,4 +76,65 @@
         margin-bottom: 10px;
         max-width: 60px;
     }
+}
+
+#littleimgs{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:top;
+    width: 100%;
+    gap:10px;
+    margin: 10px 0;
+}   
+
+#littleimgs img{
+    display:block;
+    border-radius: 20px;
+    width: 100px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+/* viewport */
+.carousel-window{
+  overflow:hidden;
+  width: 90%;
+}
+
+/* track of all images */
+.carousel-track{
+  display:flex;
+  transition: transform 0.4s ease;
+}
+
+/* each image takes 1/3 of window */
+.carousel-track img{
+  flex: 0 0 calc(100% / 3);
+  width: 100%;
+  border-radius:20px;
+  border: solid 2px var(--secondary-dark-color);
+  border-left: none;
+  object-fit:cover;
+}
+
+/* buttons */
+#prev, #next{
+  border:none;
+  background: var(--secondary-dark-color);
+  padding:8px 12px;
+  cursor:pointer;
+  border-radius:4px;
+  font-size:20px;
+}
+#prev:hover, #next:hover{
+  background: var(--med-color);
+  color: var(--dark-color);
 }
