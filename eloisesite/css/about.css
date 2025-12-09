@@ -90,31 +90,43 @@
     height:100%;
     object-fit:cover;
 }
-
 #abouttext{
     width:60%;
     font-size:18px;
     line-height:1.6;
+    /* Ensure child elements like #softwareicons don't overflow */
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 #aboutimg, #abouttext{
     padding:20px;
 }
 
-
-
 #softwareicons{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    margin-top:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%; /* Restrict to parent width */
+    box-sizing: border-box;
 }
 
 #softwareicons img{
-    width:100px;
-    height:100px;
-    object-fit:contain;
-    margin-bottom: 50px;
+    width: auto;
+    width: 5%;
+    flex: 1 1 0;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    #softwareicons img {
+        margin-bottom: 10px;
+        max-width: 60px;
+    }
 }
