@@ -13,7 +13,6 @@
     <div id="icons">
         <a href="https://www.instagram.com/2catskissing/" target="_blank"><img src="img/icons/insta.png" alt="Instagram"></a>
         <a href="mailto:eepark.88@gmail.com"><img src="img/icons/mail.png" alt="Email"></a>
-        <a href="https://www.linkedin.com/in/eloise-park-a0b113347/" target="_blank"><img src="img/icons/linkedin.png" alt="Linkedin"></a>
     </div>
     <div id="tab">
         <span onclick="openNav()">Contact Me!</span>
@@ -34,7 +33,7 @@
                     <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                    <a onclick="filterPortfolio('bio')">Anatomy + Botany</a>
+                    <a onclick="filterPortfolio('bio')">Biology + Botany</a>
                     <a onclick="filterPortfolio('animal')">Animals</a>
                     <a onclick="filterPortfolio('people')">People</a>
                     </div>
@@ -48,113 +47,63 @@
 
     <main>
         <section>
-        <div class="row">
 
-            <!-- column 1 -->
-            <div class="column">
+            <div class="image-grid">
                 <div class="img-container" data-category="all bio">
-                    <img src="img/art/nose.png" alt="Nose" 
-                        onmouseover="this.src='img/art/noseplain.png'" 
-                        onmouseout="this.src='img/art/nose.png'">
+                    <img src="img/art/nose.png" alt="Nose" onmouseover="this.src='img/art/noseplain.png'" onmouseout="this.src='img/art/nose.png'">
                     <div class="caption">Nose</div>
                 </div>
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/eye.png" alt="Eye" onmouseover="this.src='img/art/eyeplain.png'" onmouseout="this.src='img/art/eye.png'">
+                    <div class="caption">Eye</div>
+                </div>
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/ear.png" alt="Ear" onmouseover="this.src='img/art/earplain.png'" onmouseout="this.src='img/art/ear.png'">
+                    <div class="caption">Ear</div>
+                </div>
+
+
+
+
                 <div class="img-container" data-category="all animal">
                     <img src="img/art/castle.png" alt="Castle">
                     <div class="caption">Castle</div>
+                </div>
+                <div class="img-container" data-category="all animal">
+                    <img src="img/art/landscapeinked.png" alt="Landscape Inked" onmouseover="this.src='img/art/landscape.png'" onmouseout="this.src='img/art/landscapeinked.png'">
+                    <div class="caption">Landscape Inked</div>
+                </div>
+                <div class="img-container" data-category="all animal">
+                    <img src="img/art/goatinked.png" alt="Goat Inked" onmouseover="this.src='img/art/goatsketch.png'" onmouseout="this.src='img/art/goatinked.png'">
+                    <div class="caption">Goat Inked</div>
                 </div>
                 <div class="img-container" data-category="all animal">
                     <img src="img/art/deerbat.png" alt="Deerbat">
                     <div class="caption">Deerbat</div>
                 </div>
                 <div class="img-container" data-category="all animal">
-                    <img src="img/art/sheep.png" alt="Sheep">
-                    <div class="caption">Sheep</div>
-                </div>
-                        <div class="img-container" data-category="all bio">
-                    <img src="img/art/plants/1.png" alt="Large-flowered Tickseed, Coreopsis grandiflora">
-                    <div class="caption">Large-flowered Tickseed, Coreopsis grandiflora</div>
-                </div>
-                    <div class="img-container" data-category="all bio">
-                        <img src="img/art/plants/6.png" alt="Goldenrod, Solidago">
-                    <div class="caption">Goldenrod, Solidago</div>
-                </div>
-            </div>
-
-
-            <!-- column 2 -->
-            <div class="column">
-                <div class="img-container" data-category="all bio">
-                    <img src="img/art/eye.png" alt="Eye" 
-                        onmouseover="this.src='img/art/eyeplain.png'" 
-                        onmouseout="this.src='img/art/eye.png'">
-                    <div class="caption">Eye</div>
-                </div>
-                <div class="img-container" data-category="all animal">
-                    <img src="img/art/landscapeinked.png" alt="Landscape Inked" 
-                        onmouseover="this.src='img/art/landscape.png'" 
-                        onmouseout="this.src='img/art/landscapeinked.png'">
-                    <div class="caption">Landscape Inked</div>
-                </div>
-                <div class="img-container" data-category="all animal">
                     <img src="img/art/matcha.png" alt="Matcha">
                     <div class="caption">Matcha</div>
+                </div>
+                <div class="img-container" data-category="all animal">
+                    <img src="img/art/sheep.png" alt="Sheep">
+                    <div class="caption">Sheep</div>
                 </div>
                 <div class="img-container" data-category="all people">
                     <img src="img/art/fire.png" alt="Fire">
                     <div class="caption">Fire</div>
-                </div>
-                        <div class="img-container" data-category="all bio">
-                    <img src="img/art/plants/2.png" alt="Foxglove Beardtongue, Penstemon digitalis">
-                    <div class="caption">Foxglove Beardtongue, Penstemon digitalis</div>
-                </div>
-                <div class="img-container" data-category="all bio">
-                    <img src="img/art/plants/7.png" alt="Red Columbine (Aquilegia canadensis)">
-                    <div class="caption">Red Columbine (Aquilegia canadensis)</div>
-                </div>
-            </div>
-
-
-            <!-- column 3 -->
-            <div class="column">
-                <div class="img-container" data-category="all bio">
-                    <img src="img/art/ear.png" alt="Ear"
-                        onmouseover="this.src='img/art/earplain.png'" 
-                        onmouseout="this.src='img/art/ear.png'">
-                    <div class="caption">Ear</div>
-                </div>
-                <div class="img-container" data-category="all animal">
-                    <img src="img/art/goatinked.png" alt="Goat Inked"
-                        onmouseover="this.src='img/art/goatsketch.png'" 
-                        onmouseout="this.src='img/art/goatinked.png'">
-                    <div class="caption">Goat Inked</div>
                 </div>
                 <div class="img-container" data-category="all people">
                     <img src="img/art/metamorphosis.png" alt="Metamorphosis">
                     <div class="caption">Metamorphosis</div>
                 </div>
                 <div class="img-container" data-category="all people">
+                    <img src="img/art/warrorinked.png" alt="Warrior Inked" onmouseover="this.src='img/art/warrior.png'" onmouseout="this.src='img/art/warrorinked.png'">
+                    <div class="caption">Warrior Inked</div>
+                </div>
+                <div class="img-container" data-category="all people">
                     <img src="img/art/penpfp.png" alt="Pen PFP">
                     <div class="caption">Pen PFP</div>
-                </div>
-                    <div class="img-container" data-category="all bio">
-                        <img src="img/art/plants/3.png" alt="Swamp milkweed, Asclepias incarnata">
-                    <div class="caption">Swamp milkweed, Asclepias incarnata</div>
-                </div>
-                    <div class="img-container" data-category="all bio">
-                        <img src="img/art/plants/8.png" alt="New England Aster (Symphyotrichum novae-angliae)">
-                    <div class="caption">New England Aster (Symphyotrichum novae-angliae)</div>
-                </div>
-            </div>
-
-
-
-            <!-- column 4 -->
-            <div class="column">
-                <div class="img-container" data-category="all people">
-                    <img src="img/art/warrorinked.png" alt="Warrior Inked"
-                        onmouseover="this.src='img/art/warrior.png'" 
-                        onmouseout="this.src='img/art/warrorinked.png'">
-                    <div class="caption">Warrior Inked</div>
                 </div>
                 <div class="img-container" data-category="all animal">
                     <img src="img/art/pillbug.png" alt="Pillbug">
@@ -164,6 +113,23 @@
                     <img src="img/art/robot.png" alt="Robot">
                     <div class="caption">Robot</div>
                 </div>
+
+
+
+
+
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/plants/1.png" alt="Large-flowered Tickseed, Coreopsis grandiflora">
+                    <div class="caption">Large-flowered Tickseed, Coreopsis grandiflora</div>
+                </div>
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/plants/2.png" alt="Foxglove Beardtongue , Penstemon digitalis">
+                    <div class="caption">Foxglove Beardtongue , Penstemon digitalis</div>
+                </div>
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/plants/3.png" alt="Swamp milkweed, Asclepias incarnata">
+                    <div class="caption">Swamp milkweed, Asclepias incarnata</div>
+                </div>
                 <div class="img-container" data-category="all bio">
                     <img src="img/art/plants/4.png" alt="Anise hyssop (Agastache foeniculum)">
                     <div class="caption">Anise hyssop (Agastache foeniculum)</div>
@@ -172,10 +138,19 @@
                     <img src="img/art/plants/5.png" alt="Black-eyed Susan (Rudbeckia hirta)">
                     <div class="caption">Black-eyed Susan (Rudbeckia hirta)</div>
                 </div>
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/plants/6.png" alt="Goldenrod, Solidago">
+                    <div class="caption">Goldenrod, Solidago</div>
+                </div>
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/plants/7.png" alt="Red Columbine (Aquilegia canadensis)">
+                    <div class="caption">Red Columbine (Aquilegia canadensis)</div>
+                </div>
+                <div class="img-container" data-category="all bio">
+                    <img src="img/art/plants/8.png" alt="New England Aster (Symphyotrichum novae-angliae)">
+                    <div class="caption">New England Aster (Symphyotrichum novae-angliae)</div>
+                </div>
             </div>
-
-
-        </div>
         </section>
 
 
@@ -203,10 +178,11 @@
 
     </main>
     <footer>
-        All works &copy; 2025 Eloise Park unless noted | <a href="https://www.instagram.com/2catskissing/" target="_blank">Instagram</a> | <a href="mailto:eepark.88@gmail.com">Email</a>
+        &copy; 2025 Eloise Park | <a href="https://www.instagram.com/2catskissing/" target="_blank">Instagram</a> | <a href="mailto:eepark.88@gmail.com">Email</a>
     </footer>
 
 
     <script src="js/script.js"></script>
+    <script src="js/grid.js"></script>
 </body>
 </html>
