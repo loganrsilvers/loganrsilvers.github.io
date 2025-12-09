@@ -108,37 +108,26 @@ header {
     background-color: var(--white);
     border-color: var(--dark-color);
     color: var(--dark-color);
-    padding: 5px 0;
     font-family: 'cursive', sans-serif;
     text-align: center;
 }
 
 header h1 {
-    font-size: 40px;
-    margin-bottom: 0;
-    margin-top: 10px;
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: -42px;
 }
 
-header h3  {
+/* header h3  {
     font-size: 20px;
     line-height: 10px;
-    margin: -15px 0 10px 0;
+    margin: -20px 0 10px 0;
     font-family: 'paper', sans-serif;
-    /* outline the text */
     text-shadow: var(--white) -1px 0 20px,
                  var(--white) 0 1px 20px,
                  var(--white) 1px 0 20px,
                  var(--white) 0 -1px 20px;
-}
-
-
-
-
-
-
-
-
-
+} */
 
 
 nav {
@@ -146,12 +135,12 @@ nav {
     justify-content: space-evenly;
     flex-direction: row;
     background-color: var(--white);
-    border-top: solid 2px var(--secondary-dark-color);
+    border-top: solid 2px var(--secondary-dark-color); 
     border-bottom: solid 2px var(--secondary-dark-color);
     border-left: none;
     border-right: none;
     color: var(--secondary-dark-color);
-    padding: 10px 0;
+    margin-bottom: 5px;
 }
 
 nav span {
