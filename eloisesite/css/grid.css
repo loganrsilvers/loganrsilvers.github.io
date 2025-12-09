@@ -36,13 +36,12 @@
   position: relative;
   margin-top: 8px;
   overflow: hidden;
-  border-radius: 6px;
+  border: var(--secondary-dark-color) solid 2px;
 }
 
 .column img {
   width: 100%;
   vertical-align: middle;
-  border-radius: 6px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -51,7 +50,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #310a31bd;
+  background: var(--dark-color);
   color: var(--white);
   font-size: 16px;
   text-align: center;
