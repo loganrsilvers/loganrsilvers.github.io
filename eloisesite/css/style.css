@@ -85,6 +85,7 @@ img{
 
 #tab {
     position: fixed;
+    font-size: 30px;
     right: 0;
     top: 10px;
     background-color: var(--dark-color);
