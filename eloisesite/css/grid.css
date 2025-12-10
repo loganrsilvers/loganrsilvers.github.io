@@ -81,3 +81,30 @@
     max-width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img-container2 {
+    width: 500px;
+    margin: 0 auto;
+    border: var(--secondary-dark-color) solid 2px;
+}
+
+.img-container2 img {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 8px;
+    border-radius: 4px;
+    transition: box-shadow 0.5s, transform 0.5s;
+}

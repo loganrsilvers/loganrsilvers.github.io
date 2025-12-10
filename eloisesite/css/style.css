@@ -191,7 +191,8 @@ color: var(--secondary-dark-color);
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: var(--secondary-light-color);
+  background-color: var(--med-color);
+  text-decoration: underline;
 }
 /* dropdown in index */
 .dropdown-content {
@@ -203,17 +204,18 @@ color: var(--secondary-dark-color);
 }
 
 .dropdown-content a {
-  float: none;
-  text-decoration: none;
-  display: block;
-  padding: 4px;
-  margin: 0px;
-  text-align: left;
+    float: none;
+    text-decoration: none;
+    display: block;
+    padding: 4px;
+    margin: 0px;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: var(--secondary-light-color);
-  color: var(--dark-color);
+    background-color: var(--med-color);
+    color: var(--dark-color);
+    text-decoration: underline;
 }
 
 .dropdown:hover .dropdown-content {
