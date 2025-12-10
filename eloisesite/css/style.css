@@ -60,6 +60,16 @@ body {
     overflow-x: hidden;
     scrollbar-width: none;
 }
+
+
+header h1 a {
+    text-decoration: none;
+    color: var(--dark-color);
+    cursor: pointer;
+    z-index: 3;
+}
+
+
 img{
     width: 100%;
 }
