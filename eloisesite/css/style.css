@@ -68,6 +68,11 @@ header h1 a {
     cursor: pointer;
     z-index: 3;
 }
+header h1 a:hover{
+    text-decoration: none;
+    font-style: normal;
+    color: var(--dark-color);
+}
 
 
 img{
