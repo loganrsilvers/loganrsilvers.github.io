@@ -27,9 +27,9 @@
 
 			const today = new Date();
 			
-			const twentyFirstBirthday = new Date(birthYear + 21, birthMonth, birthDay);
+			const twentyFirstBirthday = new Date(birthYear + 22, birthMonth, birthDay);
 
-			// If already turned 21, adjust year forward
+			// If already turned 22, adjust year forward
 			if (today >= twentyFirstBirthday) {
 			twentyFirstBirthday.setFullYear(twentyFirstBirthday.getFullYear() + 1);
 			}
@@ -42,8 +42,8 @@
 			// Output the message
 			document.getElementById('countdown').textContent =
 			days > 0
-				? `I will be 21 in ${days} days!`
-				: "Happy 21st Birthday!";
+				? `I will be 22 in ${days} days!`
+				: "Happy 22nd Birthday!";
 		</script>
 	
 	  	<table>
