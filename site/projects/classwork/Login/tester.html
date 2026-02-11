@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logan Testing JS</title>
+        <link rel="stylesheet" href="testerStyle.css">
+        <script src="testerScript.js"></script>
+    </head>
+    <body>
+        <aside>
+            <h1>Solve the puzzle !!</h1>
+            <p>Favorite type of Cat?</p>
+            <input type="text" id="pname">
+
+            <p>Favorite color?</p>
+            <input type="text" id="pcolor">
+
+            <button type="button" onclick="checkPass()"> Try this! </button>
+        </aside>
+        <main>
+            <h1>Your Character Here:</h1>
+            <table>
+                <tr>
+                    <td><img id="imageToChange" src="IMG/blackCat.webp" alt="image of the cat you chose"></td>
+                    <td><div id="colorResult"></div></td>
+                </tr>
+            </table>
+        </main>
+    </body>
+</html>
