@@ -70,6 +70,19 @@ body {
     z-index: 10;
 }
 
+#socials {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+#socials img {
+    width: 20px;
+    height: 20px;
+}
+#socials a:hover {
+    border-bottom: #ffffff 1px solid;
+}
+
 .header-inner {
     display: flex;
     align-items: baseline;
