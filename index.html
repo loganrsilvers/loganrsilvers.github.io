@@ -7,23 +7,119 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <p>
-        Hi virtually everybody. This is my website where I host my <a href="site/list.html">projects</a> and <a href="projects.html">other fun tidbits</a>. I hope you enjoy the items you click on.
-    </p>
-    <h3>About Me</h3>
-    <p>
-        My name is Logan Silvers. I am a full time student studying computer programming BA from columbia college chicago, a small art school in the south loop of chicago. I am trying to thrust myself into the center of internshipmania and pack my 20s with maximalism and muchness. This is where I am right now, if you want a more detailed history of what I know and how I know it please check out my <a href="intro.html">about page</a>.
-    </p>
-    <h3>What I do</h3>
-    <ul>
-        <li><a href="https://webdevclub.github.io/webdevclub.io/index.html">Websites websites websites</a> - president</li>
-        <li><a href="https://www.colum.edu/tutoring">Academic center for tutoring</a> - tutor</li>
-    </ul>
-    <h3>Why does this site exits ???</h3>
-    <p>
-        I need a space to store and contain my endless amount of ideas and projects. This is that space. I hope you enjoy the documented thoughts scattered through my massive amount of websites. As per usual on the internet, everything you see is a work in progress.
-    </p>
-    <b>last updated: 2026-feb-11</b>
-    <b>github source code: <a href="https://github.com/loganrsilvers/loganrsilvers.github.io">loganrsilvers/loganrsilvers.github.io</a></b>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="identity">
+                <h1 class="site-title">Logan Silvers</h1>
+                <p class="site-tagline">
+                    computer programming • web dev • student at Columbia College Chicago
+                </p>
+            </div>
+            <nav class="site-nav">
+                <a href="index.html" class="nav-link is-active">home</a>
+                <a href="site/list.html" class="nav-link">little sites</a>
+                <a href="site/projects/personal/myBlog/blog.html" class="nav-link">about</a>
+                <a href="site/projects.html" class="nav-link">other projects</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="hero">
+            <p class="hero-intro">
+                Hi virtually everybody. This is my little corner of the internet where I host my
+                <a href="site/list.html">projects</a> and
+                <a href="site/projects.html">other fun tidbits</a>.
+            </p>
+            <p class="hero-intro">
+                Click around, get lost, open too many tabs. That is the intended user experience.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                My name is Logan Silvers. I am a full‑time student studying Computer Programming (B.A.)
+                at Columbia College Chicago, a small art school in the South Loop of Chicago.
+            </p>
+            <p>
+                I am currently hurling myself into internshipmania and trying to pack my 20s with
+                as much **muchness** as possible: weird web, playful interfaces, and code‑as‑craft.
+            </p>
+            <p>
+                If you want a more detailed history of what I know and how I know it, please check out
+                my <a href="site/projects/personal/myBlog/blog.html">about page</a>.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">What I Do</h2>
+            <ul class="role-list">
+                <li class="role-item">
+                    <span class="role-title">
+                        <a href="https://webdevclub.github.io/webdevclub.io/index.html" target="_blank" rel="noopener">
+                            Websites websites websites
+                        </a>
+                    </span>
+                    <span class="role-meta">president • web dev club</span>
+                </li>
+                <li class="role-item">
+                    <span class="role-title">
+                        <a href="https://www.colum.edu/tutoring" target="_blank" rel="noopener">
+                            Academic Center for Tutoring
+                        </a>
+                    </span>
+                    <span class="role-meta">tutor • helping folks debug life and code</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Why This Site Exists</h2>
+            <p>
+                I need a space to store and contain my endless amount of ideas and projects. This is that space.
+            </p>
+            <p>
+                You will find documented thoughts scattered across a frankly
+                irresponsible number of small websites, experiments, and half-finished toys.
+                As per usual on the internet, everything you see is a work in progress.
+            </p>
+        </section>
+
+        <section class="section highlight">
+            <h2 class="section-title">Recent Things</h2>
+            <ul class="recent-list">
+                <li class="recent-item">
+                    <span class="recent-label">Latest update</span>
+                    <span class="recent-detail">2026-03-19 — updated about link, added index.css</span>
+                </li>
+                <li class="recent-item">
+                    <span class="recent-label">Currently obsessed with</span>
+                    <span class="recent-detail">
+                        making tiny web tools, messing with CSS, and teaching folks how to ship weird little sites
+                    </span>
+                </li>
+                <li class="recent-item">
+                    <span class="recent-label">Want the long version?</span>
+                    <span class="recent-detail">
+                        <a href="site/list.html">Browse the project index</a> or
+                        <a href="site/projects.html">poke the misc section</a>.
+                    </span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-meta">
+            last updated: <time datetime="2026-02-11">2026-03-19</time>
+        </p>
+        <p class="footer-meta">
+            github source code:
+            <a href="https://github.com/loganrsilvers/loganrsilvers.github.io">
+                loganrsilvers/loganrsilvers.github.io
+            </a>
+        </p>
+    </footer>
 </body>
 </html>

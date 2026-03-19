@@ -1,0 +1,276 @@
+/* ===== fonts ===== */
+/* Put your font files in a /fonts folder next to index.css */
+
+@font-face {
+    font-family: "LoganTitle";
+    src:
+        local("LoganTitle"),
+        url("site/projects/personal/myBlog/css/BlackWolf.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LoganBody";
+    src:
+        local("LoganBody"),
+        url("site/projects/personal/myBlog/css/PixelOperator.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===== base ===== */
+
+:root {
+    --bg: #000000;
+    --fg: #ffffff;
+    --muted: #bfbfbf;
+    --border: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "LoganBody", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: 16px;
+}
+
+.page {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* ===== header / nav ===== */
+
+.site-header {
+    border: 1px solid var(--border);
+    background: var(--bg);
+    padding: 10px 18px;
+    margin: 12px auto 28px;
+    max-width: 960px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.identity {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.site-title {
+    font-family: "LoganTitle", "LoganBody", system-ui, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.site-tagline {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.site-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--muted);
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    background: transparent;
+    text-transform: lowercase;
+}
+
+.nav-link:hover {
+    border-color: var(--border);
+    color: var(--fg);
+}
+
+.nav-link.is-active {
+    border-color: var(--border);
+    color: var(--fg);
+}
+
+/* ===== hero ===== */
+
+.hero {
+    border: 1px solid var(--border);
+    background: var(--bg);
+    padding: 18px 18px 14px;
+    margin-bottom: 24px;
+}
+
+.hero-intro {
+    margin: 0 0 8px;
+    font-size: 1rem;
+}
+
+/* ===== sections ===== */
+
+.section {
+    border: 1px solid var(--border);
+    background: var(--bg);
+    padding: 16px 18px 14px;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: "LoganTitle", "LoganBody", system-ui, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin: 0 0 10px;
+    color: var(--muted);
+}
+
+.section p {
+    margin: 0 0 8px;
+}
+
+/* ===== links ===== */
+
+a {
+    color: var(--fg);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ===== role / work list ===== */
+
+.role-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.role-item {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.role-title {
+    display: block;
+    font-weight: 600;
+}
+
+.role-meta {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* ===== recent section ===== */
+
+.highlight {
+    /* still just black, but visually separated via border stack */
+    border-width: 2px;
+}
+
+.recent-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.recent-item {
+    display: grid;
+    grid-template-columns: minmax(80px, 140px) 1fr;
+    gap: 4px 10px;
+    align-items: baseline;
+}
+
+.recent-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+}
+
+.recent-detail {
+    font-size: 0.95rem;
+}
+
+/* ===== footer ===== */
+
+.site-footer {
+    max-width: 860px;
+    margin: 18px auto 10px;
+    padding: 8px 4px 14px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    justify-content: space-between;
+}
+
+.footer-meta {
+    margin: 0;
+}
+
+.footer-meta a {
+    color: var(--muted);
+}
+
+.footer-meta a:hover {
+    color: var(--fg);
+}
+
+/* ===== responsive ===== */
+
+@media (max-width: 640px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page {
+        max-width: 100%;
+    }
+
+    .recent-item {
+        grid-template-columns: 1fr;
+    }
+}
