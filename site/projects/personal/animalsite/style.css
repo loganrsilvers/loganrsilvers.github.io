@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'main';
+    src: url(Shifa.ttf);
+}
+
+
+
+
+body {
+    background-image: url(textures/bubble.png);
+    font-family: 'main';
+}
