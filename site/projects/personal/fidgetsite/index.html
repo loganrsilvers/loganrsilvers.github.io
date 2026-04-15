@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+                </button>
+            </td>
+        </tr>
+                <tr>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+                </button>
+            </td>
+        </tr>
+                <tr>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+
+                </button>
+            </td>
+            <td>
+                <button class="unpopped" onclick="poppinator(this)">
+                </button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+
+function poppinator(element) {
+    if (element.classList.contains("popped"))
+    
+    
+    {
+        element.classList.remove("popped");
+        element.classList.add("unpopped");
+    }
+    else{
+        element.classList.remove("unpopped");
+        element.classList.add("popped");
+    }
+}
+    </script>
+
+
+</body>
+</html>

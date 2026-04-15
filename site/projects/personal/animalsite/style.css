@@ -10,3 +10,8 @@ body {
     background-image: url(textures/bubble.png);
     font-family: 'main';
 }
+
+
+img {
+    rotate: 45deg;
+}
