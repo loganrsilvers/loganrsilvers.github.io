@@ -1,0 +1,105 @@
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url(img/green.gif);
+      color: #234;
+      text-align: center;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px;
+      flex-wrap: wrap;
+      color: thistle;
+      background: url(img/blue.png);
+      border-bottom: 2px solid #9ccfb5;
+    }
+
+    .lives, .targets {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .icon {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+
+    .game-area {
+      position: relative;
+      width: min(900px, 95vw);
+      height: 600px;
+      margin: 20px auto;
+      background: url("img/bench.png") center/cover no-repeat;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .item {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    .found {
+      opacity: 0.45;
+      transform: scale(0.95);
+      pointer-events: none;
+    }
+
+    .hud {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .popup.show {
+      display: flex;
+    }
+
+    .popup-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .popup-card button {
+      margin-top: 12px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #2f9e63;
+      color: white;
+      font-size: 16px;
+    }

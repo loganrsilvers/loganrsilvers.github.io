@@ -1,0 +1,92 @@
+:root {
+
+    --black: #000;
+    --white: #fff;
+    --grey: #444;
+    --light-grey: #666;
+    --font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--black);
+
+    display: flex;
+    flex-direction: column;
+
+    /* ensures footer is at the bottom of the page */
+    min-height: 100vh; 
+    /* vh is view height */
+}
+
+header {
+    background-color: var(--black);
+    color: var(--white);
+    
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    background-color: var(--grey);
+}
+
+nav ul li {
+    flex: 1;
+    /* see below: */
+    /* https://medium.com/shsfwork/flex-your-css-muscles-understanding-and-using-the-flex-1-property-6657fb2382b3 */
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+
+    color: var(--white);
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: var(--light-grey);
+}
+
+/* the container holding main and aside */
+#container {
+    display: flex;
+    flex: 1;
+
+    margin: 0 20px;
+}
+
+main {
+    flex: 3;
+
+    padding: 30px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+aside {
+    flex: 1;
+
+    padding: 30px;
+    background-color: var(--white);
+    border-left: 5px solid var(--black);
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
