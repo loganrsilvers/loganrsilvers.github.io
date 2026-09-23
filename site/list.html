@@ -20,12 +20,23 @@
 
   	<header>
   	    <h1>logan silvers</h1>
-  	    <h2>~ sites i have coded / am in the process of coding</h2>
+  	    <h2>~ little sites i have made / am in the process of making</h2>
 		<p>Hi, my name is Logan Silvers and I am a webmaster. Below are all my short and sweet websites I have made during the past 3 years of my HTML and CSS experience and this is essentially a compilation of all sorts of projects that I have made myself coding in visual studio code.</p>
 		<p>Feel free to click around and explore.</p>
 		<p><a href="../index.html">go back home</a></p>
   	  </header>
 
+	  	<section>
+			<h2>take me to a random site logan made</h2>
+			<button id="randomsite" onclick="randomSite()">click me</button>
+			<script>
+			function randomSite() {
+				var links = document.querySelectorAll('nav ul li a');
+				var randomLink = links[Math.floor(Math.random() * links.length)];
+				window.open(randomLink.href, '_blank');
+			}
+			</script>
+		</section>	
   	  <main>
   	  		  <nav>
   	  		    <ul>

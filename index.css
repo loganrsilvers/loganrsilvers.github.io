@@ -61,7 +61,7 @@ nav a{
     color: var(--black);
 }
 
-nav a:hover {
+a:hover {
     color: var(--dark-color);
 }
 

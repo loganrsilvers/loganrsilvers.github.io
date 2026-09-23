@@ -1,3 +1,54 @@
 body {
 	background-image: url(css/img/bagle.gif);
 }
+
+
+section h2 {
+	font-size: 1.5rem;
+	text-decoration: underline;
+	margin-bottom: 0.5rem;
+	animation: rainbow-text 1s infinite;
+}
+
+section {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+section button {
+	background-color: #000000;
+	border: none;
+	color: white;
+	padding: 5px 3px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 30px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border: 7px solid #e09c14;
+	animation: rainbow-border 1s infinite;
+}
+
+@keyframes rainbow-text {
+	0% { color: red; }
+	14% { color: orange; }
+	28% { color: yellow; }
+	42% { color: green; }
+	57% { color: blue; }
+	71% { color: indigo; }
+	85% { color: violet; }
+	100% { color: red; }
+}
+
+@keyframes rainbow-border {
+	0% { border-color: red; }
+	14% { border-color: orange; }
+	28% { border-color: yellow; }
+	42% { border-color: green; }
+	57% { border-color: blue; }
+	71% { border-color: indigo; }
+	85% { border-color: violet; }
+	100% { border-color: red; }
+}
