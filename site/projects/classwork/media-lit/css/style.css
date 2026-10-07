@@ -1,0 +1,26 @@
+:root{
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--white);
+    color: var(--black);
+}
+nav {
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+}
+nav a {
+    color: var(--white);
+}
+
+#text-container{
+    margin: 0px 10px;
+}
