@@ -1,0 +1,30 @@
+body{
+
+    background-color: #98CE00;
+    background-color: linear-gradient(0deg, rgba(152, 206, 0, 1) 0%, rgba(238, 214, 75, 1) 100%);
+    background-image: url(crisp-paper-ruffles.png);
+}
+
+
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/round-peppermint-14adf467-32.webp') 32 32, auto !important;
+}
+
+header, main, aside, section{
+    border: solid black 4px;
+    padding: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+aside{
+    width: 30%;
+}
+
+section{
+    width: 70%;
+}
