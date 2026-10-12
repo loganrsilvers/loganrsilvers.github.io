@@ -12,6 +12,9 @@ body {
     color: var(--black);
 }
 nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     flex-direction: row;
     width: 100%;
     background-color: var(--black);
@@ -19,6 +22,9 @@ nav {
 }
 nav a {
     color: var(--white);
+}
+img{
+    width: 100%;
 }
 
 #text-container{
