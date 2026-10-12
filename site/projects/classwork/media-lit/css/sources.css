@@ -1,0 +1,8 @@
+#text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#text-container a {
+    text-align: right;
+}

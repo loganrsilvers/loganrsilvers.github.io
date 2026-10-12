@@ -1,32 +1,71 @@
-:root{
+:root {
     --black: #000000;
     --white: #FFFFFF;
+}
+
+@font-face{
+    font-family: 'main';
+    src: url('fonts/KGCorneroftheSky.ttf');
+}
+@font-face {
+    font-family: 'title';
+    src: url('fonts/SERIO___.TTF');
 }
 
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-color: var(--white);
     color: var(--black);
+    font-family: 'main', sans-serif;
+    background-image: url(../img/assets/bandaidTexture.png);
 }
+
 nav {
     display: flex;
     align-items: center;
-    gap: 5px;
-    flex-direction: row;
+    gap: 0.75rem;
+    flex-wrap: wrap;
     width: 100%;
+    padding: 0.75rem 1rem;
     background-color: var(--black);
     color: var(--white);
-}
-nav a {
-    color: var(--white);
-}
-img{
-    width: 100%;
+    box-sizing: border-box;
 }
 
-#text-container{
-    margin: 0px 10px;
+nav, h1, h2, h3, h4, h5, h6 {
+    font-family: 'title', sans-serif;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav .word-count {
+    margin-left: auto;
+    display: flex;
+    gap: 0.35rem;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#text-container {
+    margin: 0 10px;
+    max-width: 900px;
+}
+
+p, li {
+    line-height: 1.5;
 }
