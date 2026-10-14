@@ -4,22 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lady liberty</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/liberty.css">
+    <link rel="icon" type="image/gif" href="v1/img/liberty-face.png">
 </head>
 <body>
-    
-    <nav>
-        <a href="index.html">home</a>
-        <a href="assignment.html">assignment</a>
-        <a href="design-rationale.html">design rationale</a>
-        <a href="sources.html">sources</a>
-        <p class="word-count"><span>word count:</span> <span id="page-word-count">zero</span></p>
-    </nav>
+
     <header>
-        <h4>statue of liberty</h4>
+        The Statue of Liberty
     </header>
-    <main>
+
+    <div id="image">
+        <img src="v1/img/liberty-full.png" alt="Picture of the Statue of Liberty" style="height: 1100px; margin-left: 350px; position: relative;">
+    </div>
+
+    <div id="nav">
+        <a class="one" href="../../../../index.html">link 2 logan's site</a> ✦ <a class="one" href="v1/index.html">an homage 2 the 1st version of this assignment</a> ✦ <a class="one" href="https://pomelo.lol/premades/home" target="_blank">template link</a>
+
+        <select name="morelinks" id="morelinks" class="morelinks">
+            <option value="more links">more links</option>
+            <option value="https://www.pinterest.com/search/pins/?q=nyc%20statue%20selfie&rs=typed">✦pinterest "nyc statue selfie"</option>
+            <option value="https://www.statueofliberty.org/statue-of-liberty/">✦statueofliberty.org</option>
+            <option value="https://www.hawaii.edu/news/2021/10/29/statue-of-liberty-symbol-for-a-national-myth/">✦How the Statue of Liberty became a symbol for a national myth</option>
+            <option value="https://www.pbs.org/kenburns/statue-of-liberty/timeline">✦PBS Statue of Liberty Timeline</option>
+            <option value="https://www.newyorktickets.com/statue-of-liberty/history/">✦Tracing the fascinating history of the Statue of Liberty</option>
+            <option value="https://www.youtube.com/embed/JEZ49GvKeEQ?si=ceo_uLdHK-Z-PZvC&amp;start=89">✦YouTube video player</option>
+            <option value="https://www.nps.gov/stli/learn/education/classrooms/curriculummaterials.htm">✦national park service (curriculum)</option>
+            <option value="https://www.statueofliberty.org/discover/educational-resources/">✦statueofliberty.com (curriculum)</option>
+            <option value="https://thinktv.pbslearningmedia.org/resource/what-is-liberty-video/the-statue-of-liberty/">✦pbs (curriculum)</option>
+            <option value="https://www.si.edu/educators/teaching-250th">✦smithsonian (curriculum)</option>
+            <option value="https://www.transparenttextures.com/">✦textures (webdev)</option>
+            <option value="https://www.dafont.com/">✦fonts (webdev)</option>
+        </select>
+        <input type="button" id="btnmorelinks" class="btnmorelinks" onclick='window.location = document.getElementById("morelinks").options[document.getElementById("morelinks").selectedIndex].value' value="go" />
+    </div>
+
+    <div id="info">
+        <h1>statue of liberty</h1>
+
+        <p>1 - Choose one example of a medium and analyse how it mediates experience, knowledge, perception, memory, movement or social relationships. Your medium could be a map, a camera, a building, a search engine, a database or a public monument, or something else you clear with me.</p>
+
         <div id="text-container">
             <p>analyse how it mediates .:</p>
             <ul>
@@ -38,32 +61,52 @@
                                 </div>
                             </details>
                         </li>
-                        <li>taking photos of the statue, etc</li>
-                        <li>big monument for the whole country</li>
-                        <li>very american monument</li>
+                        <li>ferry-only access, tickets and security barriers before you see it up close</li>
+                        <li>free to see from the harbour, ticketed up close</li>
+                        <li>very american monument: visiting feels a classic nyc experience, very touristy</li>
                     </ul>
+                    <p>
+                        the statue is experienced through a managed route. the ferry, the queue and
+                         photo spot decide how you meet/make contact w/ the monument, and the images you see online decide what
+                        you expect to find. visiting becomes partly a proof of "i was here" by taking a selfie with it 
+                        (usually in ur nyc official merch) and uploading to instagram. (see imgs above in dropdown ^^^)
+                    </p>
                 </li>
                 <li>
                     knowledge,
                     <ul>
                         <li>
                             <details>
-                                <summary>studied in schools (or at least i they taught it to me when i was in school)</summary>
+                                <summary><i>studied in schools</i> (or at least i they taught it to me when i was in school)</summary>
                                 <div class="details-content">
                                     <a href="https://www.statueofliberty.org/statue-of-liberty/">statue of liberty.com</a>
                                     <img src="img/etc/museum.png" alt="museum">
                                 </div>
                             </details>
                         </li>
-                        <li>history in the monument</li>
+                        <li>history in the monument: torch, crown, tablet (July 4, 1776) and broken shackles are symbols (( usually you have to have been taught to identify</li>
+                        <li>school, the official site and the museum repeat a similar short story which educates the public about like - background</li>
+                        <li>liberty iron skeleton / copper skin --> 19th-century engineering (many statues at the time made of similar materials)))</li>
                     </ul>
+                    <p>
+                        the statue carries knowledge in its design, but the meaning comes from the institutions around it 
+                        (school curriculums, museum exhibits, books with liberty in it, etc).
+                        most people learn the sort of a gift from france, a welcome to immigrants kind of shpeel before they
+                        visit, (and the tour guides also explain in detail) and the museum and website keep that version going by choosing what to display and explain.
+                    </p>
                 </li>
                 <li>
                     perception,
                     <ul>
-                        <li>symbolic of the us</li>
+                        <li><b>symbolic of the US:</b> used as shorthand for the whole country in logos, news and movies</li>
                         <li>liberty, freedom, discovery</li>
+                        <li>scale and position: on a pedestal, you look up at her, so definetly reading as <i>symbolic</i> rather than as a statue of a person</li>
                     </ul>
+                    <p>
+                        because the statue is so recognisable, it shapes how people picture the united states: free,
+                        welcoming, hopeful, etc. a single symbol can only show one version of that ideal, and it can hide the
+                        times the country did not live up to it
+                    </p>
                 </li>
                 <li>
                     memory,
@@ -71,7 +114,7 @@
                         <li>recording history - whos history? what is left out?</li>
                         <li>
                             <details>
-                                <summary>sources + quotes</summary>
+                                <summary><i>sources + quotes</i></summary>
                                 <div class="details-content">
                                     <p><a href="https://www.hawaii.edu/news/2021/10/29/statue-of-liberty-symbol-for-a-national-myth/">source</a>
                                         Designed by Frédéric Auguste Bartholdi and dedicated in 1886, the statue was originally meant to celebrate the abolition of slavery and the U.S. centennial, featuring broken shackles at her feet.
@@ -79,9 +122,19 @@
                                 </div>
                             </details>
                         </li>
-                        <li>memory of NYC trips</li>
-                        <li>merch</li>
+                        <li>the shackles are hard to see from most visitor angles, so the abolition meaning mostly faded</li>
+                        <li>the island had a history before the statue (lenape land, then a fort), which the monument doesn't bring to mind</li>
+                        <li>memory of NYC trips: your photos and ferry ticket get shaped by the icon/symbol/statue</li>
+                        <li>merch: crowns, magnets and miniatures turn memory into something monotizeable, and also can travel with you to different places</li>
                     </ul>
+                    <p>
+                        a monument keeps one version of the past in public view, which makes it powerful as collective
+                        memory, but it can only remember what its makers and keepers chose to show. the statue's meaning
+                        has also shifted since 1886, from liberty and franco-american friendship (from the revolutionary war) 
+                        toward immigration (as ellis island is where most US citizens are recieved present day), so it
+                        "remembers" differently now than when it was built. on a personal level, photos and merch let
+                        visitors carry that version home.
+                    </p>
                 </li>
                 <li>
                     movement,
@@ -89,12 +142,12 @@
                         <li>at the place of immigration, first symbol of the US/entry into the country</li>
                         <li>
                             <details>
-                                <summary>sources + quotes</summary>
+                                <summary><i>sources + quotes</i></summary>
                                 <div class="details-content">
                                     <p><a href="https://www.cityreliquary.org/lady-liberty-and-immigration/">source</a>
                                         The Statue of Liberty became a universal symbol of immigration and hope through its close proximity to Ellis Island, where over 12 million immigrants were processed between 1892 and 1954.
                                     </p>
-                                    <p>there is a quote that is attatched to the statue on the inside:: </p>
+                                    <p>there is a quote that is attached to the statue on the inside:: </p>
                                     <p>
                                         “Give me your tired, your poor, your huddled masses yearning to breathe free, the wretched refuse of your teeming shore, send these, the homeless, tempest-tossed to me, I lift my lamp beside the golden door!”
                                     </p>
@@ -102,32 +155,81 @@
                                 </div>
                             </details>
                         </li>
+                        <li>the quote is from emma lazarus's 1883 poem "the new colossus" (lazarus, 1883); the plaque was added to the pedestal in 1903</li>
+                        <li>the chinese exclusion act (1882) and angel island show that "open arrival" wasn't the same for everyone</li>
+                        <li>access to the monument itself is managed: ferry, timed tickets, screening</li>
                     </ul>
+                    <p>
+                        the statue sits where many arriving ships passed, so it became tied to the idea of migration and
+                        entry. but the immigration message was added later by the poem and by public memory, not by its
+                        designers. the symbol of open arrival is also reached through controlled/monitored movement through ellis island/nyc, and it
+                        doesn't match the experience of people who were excluded or processed elsewhere.
+                    </p>
                 </li>
                 <li>
                     or social relationships,
                     <ul>
                         <li>made by a french..? person // us relationship w other designer etc</li>
-                        <li>tourist culture</li>
+                        <li>bartholdi (sculptor) and eiffel (iron structure) in france; hunt (pedestal) and pulitzer's fundraising in the us</li>
+                        <li>tourist culture: same queue, ferry and photo spot, shared by strangers</li>
                         <li>
                             <details>
-                                <summary>sources + quotes</summary>
-                                <p>
-                                    <a href="https://www.nps.gov/stli/learn/historyculture/the-french-connection.htm" target="_blank">national park service</a>
-                                    The statue was conceived in 1865 by French political thinker Édouard René de Laboulaye as a symbolic gift of friendship from the people of France to the United States.
-                                </p>
-                                <p>
-                                    The American Revolutionary War lasted from April 19, 1775, to September 3, 1783.
-                                </p>
-                                <p>
-                                    The Statue of Liberty was built in France between 1875 and 1884, shipped to the United States in 1885, and officially dedicated on October 28, 1886.
-                                </p>
+                                <summary><i>sources + quotes</i></summary>
+                                <div class="details-content">
+                                    <p>
+                                        <a href="https://www.nps.gov/stli/learn/historyculture/the-french-connection.htm" target="_blank">national park service</a>
+                                        The statue was conceived in 1865 by French political thinker Édouard René de Laboulaye as a symbolic gift of friendship from the people of France to the United States.
+                                    </p>
+                                    <p>
+                                        The American Revolutionary War lasted from April 19, 1775, to September 3, 1783.
+                                    </p>
+                                    <p>
+                                        The Statue of Liberty was built in France between 1875 and 1884, shipped to the United States in 1885, and officially dedicated on October 28, 1886.
+                                    </p>
+                                </div>
                             </details>
                         </li>
                     </ul>
+                    <p>
+                        the statue is a gift that shows (creates) a relationship between two countries, a group of
+                        designers and thousands of everyday donors. calling it a gift from "the people of france" makes a
+                        political alliance feel grounded. today also ms liberty brings people into a shared ritual of "lets go visit the statue!", supported by
+                        an entire tourist economy.
+                    </p>
                 </li>
             </ul>
+        </div>
 
+        <h2>what it makes possible:</h2>
+        <ul>
+            <li>shared symbol // millions of people recognise and can talk about</li>
+            <li>place to perform and photograph national stories (friendship, liberty, immigration)</li>
+            <li>can give feeling of connection to bigger history through a visit, photo, souvenir</li>
+        </ul>
+
+        <h1>what it makes difficult:</h1>
+        <ul>
+            <li>seeing complications: abolition meaning, the later added poem, the gap with immigration restrictions</li>
+            <li>approaching it freely (as in literally for free): ticket paywall, ferry schedules, screening and physical access limitations etc</li>
+            <li>liberty is so famous/iconic/everywhere in nyc that merch and monitization get in the way of the actual statue being experienced raw for the first time</li>
+        </ul>
+
+        <h2>reflexivity</h2>
+        <p>
+            i learned the version i know currently of the statue in elementary school, and i mostly know it through photos and media, which is
+            part of what the critiquing is about. the national park service and the foundation that run the monument want it
+            presented as a unifying national symbol, and my sources mostly come from those institutions and
+            their museum blogging thingies, so i am seeing the monument through the versions of its story that are easiest to find via a google searh (seo, etc).
+        </p>
+        <p>is it dangerous? is it lacking? design rationale on the bottom:</p>
+
+        <a href="">links look like this</a> ✚ <b> bold text looks like this</b> ✚ <i>italics look like this </i> ✚
+        <u>underline looks like this</u>
+        </br>
+
+        <font class="ha">more</font> <font class="ah">cute</font> <font class="eh">text</font>
+        <div>
+            <h2>timeline</h2>
             <div id="timeline">
                 <p><b>1870-1874:</b> Sculptor Frédéric-Auguste Bartholdi designed the statue.</p>
                 <p><b>1875-1884:</b> The statue was constructed in France under Bartholdi and engineer Gustave Eiffel.</p>
@@ -137,13 +239,26 @@
                 <p><b>October 28, 1886:</b>  President Grover Cleveland dedicated the monument.</p>
             </div>
         </div>
-        <aside>
-            <img src="img/liberty-full.png" alt="le lady liber-tea">
-        </aside>
-    </main>
-    
 
-    <script src="wordcounter.js"></script>
+        <div>
+            <h1>Design rationale</h1>
+            <div id="text-container">
+                <h4>4- Write a 250-word design rationale. Explain why you chose this form and how it helps make your argument about your medium.</h4>
+                <p>i chose a website because i have not coded for a class project all semester and I am a programming major, i love making websites and i wanted to make a website for this class at some point and I felt this was a perfect opprotunity</p>
+                <p>the other options were also interesting for this though, i would have probably made a tourist pamphlet/zine about lady liberty which would have been intended to be read while you were looking  at it across the pier.</p>
+                <p>i do feel however that when done correctly the website is the ultimate gateway to recieving and displaying information in multiple formats that is acessible to a wide range of people who have acess to technology.</p>
 
+                <img src="img/liberty-face.png" alt="liberty face">
+
+                <h3>pros tracker</h3>
+                <p>able to track most sources on the web in the <a href="sources.html">sources page</a></p>
+
+                <h3>cons tracker</h3>
+                <p>biased on pulling imgs + facts that i am selectively choosing off the internet</p>
+            </div>
+        </div>
+       
+    </div>
+    <div class="wrap"></div>
 </body>
 </html>
