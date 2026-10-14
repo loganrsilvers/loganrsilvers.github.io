@@ -40,8 +40,8 @@
   --scrollbar-thumb-color: var(--color-accent);
   --scrollbar-track-color: var(--color-accent-alt);
 
-  --select-text-color: var(--color-accent-alt);
-  --select-background-color: var(--color-highlight);
+  --select-text-color: var(--color-bg);
+  --select-background-color: var(--color-accent);
 
   --button-text-color: var(--color-highlight);
   --button-background-color: var(--color-accent-alt);
