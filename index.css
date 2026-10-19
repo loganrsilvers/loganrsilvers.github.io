@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'initial-font';
-    src: url('index-assets/fonts/Initial-Font.ttf');
+    src: url('index-assets/fonts/InitialFont.ttf');
 }
 @font-face {
     font-family: '';
@@ -26,6 +26,10 @@ body{
     display: flex;
     flex-direction: column;
 }
+/* makes first letter of each text (p + a) different font */
+a::first-letter {
+    font-family: 'initial-font', sans-serif;
+} 
 
 * {
     box-sizing: border-box;
@@ -33,54 +37,73 @@ body{
     padding: 0;
 }
 
-
-
-
-
-/* header */
 header {
-    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     margin: 1rem 0;
 }
+h1 {
+    font-family: 'initial-font', sans-serif;
+    font-size: 3rem;
+    color: var(--dark-color);
+    text-align: center;
+}
 
-
-nav {
-    width: 100%;
+/* cat themed main and link whiskers */
+#container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-
-    border-bottom: 1px solid var(--black);
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+#left, #right {
+    display: flex;
+    flex-direction:column;
 }
 
-nav a{
-    text-decoration: none;
-    color: var(--black);
+#left a, #right a {
+    margin-top: 1rem;
+    text-align: center;
 }
 
-a:hover {
-    color: var(--dark-color);
+#ears {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-
-
-/* main */
-
-main {
-    width: 70%;
-    margin: 0 auto;
+#left-ear, #right-ear {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid var(--black);
 }
-
-main figure img {
+#left {
+    text-align: right;
+}
+img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: center -210px;
+    height: 200px;
+    border-width: 15px;
+    border-style: double;
+    border-color: var(--black);
 }
+a {
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+a:hover {
+    color: var(--black);
+    background-color: var(--dark-color);
+}
+
 
 footer {
     border-top: 1px solid var(--black);
@@ -89,4 +112,11 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    /* put the footer on the bottom of the page */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
 }
