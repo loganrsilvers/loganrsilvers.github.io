@@ -84,7 +84,7 @@ h1 {
 }
 
 main {
-    width: clamp(12rem, 34vw, 30rem);
+    width: clamp(11rem, 28vw, 24rem);
 }
 
 #ears {
@@ -97,16 +97,16 @@ main {
 #left-ear, #right-ear {
     width: 0;
     height: 0;
-    border-left: clamp(1.1rem, 4vw, 1.5625rem) solid transparent;
-    border-right: clamp(1.1rem, 4vw, 1.5625rem) solid transparent;
-    border-bottom: clamp(2.25rem, 8vw, 3.125rem) solid var(--black);
+    border-left: clamp(1.2rem, 4.2vw, 2.4rem) solid transparent;
+    border-right: clamp(1.2rem, 4.2vw, 2.4rem) solid transparent;
+    border-bottom: clamp(2.4rem, 8.5vw, 4.8rem) solid var(--black);
 }
 img {
     width: 100%;
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
-    border-width: clamp(0.5rem, 2vw, 0.9375rem);
+    border-width: clamp(0.75rem, 2.2vw, 1.5rem);
     border-style: double;
     border-color: var(--black);
 }
@@ -123,7 +123,7 @@ a:hover {
 
 @media (max-width: 42rem) {
     #container {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 60vw) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 54vw) minmax(0, 1fr);
         padding: 0 0.5rem;
     }
 
@@ -140,6 +140,18 @@ a:hover {
         overflow-wrap: anywhere;
         font-size: clamp(0.75rem, 3.6vw, 1rem);
         margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 42.001rem) {
+    #left-ear, #right-ear {
+        border-left-width: clamp(2.1rem, 4.75vw, 2.85rem);
+        border-right-width: clamp(2.1rem, 4.75vw, 2.85rem);
+        border-bottom-width: clamp(4.2rem, 9.5vw, 5.7rem);
+    }
+
+    img {
+        border-width: clamp(1.125rem, 2.5vw, 1.75rem);
     }
 }
 
