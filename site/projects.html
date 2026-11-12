@@ -1,77 +1,191 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	
 	<meta charset="utf-8">
-	
-	<title>logan's websites</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>logan silvers - projects</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="projects.css">	
-	
+	<link rel="stylesheet" href="projects.css">
 </head>
-
-
 <body>
+<div id="container">
 
-  <div id="container">
+	<header>
+		<h1>logan silvers</h1>
+		<h2>programmer, webmaster, gamemaker</h2>
+		<p>Welcome to my projects page! I have a variety of projects in web development, game development, and event planning + production. ///////</p>
+		<p class="quick-links">
+			<a href="../index.html">go back home</a>
+			<a href="https://github.com/loganrsilvers" target="_blank">github</a>
+			<a href="https://loganrsilvers.itch.io" target="_blank">itch.io</a>
+			<a href="list.html">all my little sites</a>
+		</p>
+	</header>
 
-  	<header>
-  	    <h1>logan silvers</h1>
-  	    <h2>programmer, webmaster, gamemaker</h2>
-		<p>Welcome to my projects page! I have a variety of projects in web development, game development, and event planning + production. /////// </p>
-		<p>Feel free to click around and explore.</p>
-		<p><a href="../index.html">go back home</a></p>
-  	  </header>
+	<main>
 
-  	  <main>
-  	  		  <nav>
-  	  		    <ul>
-					<li>
-						<p>programming - C#, HTML, CSS, JavaScript</p>
-					</li>
-					<li><a href="https://github.com/loganrsilvers" target="_blank">my github profile</a></li>
-					<li><a href="https://github.com/Chicago-Puppet-Fest/Backstage" target="_blank">inventory management system for the chicago puppet festival - 2026</a></li>
-					
-					<li><p>event planning + execution /// clubs, organizations, volunteer work</p></li>
-					<li><a href="https://www.instagram.com/websiteswebsiteswebsites/" target="_blank">webdev club - 2026</a></li>
-					<li><a href="https://www.instagram.com/callofthecauldron/" target="_blank">call of the cauldron - 2025</a></li>
-					<li><a href="https://www.instagram.com/creativeleadersofcolumbia/" target="_blank">creative leaders of columbia - 2024</a></li>
-					<li><a href="https://www.instagram.com/artinstituteteens/" target="_blank">art institute of chicago - teens - 2023</a></li>
+		<!-- FEATURED -->
+		<section class="featured">
+			<a class="card card-big" href="https://github.com/Chicago-Puppet-Fest/Backstage" target="_blank">
+				<div class="shot" style="--c:#e09c14"><img src="projectheaders/backstage.png" alt="Backstage project screenshot" loading="lazy"></div>
+				<div class="card-text">
+					<span class="eyebrow">featured project · 2026</span>
+					<h3>Backstage</h3>
+					<p>An inventory management system for the Chicago Puppet Festival, used to keep track of props, puppets and equipment behind the scenes.</p>
+					<ul class="tags"><li>C#</li><li>Blazor</li><li>Azure</li><li>client project</li></ul>
+				</div>
+			</a>
+		</section>
 
-					<li><p>my games in development +/+/ unity, C#, ren.py (python), twine, javascript</p></li>
-					<li><a href="https://loganrsilvers.itch.io" target="_blank">itch.io page</a></li>
-					<li><a href="https://loganrsilvers.itch.io/paired" target="_blank">paired - a cooperative puzzle game - 2026</a></li>
-					<li><a href="https://loganrsilvers.itch.io/earthdayjam2026" target="_blank">click the plastic - earth day 2026</a></li>
-					<li><a href="https://loganrsilvers.itch.io/fish-marry-kill" target="_blank">fish marry kill - a fishmonger + fish dating (cooking) sim - 2025</a></li>
-					<li><a href="https://loganrsilvers.itch.io/vampiredressup" target="_blank">vampiredressup - a vampire dress-up game - 2025</a></li>
+		<!-- CODE + HACKATHONS -->
+		<section>
+			<h2 class="section-title">code + hackathons</h2>
+			<div class="grid">
+				<a class="card" href="https://github.com/loganrsilvers/FirmFlow" target="_blank">
+					<div class="shot" style="--c:#7f77dd"><img src="projectheaders/firmflow.png" alt="FirmFlow project screenshot" loading="lazy" style="object-position: left"></div>
+					<div class="card-text">
+						<h3>FirmFlow <span class="year">2026</span></h3>
+						<p>Built at the AEC hackathon.</p>
+						<ul class="tags"><li>python</li><li>typescript</li><li>vercel</li><li>supabase</li><li>hackathon</li></ul>
+					</div>
+				</a>
+				<a class="card" href="https://loganrsilvers.github.io/paintingApp/" target="_blank">
+					<div class="shot" style="--c:#7f77dd"><img src="projectheaders/paintingapp.png" alt="paintingApp project screenshot" loading="lazy" style="object-position: left"></div>
+					<div class="card-text">
+						<h3>paintingApp <span class="year">2026</span></h3>
+						<p>pixie.js painting web application</p>
+						<ul class="tags"><li>html/css/js</li><li>pixie.js</li></ul>
+					</div>
+				</a>
+			</div>
+		</section>
 
-					<li><p>gamejams I have participated in</p></li>
-					<li><a href="https://valiantamm.itch.io/rodent-fried-eggs" target="_blank">rodent fried eggs - 2026</a></li>
+		<!-- EXPERIENCE -->
+		<section>
+			<h2 class="section-title">event planning + organizing</h2>
+			<p class="section-note">clubs, organizations, volunteer work</p>
+			<ol class="experience">
+				<li>
+					<span class="exp-year">2026</span>
+					<div class="exp-body">
+						<h3>AWS builder center</h3>
+						<span class="exp-role">student builder campus leader (SBCL) · sep 2026 - present</span>
+						<p>like a brand ambassedor, passed out merch + advertized the AWS builder center</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year">2026</span>
+					<div class="exp-body">
+						<h3><a href="https://webdevclub.github.io/webdevclub.io/" target="_blank">websites websites websites</a></h3>
+						<span class="exp-role">founder + president · 2025 - 2026</span>
+						<p>webdevclub is a super awesome club for the indie web enthusiasts that live inside us.</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year">2025</span>
+					<div class="exp-body">
+						<h3>game forge</h3>
+						<span class="exp-role">vp + paperwork manager · 2025-2026</span>
+						<p>hosted game jams on itch.io and organized the events for the jams</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year">2024</span>
+					<div class="exp-body">
+						<h3><a href="https://www.instagram.com/callofthecauldron/" target="_blank">call of the cauldron</a></h3>
+						<span class="exp-role">communications director · 2024-2026</span>
+						<p>space reservations, club financials, things like that</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year">2024</span>
+					<div class="exp-body">
+						<h3><a href="https://www.instagram.com/creativeleadersofcolumbia/" target="_blank">creative leaders of columbia</a></h3>
+						<span class="exp-role">programming intern · 2024</span>
+						<p>hosted and ran leadership oriented events + one big manifest event</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year">2023</span>
+					<div class="exp-body">
+						<h3><a href="https://www.instagram.com/artinstituteteens/" target="_blank">art institute of chicago</a></h3>
+						<span class="exp-role">events intern · 2023</span>
+						<p>exhuberus</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year">2022</span>
+					<div class="exp-body">
+						<h3>hollister brand agent</h3>
+						<span class="exp-role">brand agent · 2022</span>
+						<p>similar to a brand rep, passed things out, posted to socials, hosted events, those sorts of things</p>
+					</div>
+				</li>
+			</ol>
+		</section>
 
-					<li><p>hackathons</p></li>
-					<li><a href="firmflow-iota.vercel.app" target="_blank">FirmFlow - AEC hackathon 2026</a></li>
+		<!-- GAMES -->
+		<section>
+			<h2 class="section-title">games</h2>
+			<p class="section-note">unity, C#, ren'py (python), twine, javascript</p>
+			<div class="grid">
+				<a class="card" href="https://loganrsilvers.itch.io/boobytrap" target="_blank">
+					<div class="shot" style="--c:#c94f7c"><img src="projectheaders/boobytrap.png" alt="Boobytrap game cover" loading="lazy"></div>
+					<div class="card-text">
+						<h3>boobytrap <span class="year">2026</span></h3>
+						<p>Made for a game jam.</p>
+						<ul class="tags"><li>html/css/js</li><li>game jam</li></ul>
+					</div>
+				</a>
+				<a class="card" href="https://loganrsilvers.itch.io/fish-marry-kill" target="_blank">
+					<div class="shot" style="--c:#3fa88a"><img src="projectheaders/fishmarrykill.png" alt="Fish Marry Kill game cover" loading="lazy"></div>
+					<div class="card-text">
+						<h3>fish marry kill <span class="year">2025</span></h3>
+						<p>A fishmonger + fish dating (cooking) sim.</p>
+						<ul class="tags"><li>python</li><li>ren.py</li></ul>
+					</div>
+				</a>
+				<a class="card" href="https://loganrsilvers.itch.io/paired" target="_blank">
+					<div class="shot" style="--c:#5aa5d6"><img src="projectheaders/paired.png" alt="Paired game cover" loading="lazy"></div>
+					<div class="card-text">
+						<h3>paired <span class="year">2026</span></h3>
+						<p>A cooperative puzzle game.</p>
+						<ul class="tags"><li>html/css/js</li><li>game jam</li></ul>
+					</div>
+				</a>
+				<a class="card" href="https://loganrsilvers.itch.io/earthdayjam2026" target="_blank">
+					<div class="shot" style="--c:#6aa630"><img src="projectheaders/clickThePlastic.png" alt="Click the Plastic game cover" loading="lazy"></div>
+					<div class="card-text">
+						<h3>click the plastic <span class="year">2026</span></h3>
+						<p>Made for an Earth Day game jam.</p>
+						<ul class="tags"><li>html/css/js</li><li>game jam</li></ul>
+					</div>
+				</a>
+				<a class="card" href="https://valiantamm.itch.io/rodent-fried-eggs" target="_blank">
+					<div class="shot" style="--c:#d8662f">cover image</div>
+					<div class="card-text">
+						<h3>rodent fried eggs <span class="year">2026</span></h3>
+						<p>A team game jam entry.</p>
+						<ul class="tags"><li>unity</li><li>game jam</li></ul>
+					</div>
+				</a>
+				<a class="card" href="https://loganrsilvers.itch.io/vampiredressup" target="_blank">
+					<div class="shot" style="--c:#b0306a"><img src="projectheaders/vladsvloset.png" alt="Vampire Dress-Up game cover" loading="lazy"></div>
+					<div class="card-text">
+						<h3>vampire dress-up <span class="year">2025</span></h3>
+						<p>A vampire dress-up game.</p>
+						<ul class="tags"><li>html/css/js</li><li>game jam</li></ul>
+					</div>
+				</a>
+			</div>
+		</section>
 
-  	  		      <li><p></p></li>
+	</main>
 
-  	  		    </ul>
-  	  		  </nav>
+	<footer>
+		<p>&#169;logan silvers 2026</p>
+	</footer>
 
-  	  </main>
-
-  	  <footer>
-  	    <p>&#169;logan silvers 2025</p>
-  	  </footer>
-
-
-
-
-
-  </div><!-- close "container" -->
-  
-
+</div>
 </body>
-	
-</html> 
+</html>
