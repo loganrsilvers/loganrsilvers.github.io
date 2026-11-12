@@ -2,6 +2,90 @@ body {
 	background-image: url(css/img/bagle.gif);
 }
 
+.site-header-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-header-list li {
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.site-header-list .list-heading,
+.site-header-list .text-link {
+	grid-column: 1 / -1;
+	line-height: 1.4;
+}
+
+.site-header-list .list-heading {
+	padding: 1.25rem 0 0.2rem;
+}
+
+/* section headings use the site's own font instead of plain Arial */
+.site-header-list .list-heading h2,
+.site-header-list .list-heading h3 {
+	margin: 0;
+	font-family: 'metalfont2', Arial, sans-serif;
+}
+
+.site-header-list .list-heading h3 {
+	font-size: 1rem;
+	opacity: 0.85;
+}
+
+.site-header-list .text-link {
+	padding: 0.25rem 0;
+}
+
+/* each site = one framed tile */
+.site-header-list a.site-header-image-link {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	background: rgb(10, 3, 16);
+	border: 2px solid rgb(139, 186, 194);
+	transition: transform 0.15s, border-color 0.15s;
+}
+
+.site-header-list a.site-header-image-link:hover {
+	transform: translateY(-3px) rotate(-0.6deg);
+	border-color: rgb(229, 66, 229);
+}
+
+/* every header strip gets the same size box, centered */
+.site-header-list img {
+	display: block;
+	width: 100%;
+	height: 70px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.site-header-list .cap {
+	display: block;
+	padding: 5px 8px;
+	font-family: 'font', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.3;
+	color: whitesmoke;
+}
+
+.site-header-list a.site-header-image-link:hover .cap {
+	color: rgb(229, 66, 229);
+}
+
+@media (max-width: 520px) {
+	.site-header-list {
+		grid-template-columns: 1fr;
+	}
+}
 
 section h2 {
 	font-size: 1.5rem;

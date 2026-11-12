@@ -1,110 +1,86 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	
 	<meta charset="utf-8">
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>logan's websites</title>
-	
-	<link rel="stylesheet" href="css/style.css">	
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="list.css">
-	
+	<script src="list.js" defer></script>
 </head>
-
-<!-- wkjefblwkefbwqlkjeb -->
 <body>
+	<div id="container">
+		<header>
+			<h1>logan silvers</h1>
+			<h2>~ little sites i have made / am in the process of making</h2>
+			<p>Hi, my name is Logan Silvers and I am a webmaster. Below are all my short and sweet websites I have made during the past 3 years of my HTML and CSS experience and this is essentially a compilation of all sorts of projects that I have made myself coding in visual studio code.</p>
+			<p>Feel free to click around and explore.</p>
+			<p><a href="../index.html">go back home</a></p>
+		</header>
 
-  <div id="container">
-
-  	<header>
-  	    <h1>logan silvers</h1>
-  	    <h2>~ little sites i have made / am in the process of making</h2>
-		<p>Hi, my name is Logan Silvers and I am a webmaster. Below are all my short and sweet websites I have made during the past 3 years of my HTML and CSS experience and this is essentially a compilation of all sorts of projects that I have made myself coding in visual studio code.</p>
-		<p>Feel free to click around and explore.</p>
-		<p><a href="../index.html">go back home</a></p>
-  	  </header>
-
-	  	<section>
+		<section>
 			<h2>take me to a random site logan made</h2>
-			<button id="randomsite" onclick="randomSite()">click me</button>
-			<script>
-			function randomSite() {
-				var links = document.querySelectorAll('nav ul li a');
-				var randomLink = links[Math.floor(Math.random() * links.length)];
-				window.open(randomLink.href, '_blank');
-			}
-			</script>
-		</section>	
-  	  <main>
-  	  		  <nav>
-  	  		    <ul>
-					<li><p>homepage</p></li>
-					<li><a href="intro.html">intro - my about me</a></li>
-					<li><a href="projects.html">its the same as this except there is more than just websites on there...</a></li>
+			<button id="randomsite" type="button">click me</button>
+		</section>
 
-					<li><p>list of all my websites</p></li>
-					<li><a href="list.html">this page here</a></li>
+		<main>
+			<nav aria-label="All websites">
+				<ul class="site-header-list">
+					<li class="list-heading"><h2>homepage</h2></li>
+					<li><a class="site-header-image-link" data-norandom href="../index.html"><img src="siteheaders/portfoliohome.png" alt="" loading="lazy"><span class="cap">Logan Silvers portfolio homepage</span></a></li>
+					<li><a class="site-header-image-link" data-norandom href="intro.html"><img src="siteheaders/aboutmeintro.png" alt="" loading="lazy"><span class="cap">About me and intro</span></a></li>
+					<li><a class="site-header-image-link" data-norandom href="projects/personal/myBlog/blog.html"><img src="siteheaders/blog.png" alt="" loading="lazy"><span class="cap">My about-me blog</span></a></li>
+					<li class="text-link"><a href="projects.html">its the same as this except there is more than just websites on there...</a></li>
 
-					<li><p>sites for other people</p></li>
-					<li><a href="projects/commissions/2catskissing/index.html">eloise (ilustrator) link in bio</a></li>
-					<li><a href="https://eloisepark.com">eloise (same illustrator) more professional website</a></li>
-					<li><a href="https://gingersnapsphoto.com">caleb (photographer) website</a></li>
-					<li><a href="projects/commissions/savegeorge/index.html">short webgame : SAVE GEORGE!</a></li>
-					<li><a href="projects/commissions/orangepeelplease/index.html">orange peel please band site</a></li>
-					<li><a href="projects/commissions/tonisite/index.html">toni (artist) website</a></li>
+					<li class="list-heading"><h2>sites for other people</h2></li>
+					<li><a class="site-header-image-link" href="projects/commissions/2catskissing/index.html"><img src="siteheaders/2catskissing.png" alt="" loading="lazy"><span class="cap">Eloise's illustrator link-in-bio site</span></a></li>
+					<li><a class="site-header-image-link" href="https://eloisepark.com"><img src="siteheaders/eloisepark.png" alt="" loading="lazy"><span class="cap">Eloise Park's professional website</span></a></li>
+					<li><a class="site-header-image-link" href="https://gingersnapsphoto.com"><img src="siteheaders/caleb.png" alt="" loading="lazy"><span class="cap">Caleb's photography website</span></a></li>
+					<li><a class="site-header-image-link" href="projects/commissions/savegeorge/index.html"><img src="siteheaders/savegeorge.png" alt="" loading="lazy"><span class="cap">Save George web game</span></a></li>
+					<li><a class="site-header-image-link" href="projects/commissions/orangepeelplease/index.html"><img src="siteheaders/orangepeelplease.png" alt="" loading="lazy"><span class="cap">Orange Peel Please band site</span></a></li>
+					<li><a class="site-header-image-link" href="projects/commissions/tonisite/index.html"><img src="siteheaders/tonisite.png" alt="" loading="lazy"><span class="cap">Toni's artist website</span></a></li>
 
-					<li><p>other things</p></li>
-					<li><a href="projects/personal/hopesanddreams/index.html">experimenting w perplexy for sitebuilding // has an oddities page inspired by neocities</a></li>
-					<li><a href="projects/classwork/Login/tester.html">testing password combos w/ javascript (tabby and pink)</a></li>
-					<li><a href="projects/personal/weBlog/index.html">me and my boyf have a blog</a></li>
-					<li><a href="https://loganrsilvers.github.io/meowcentral">cat themed mini-site</a></li>
-					<li><a href="https://loganrsilvers.github.io/construction-graffiti-translator/">grafiiti translator concept site</a></li>
-					<li><a href="https://loganrsilvers.github.io/typo-terminator/">typo terminator game</a></li>
+					<li class="list-heading"><h2>other things</h2></li>
+					<li><a class="site-header-image-link" href="projects/personal/hopesanddreams/index.html"><img src="siteheaders/hopesanddreams.png" alt="" loading="lazy"><span class="cap">Hopes and dreams site</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/Login/tester.html"><img src="siteheaders/passworddemo.png" alt="" loading="lazy"><span class="cap">Password combination demo</span></a></li>
+					<li><a class="site-header-image-link" href="projects/personal/weBlog/index.html"><img src="siteheaders/boyfblog.png" alt="" loading="lazy"><span class="cap">Me and my boyfriend's blog</span></a></li>
+					<li><a class="site-header-image-link" href="https://loganrsilvers.github.io/meowcentral"><img src="siteheaders/meowcentral.png" alt="" loading="lazy"><span class="cap">Meow Central cat-themed mini-site</span></a></li>
+					<li><a class="site-header-image-link" href="https://loganrsilvers.github.io/construction-graffiti-translator/"><img src="siteheaders/construction translator.png" alt="" loading="lazy"><span class="cap">Construction graffiti translator</span></a></li>
+					<li><a class="site-header-image-link" href="https://loganrsilvers.github.io/typo-terminator/"><img src="siteheaders/typoterminator.png" alt="" loading="lazy"><span class="cap">Typo Terminator game</span></a></li>
+					<li class="list-heading"><h3>more personal sites</h3></li>
+					<li><a class="site-header-image-link" href="projects/personal/fidgetsite/index.html"><img src="siteheaders/fidgetsite.png" alt="" loading="lazy"><span class="cap">Fidget site</span></a></li>
+					<li><a class="site-header-image-link" href="projects/personal/jack-o-lantern/index.html"><img src="siteheaders/jackolantern.png" alt="" loading="lazy"><span class="cap">Jack-o'-lantern site</span></a></li>
+					<li><a class="site-header-image-link" href="projects/personal/animalsite/index.html"><img src="siteheaders/manatee.png" alt="" loading="lazy"><span class="cap">Manatee site</span></a></li>
+					<li><a class="site-header-image-link" href="projects/personal/spooky-shrine/index.html"><img src="siteheaders/spookyshrine.png" alt="" loading="lazy"><span class="cap">Spooky shrine</span></a></li>
 
+					<li class="list-heading"><h2>school projects</h2></li>
+					<li class="list-heading"><h3>Web Dev 1 ,,, my spurt of energy i had freshman year !!</h3></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web1/assignment4/index.html"><img src="siteheaders/web1assignment4.png" alt="" loading="lazy"><span class="cap">Web 1 evil Logan typography</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web1/assignment5/index.html"><img src="siteheaders/hoverandswitch.png" alt="" loading="lazy"><span class="cap">Web 1 hover and switch</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web1/assignment6/index.html"><img src="siteheaders/web1assignment6.png" alt="" loading="lazy"><span class="cap">Web 1 Ginger the dog</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web1/assignment7/index.html"><img src="siteheaders/mlp8ball.png" alt="" loading="lazy"><span class="cap">Web 1 My Little Pony 8-ball</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web1/assignment8/index.html"><img src="siteheaders/cultofthelamb.png" alt="" loading="lazy"><span class="cap">Web 1 Cult of the Lamb site</span></a></li>
+					<li class="list-heading"><h3>Web Dev 2 /// a continuation of awesomeness mixed with my super busy 18 credit second semester</h3></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web2/assignment3/index.html"><img src="siteheaders/web2assignment3.png" alt="" loading="lazy"><span class="cap">Web 2 Evil Potions</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web2/assignment4/index.html"><img src="siteheaders/websitethatbreaksovertime.png" alt="" loading="lazy"><span class="cap">Web 2 website that breaks itself over time</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web2/assignment5/index.html"><img src="siteheaders/shamusbug.png" alt="" loading="lazy"><span class="cap">Web 2 my boyfriend is a bug</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/web2/assignment6/index.html"><img src="siteheaders/web2assignment6.png" alt="" loading="lazy"><span class="cap">Web 2 fish site with big pictures</span></a></li>
+					<li class="list-heading"><h3>the results of my super short 1 credit web design class in lieu of no availible web dev 3 course</h3></li>
+					<li><a class="site-header-image-link" href="projects/classwork/webdesign/index.html"><img src="siteheaders/webdesignbugland.png" alt="" loading="lazy"><span class="cap">Web design bug site</span></a></li>
+					<li><a class="site-header-image-link" href="projects/classwork/media-lit/index.html"><img src="siteheaders/medialit.png" alt="" loading="lazy"><span class="cap">Media literacy project</span></a></li>
 
-					<li><h3>school projects</h3></li>
-  	  		    	<li><p>Web Dev 1 ,,, my spurt of energy i had freshman year !!</p></li>
-  	  		    	<li><a href="projects/classwork/web1/assignment4/index.html"> web 1- evil logan typography </a></li>
-  	  		    	<li><a href="projects/classwork/web1/assignment5/index.html"> web 1- hover and switch </a></li>
-  	  		    	<li><a href="projects/classwork/web1/assignment6/index.html"> web 1- my dog ginger </a></li>
-  	  		    	<li><a href="projects/classwork/web1/assignment7/index.html"> web 1- mlp 8ball </a></li>
+					<li class="list-heading"><h2>my webdev club :: websites websites websites</h2></li>
+					<li><a class="site-header-image-link" href="https://webdevclub.github.io/webdevclub.io/"><img src="siteheaders/webdevclub.png" alt="" loading="lazy"><span class="cap">Web Dev Club website</span></a></li>
+					<li><a class="site-header-image-link" href="https://webdevclub.github.io/webdevclub.io/hauntedhouse2025/house.html"><img src="siteheaders/hauntedhouse.png" alt="" loading="lazy"><span class="cap">Group Halloween hotel rooms</span></a></li>
+					<li><a class="site-header-image-link" href="https://webdevclub.github.io/webdevclub.io/closet/closet.html"><img src="siteheaders/charactercreator.png" alt="" loading="lazy"><span class="cap">Group Halloween character assembler</span></a></li>
+					<li><a class="site-header-image-link" href="https://loganrsilvers.github.io/THE-ULTIMATE-REPO/"><img src="siteheaders/theultimaterepo.png" alt="" loading="lazy"><span class="cap">Collaborative project making the person to our right</span></a></li>
+				</ul>
+			</nav>
+		</main>
 
-  	  		    	<li><p>Web Dev 2 /// a continuation of awesomeness mixed with my super busy 18 credit second semester</p></li>
-  	  		    	<li><a href="projects/classwork/web2/assignment3/index.html"> web 2- Evil Potions </a></li>
-  	  		    	<li><a href="projects/classwork/web2/assignment4/index.html"> web 2- Website that breaks itself over time </a></li>
-  	  		    	<li><a href="projects/classwork/web2/assignment5/index.html"> web 2- my bf is a bug </a></li>
-  	  		    	<li><a href="projects/classwork/web2/assignment6/index.html"> web 2- fish site w big pictures</a></li>
-  	  		    	
-  	  		    	<li><p>the results of my super short 1 credit web design class in lieu of no availible web dev 3 course</p></li>
-  	  		    	<li><a href="projects/classwork/webdesign/index.html">web design - bug site</a></li>
-
-					<li><p>my webdev club :: websites websites websites</p></li>
-					<li><a href="https://webdevclub.github.io/webdevclub.io/">webdevclub website</a></li>
-					<li><a href="https://webdevclub.github.io/webdevclub.io/hauntedhouse2025/house.html">group halloween hotel rooms</a></li>
-					<li><a href="https://webdevclub.github.io/webdevclub.io/closet/closet.html">group halloween character assembler</a></li>
-					<li><a href="https://loganrsilvers.github.io/THE-ULTIMATE-REPO/">We all sat in a circle and made (with divs) the person to our right!!</a></li>
-
-
-  	  		      <li><p></p></li>
-
-  	  		    </ul>
-  	  		  </nav>
-
-  	  </main>
-
-  	  <footer>
-  	    <p>&#169;logan silvers 2025</p>
-  	  </footer>
-
-
-
-
-
-  </div><!-- close "container" -->
-  
-
+		<footer>
+			<p>&#169;logan silvers 2026</p>
+		</footer>
+	</div>
 </body>
-	
-</html> 
+</html>

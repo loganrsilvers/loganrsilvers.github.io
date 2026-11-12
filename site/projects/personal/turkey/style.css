@@ -1,0 +1,91 @@
+body{
+    display: flex;
+}
+
+h1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.eye{
+    position: absolute;
+
+    background-color: beige;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top:200px;
+    z-index: 1;
+}
+#left-eye{
+    left: 430px;
+}
+#right-eye{
+    left: 360px;
+}
+
+
+.wing{
+    position: absolute;
+
+    width: 100px;
+    height: 400px;
+    background-color: rgb(101, 7, 29);
+
+    border-radius: 50%;
+
+    top: 260px;
+}
+#left-wing{
+ left: 300px;
+
+    rotate: 0deg;
+    transform-origin: top center;
+}
+#right-wing{
+    left: 450px;
+
+    rotate: 0deg;
+    transform-origin: top center;
+}
+
+#left-wing:hover{
+    rotate: 20deg;
+    transition: ease-in-out 0.5s;
+}
+#right-wing:hover{
+    rotate: -20deg;
+    transition: ease-in-out 0.5s;
+}
+
+
+#head{
+position: absolute;
+    background-color: brown;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+
+    left: 320px;
+    top: 100px;
+
+    z-index: 0;
+}
+
+
+#body{
+position: absolute;
+    background-color: brown;
+    width: 250px;
+    height: 500px;
+    border-radius: 50%;
+
+    margin: auto;
+
+    top: 0;
+    margin-top: 200px;
+    left:300px;
+
+    z-index: -1;
+}
