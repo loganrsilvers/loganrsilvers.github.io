@@ -13,10 +13,6 @@
     font-family: 'initial-font';
     src: url('index-assets/fonts/InitialFont.ttf');
 }
-@font-face {
-    font-family: '';
-    src: url('index-assets/fonts/SourceSansPro-Regular.ttf');
-}
 
 body{
     background-color: var(--white);
@@ -46,8 +42,15 @@ header {
     width: 100%;
     margin: 1rem 0;
 }
+
+@font-face {
+    font-family: 'zou';
+    src: url('index-assets/fonts/zou.ttf');
+}
+
 h1 {
-    font-family: 'initial-font', sans-serif;
+    font-family: 'zou', sans-serif;
+    text-transform: uppercase;
     font-size: clamp(2rem, 7vw, 3.5rem);
     color: var(--dark-color);
     text-align: center;

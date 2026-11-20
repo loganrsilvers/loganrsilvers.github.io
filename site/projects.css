@@ -238,3 +238,48 @@ main section {
 		min-height: 160px;
 	}
 }
+
+
+/* "MADE WITH AI" stamp across a card's image on hover
+   (add made-with-ai to a .shot div to use it) */
+.made-with-ai {
+	position: relative;
+	overflow: hidden;
+}
+
+/* ::before darkens the image, ::after is the angled text */
+.made-with-ai::before,
+.made-with-ai::after {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s;
+}
+
+.made-with-ai::before {
+	content: "";
+	background: rgba(10, 3, 16, 0.6);
+}
+
+.made-with-ai::after {
+	content: "MADE WITH AI";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'metalfont', Arial, sans-serif;
+	font-size: 2.6rem;
+	line-height: 1;
+	white-space: nowrap;
+	color: #e09c14;
+	text-shadow: 3px 3px 0 rgb(10, 3, 16);
+	transform: rotate(-20deg);
+}
+
+/* show it when the whole card is hovered, not just the image */
+.card:hover .made-with-ai::before,
+.card:hover .made-with-ai::after,
+.card:focus .made-with-ai::before,
+.card:focus .made-with-ai::after {
+	opacity: 1;
+}

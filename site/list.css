@@ -2,6 +2,47 @@ body {
 	background-image: url(css/img/bagle.gif);
 }
 
+#introduction {
+	font-size: 1.5rem;
+}
+
+.highlight {
+	color: #e09c14;
+	font-size: 2rem;
+}
+
+.little-text {
+	font-size: 1rem;
+}
+
+/* "websites websites websites" link with a preview that follows the cursor
+   (the moving part is in list.js) */
+.preview-link,
+.preview-link:visited, .preview-link:focus, .preview-link:hover, .preview-link:visited:hover {	color: #e09c14;
+	text-decoration: none;
+}
+
+.preview-pop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 320px;
+	max-width: 80vw;
+	display: block;
+	border: 2px solid rgb(139, 186, 194);
+	background: rgb(10, 3, 16);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s;
+	z-index: 10;
+}
+
+.preview-link:hover .preview-pop,
+.preview-link:focus .preview-pop {
+	opacity: 1;
+}
+
+
 .site-header-list {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -79,6 +120,49 @@ body {
 
 .site-header-list a.site-header-image-link:hover .cap {
 	color: rgb(229, 66, 229);
+}
+
+/* "MADE WITH AI" stamp across the tile on hover
+   (add class="made-with-ai" to any tile link to use it) */
+.site-header-list a.made-with-ai {
+	position: relative;
+	overflow: hidden;
+}
+
+/* ::before darkens the tile, ::after is the angled text */
+.site-header-list a.made-with-ai::before,
+.site-header-list a.made-with-ai::after {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s;
+}
+
+.site-header-list a.made-with-ai::before {
+	content: "";
+	background: rgba(10, 3, 16, 0.6);
+}
+
+.site-header-list a.made-with-ai::after {
+	content: "MADE WITH AI";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'metalfont', Arial, sans-serif;
+	font-size: 2.6rem;
+	line-height: 1;
+	white-space: nowrap;
+	color: #e09c14;
+	text-shadow: 3px 3px 0 rgb(10, 3, 16);
+	transform: rotate(-15deg);
+}
+
+.site-header-list a.made-with-ai:hover::before,
+.site-header-list a.made-with-ai:hover::after,
+.site-header-list a.made-with-ai:focus::before,
+.site-header-list a.made-with-ai:focus::after {
+	opacity: 1;
 }
 
 @media (max-width: 520px) {

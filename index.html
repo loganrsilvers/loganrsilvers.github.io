@@ -34,12 +34,18 @@
 
     <footer>
         <p>
-            Last updated: <time datetime="2026-02-11">2026-10-19</time>
+            Last updated: <time id="last-updated" datetime="2026-01-01T00:00:00Z">January 1, 2026</time>
         </p>
         <p>
             &copy; 2026 Logan Silvers. All rights reserved.
         </p>
     </footer>
 
+    <script>
+        // current datetime
+        const currentDateTime = new Date();
+        const formattedDateTime = currentDateTime.toLocaleString();
+        document.getElementById('last-updated').textContent = formattedDateTime;
+    </script>
 </body>
 </html>
