@@ -1,19 +1,9 @@
-need to be more contrast for the image job timeline section in the projects.html
-
-
-anchors on top for the sections in project.html 
-getwebbuild for rodent fried eggs
-
-preview/play a clip when you hover over the tabs for either little sites or projects.html
-
-the about section is moved all the way to the left, it looks a little odd compared to the rest of the site being centered
 about section - breaking it up into smaller digestable things // slideshow or fades in fades out / breaks up the monotony of the about / nobody will read it all
 
+preview/play a clip when you hover over the tabs for either little sites or projects.html
 
 more consistant navbar / needs to have more consistency across all the pages. 
 
 remove the e in pixie.js 
 every time you refresh painting app header is someone elses (or series of them..?
 
-readable font for the title font in homepage
-centered cat whiskers in homepage (possibly rotated?)
