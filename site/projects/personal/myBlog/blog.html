@@ -31,7 +31,104 @@
         <input type="button" id="btnmorelinks" class="btnmorelinks" onclick='window.location = document.getElementById("morelinks").options[document.getElementById("morelinks").selectedIndex].value' value="go" />
     </div>
 
+    <!-- life / work tabs: only shown on phones (see the mobile section in aboutme.css) -->
+    <div id="tabs">
+        <button type="button" class="tab active" data-tab="life">life</button>
+        <button type="button" class="tab" data-tab="work">work</button>
+    </div>
+
+    <section id="experience">
+			<h2 class="section-title">jobs & things & stuff</h2>
+			<p class="section-note">clubs, organizations, volunteer, work history</p>
+			<ol class="experience">
+				<li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2026</span>
+					<div class="exp-body">
+						<h3>AWS builder center</h3>
+						<span class="exp-role">student builder campus leader (SBCL) · sep 2026 - present</span>
+						<p>brand ambassador, passed out merch + advertized the AWS builder center</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2026</span>
+					<div class="exp-body">
+						<h3><a href="https://webdevclub.github.io/webdevclub.io/" target="_blank">websites websites websites</a></h3>
+						<span class="exp-role">founder ✚ president ✚ 2025 - 2026</span>
+						<p>webdevclub is a super awesome club for the indie web enthusiasts that live inside us.</p>
+					</div>
+				</li>
+                <li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2026</span>
+					<div class="exp-body">
+						<h3>chicago puppet festival</h3>
+						<span class="exp-role">application developer ✚ 2026</span>
+					</div>
+				</li>
+                <li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2025</span>
+					<div class="exp-body">
+						<h3>Stepping Stones Nursery</h3>
+						<span class="exp-role">outdoor/playbased preschool assistant teacher ✚ 2025-2026</span>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2025</span>
+					<div class="exp-body">
+						<h3>game forge</h3>
+						<span class="exp-role">vp ✚ paperwork manager ✚ 2025-2026</span>
+					</div>
+				</li>
+                <li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2024</span>
+					<div class="exp-body">
+						<h3>Lavner Education</h3>
+						<span class="exp-role">STEM summer camp counselor ✚ 2024</span>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2024</span>
+					<div class="exp-body">
+						<h3><a href="https://www.instagram.com/callofthecauldron/" target="_blank">call of the cauldron</a></h3>
+						<span class="exp-role">communications director ✚ 2024-2026</span>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2024</span>
+					<div class="exp-body">
+						<h3><a href="https://www.instagram.com/creativeleadersofcolumbia/" target="_blank">creative leaders of columbia</a></h3>
+						<span class="exp-role">programming intern ✚ 2024</span>
+						<p>hosted and ran leadership oriented events + one big manifest event</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2023</span>
+					<div class="exp-body">
+						<h3><a href="https://www.instagram.com/artinstituteteens/" target="_blank">art institute of chicago</a></h3>
+						<span class="exp-role">events intern ✚ 2021 - 2023</span>
+						<p>exhuberus</p>
+					</div>
+				</li>
+				<li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2022</span>
+					<div class="exp-body">
+						<h3>Hollister Co</h3>
+						<span class="exp-role">brand agent ✚ 2022</span>
+						<p>similar to a brand rep, passed things out, posted to socials, hosted events, those sorts of things</p>
+					</div>
+				</li>
+                <li>
+					<span class="exp-year"><span class="exp-star">✦</span> 2021</span>
+					<div class="exp-body">
+						<h3>Hagen's Fish Market</h3>
+						<span class="exp-role">Fishmonger ✚ 2021-2024</span>
+					</div>
+				</li>
+			</ol>
+		</section>
+
+
     <div id="info">
+        <div class="hello-card">
         <h1>Hello,</h1>
 
         <p>My name is Logan and I am currently a 20 year old living in chicago who is interested in different yarn brands and yarn textures - I like to crochet. I also enjoy a lot of websites on neocities and thus - sparked my love of coding.</p>
@@ -43,13 +140,14 @@
         </br>
 
         <font class="ha">more</font> <font class="ah">cute</font> <font class="eh">text</font>
+        </div>
 
         <div>
             <h2>who i am</h2>
-            <p>I am a Computer Programming and Software Design student at Columbia College Chicago, an arts‑focused school where I’ve spent a lot of time figuring out how to blend code with collaboration.</p>
+            <p>I am a Computer Programming and Software Design student at Columbia College Chicago, an arts-focused school where I've spent a lot of time figuring out how to blend code with collaboration.</p>
             <p>For a long time I worked mostly on backend projects and assumed that meant my corner of computing had to be a quiet, lonely one.</p>
-            <p>In my junior year, that started to change. I began seeking out ways to write code <b>with</b> people instead of just <i>for</i> people, and to treat development as a space for shared problem‑solving, experimentation, and play.</p>
-            <p>Now, whether I am mentoring another student through a bug, sketching a database schema for a festival, or helping someone publish their first website, I feel most myself when I am helping others grow through computing.</p>
+            <p>But through my extracurriculars, I began seeking out ways to write code <b>with</b> people instead of just <i>for</i> people, and to treat development as a space for shared problem-solving, experimentation, and play.</p>
+            <p>Now, I am mentoring students through a bug squashing, sketching database schemas, and helping people publish their first websites. I feel most myself when I am helping others grow through computing.</p>
         </div>
 
         <div>
@@ -58,14 +156,6 @@
             <p>I've worked as a <b>Software Development Intern</b> for the Chicago International Puppet Theater Festival, where I helped lead a team of interns building an inventory management web app in Blazor, focusing on data design, MudBlazor components, and cloud hosting.</p>
             <p>I also work as a <b>programming tutor</b>, supporting students in HTML, CSS, C#, and game development, and as a <i>club leader</i>, organizing workshops, events, and game jams that invite people into code through play.</p>
             <p>Much of my day-to-day practice involves version control, agile workflows, and cloud environments like AWS and Azure, but the through-line is simple: use these tools to make it easier for people to learn, share, and build together.</p>
-        </div>
-
-        <div>
-            <h2>projects & clubs</h2>
-            <p>One of my proudest ongoing projects is <a href="https://webdevclub.github.io/webdevclub.io/">Websites Websites Websites</a>, a web development club I founded to help students from all majors create and publish their own sites.</p>
-            <p>We trade tutorials, debug each other's ideas, and celebrate every new page that goes live. The club has become a place where nervous beginners turn into confident tinkerers.</p>
-            <p>I've also participated in multiple <b>game jams</b>, served as <i>Game Forge Club President</i>, and led STEM workshops for younger students, using playful projects to demystify code.</p>
-            <p>If you poke around my portfolio, you'll find a mix of web tools, small games, and experiments in interactive storytelling, all connected by the same goal: lowering the barrier to entry for creative computing.</p>
         </div>
 
         <div>
@@ -78,11 +168,54 @@
 
         <div>
             <h2>contact</h2>
-            <p>You can reach me at <b>actuallyiwillnot@includemyemail.com</b> or find more of my work at <a href="https://github.com/loganrsilvers">github.com/loganrsilvers</a>.</p>
+            <p>You can reach out to me on my <b><a href="https://www.linkedin.com/in/loganrsilvers">LinkedIn dms</a></b> or find more of my work online on <font class="ha"><a href="https://github.com/loganrsilvers">github.com/loganrsilvers</a></font>.</p>
             <p>I'm currently open to internships, collaboration on web projects, and opportunities to support community-oriented tech.</p>
         </div>
        
     </div>
     <div class="wrap"></div>
+
+    <script>
+        // computers: scale the whole page so it always fills the window width
+        // phones (700px and under): no zoom, the mobile layout in aboutme.css takes over
+        function fitToScreen() {
+            const width = document.documentElement.clientWidth;
+            document.body.style.zoom = width > 700 ? width / 1210 : "";
+        }
+        fitToScreen();
+        window.addEventListener("resize", fitToScreen);
+
+        // life / work tabs (phones only)
+        document.querySelectorAll("#tabs .tab").forEach((tab) => {
+            tab.addEventListener("click", () => {
+                document.body.dataset.tab = tab.dataset.tab;
+                document.querySelectorAll("#tabs .tab").forEach((t) => {
+                    t.classList.toggle("active", t === tab);
+                });
+                window.scrollTo(0, 0);
+                fitJobTitles();
+            });
+        });
+
+        // phones: shrink each job title just enough to fit on one line
+        function fitJobTitles() {
+            const phone = document.documentElement.clientWidth <= 700;
+            document.querySelectorAll(".experience h3").forEach((title) => {
+                const parts = [title, ...title.querySelectorAll("a")];
+                parts.forEach((p) => (p.style.fontSize = ""));
+                if (!phone || title.clientWidth === 0) return;
+
+                let size = 21;
+                const setSize = () => parts.forEach((p) => (p.style.fontSize = size + "px"));
+                setSize();
+                while (title.scrollWidth > title.clientWidth && size > 10) {
+                    size -= 0.5;
+                    setSize();
+                }
+            });
+        }
+        document.fonts.ready.then(fitJobTitles);
+        window.addEventListener("resize", fitJobTitles);
+    </script>
 </body>
 </html>

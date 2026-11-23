@@ -13,6 +13,7 @@ about section - breaking it up into smaller digestable things // slideshow or fa
 more consistant navbar / needs to have more consistency across all the pages. 
 
 remove the e in pixie.js 
+every time you refresh painting app header is someone elses (or series of them..?
 
 readable font for the title font in homepage
 centered cat whiskers in homepage (possibly rotated?)

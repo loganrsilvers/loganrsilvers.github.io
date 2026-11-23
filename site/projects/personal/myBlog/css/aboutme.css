@@ -117,6 +117,97 @@ body {
   color: var(--text-color);
 }
 
+#experience {
+  z-index: 7 !important;
+  position: absolute;
+  margin-top: 90px; /* same as #info, so both boxes start at the same height */
+  left: 780px;
+  width: 345px;
+  height: 870px;
+  overflow: auto;
+  overflow-x: hidden;
+  background: var(--background-color);
+  text-align: left;
+  font: var(--font-size) var(--main-font);
+  line-height: 0.8;
+  padding-top: 5px;
+  color: var(--text-color);
+}
+
+/* the long heading wraps onto two lines, so give it room */
+#experience h2 {
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+#experience .section-note {
+  margin: 6px 0 8px;
+  text-align: right;
+}
+
+/* ----- timeline ----- */
+.experience {
+  list-style: none;
+  margin: 0 0 0 6px;
+  padding: 0 4px 0 0;
+  border-left: 2px dashed var(--color-highlight);
+}
+
+.experience li {
+  position: relative;
+  padding: 0 0 10px 14px;
+}
+
+/* little square on the line for each entry */
+.experience li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 1px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border: 2px solid var(--background-color);
+}
+
+.exp-year {
+  display: block;
+  color: var(--color-highlight);
+  margin-bottom: 2px;
+}
+
+.experience h3 {
+  margin: 0 0 2px;
+  font: bold 16px var(--main-font);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.experience h3 a:link,
+.experience h3 a:visited {
+  font: bold 16px var(--main-font);
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.experience h3 a:hover {
+  color: var(--link-hover-color);
+}
+
+.exp-role {
+  display: block;
+  font-style: italic;
+  color: var(--color-highlight);
+  opacity: 0.8;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.exp-body p {
+  margin: 0;
+  line-height: 1;
+}
+
 #nav {
   position: absolute;
   width: 800px;
@@ -330,4 +421,305 @@ h2 {
 .btnmorelinks:active {
   color: var(--button-text-color);
   background-color: var(--button-background-color);
+}
+
+
+
+/* ============================= */
+/* Phones (700px and under)      */
+/* ============================= */
+
+/* tabs are hidden on computers */
+#tabs {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  body {
+    margin: 8px;
+  }
+
+  /* stars can poke off the edge without making the page scroll sideways */
+  html {
+    overflow-x: hidden;
+  }
+
+  header {
+    font-size: 32px;
+    margin-left: 0;
+  }
+
+  /* no photo on phones */
+  #image,
+  .wrap {
+    display: none;
+  }
+
+  /* nav sits under the title instead of floating */
+  #nav {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 4px 0 10px;
+  }
+
+  a.one:link,
+  a.one:visited {
+    font-size: 16px;
+  }
+
+  /* ----- life / work tabs ----- */
+  #tabs {
+    display: flex;
+    border-bottom: 3px solid var(--color-highlight);
+    margin-bottom: 14px;
+  }
+
+  #tabs .tab {
+    flex: 1;
+    padding: 6px 0;
+    border: none;
+    font: italic bold 20px var(--header-font);
+    color: var(--color-highlight);
+    background: var(--color-accent-alt);
+    cursor: crosshair;
+  }
+
+  #tabs .tab.active {
+    /* outline text in background color */
+    /* -webkit-text-stroke: 1px var(--color-accent-alt);
+    text-stroke: 1px var(--color-accent-alt); */
+    color: var(--color-accent-alt);
+    font-style: normal;
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-accent-alt);
+
+    background: var(--color-highlight);
+  }
+
+  /* only show the box for the chosen tab (life is the default) */
+  body:not([data-tab="work"]) #experience,
+  body[data-tab="work"] #info {
+    display: none;
+  }
+
+  /* both columns go back into the normal page flow */
+  #info,
+  #experience {
+    position: static;
+    left: auto; /* undo the desktop positions */
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    line-height: 1.15;
+    padding-top: 0;
+  }
+
+  /* ----- life tab: zig-zag cards ----- */
+  #info {
+    background: transparent;
+  }
+
+  #info > div,
+  #experience {
+    position: relative;
+    background: var(--background-color);
+    padding: 6px 8px;
+    margin: 14px 0;
+  }
+
+  /* alternate which side each card hugs */
+  #info > div:nth-child(odd) {
+    margin-right: 28px;
+  }
+
+  #info > div:nth-child(even) {
+    margin-left: 28px;
+  }
+
+  #info p {
+    margin: 6px 0;
+  }
+
+  /* crochet-style zig-zag trim on the top and bottom of each card */
+  #info > div::before,
+  #info > div::after,
+  #experience::before,
+  #experience::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 8px;
+  }
+
+  #info > div::before,
+  #experience::before {
+    top: -8px;
+    background:
+      linear-gradient(315deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px,
+      linear-gradient(45deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px;
+  }
+
+  #info > div::after,
+  #experience::after {
+    bottom: -8px;
+    background:
+      linear-gradient(135deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px,
+      linear-gradient(225deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px;
+  }
+
+  /* ----- work tab: zig-zag job cards ----- */
+
+  /* the work box itself is just a holder now; each job is its own card */
+  #experience {
+    background: transparent;
+    padding: 0;
+  }
+
+  #experience::before,
+  #experience::after {
+    display: none;
+  }
+
+  #experience .section-title,
+  #experience .section-note {
+    display: none;
+  }
+
+  .experience {
+    border-left: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* each job card: a heading row (title + year) like "Hello,", then the details */
+  .experience li {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    background: var(--background-color);
+    padding: 6px 8px;
+    margin: 14px 0;
+  }
+
+  /* lets the title, role and text sit straight in the card's grid */
+  .exp-body {
+    display: contents;
+  }
+
+  /* alternate which side each job card hugs, like the life tab */
+  .experience li:nth-child(odd) {
+    margin-right: 28px;
+  }
+
+  .experience li:nth-child(even) {
+    margin-left: 28px;
+    grid-template-columns: auto minmax(0, 1fr);
+    text-align: right;
+  }
+
+  /* job title: same style as the life headings */
+  .experience h3,
+  .experience h3 a:link,
+  .experience h3 a:visited {
+    font: italic bold 21px var(--header-font);
+    letter-spacing: 1px;
+    color: var(--header-color);
+  }
+
+  .experience h3 {
+    grid-row: 1;
+    grid-column: 1;
+    white-space: nowrap; /* one line only; the script in blog.html shrinks long titles to fit */
+    margin: 0;
+    padding-bottom: 0;
+    line-height: 0.85; /* text sits close on the line, but two-line titles don't overlap */
+    border-bottom: 5px solid var(--color-highlight);
+  }
+
+  .experience li:nth-child(even) h3 {
+    grid-column: 2;
+  }
+
+  /* year + star at the other end of the heading line */
+  .exp-year {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0 0 0 8px;
+    line-height: 0.6;
+    font-size: 19px;
+    color: var(--color-highlight);
+    border-bottom: 5px solid var(--color-highlight);
+  }
+
+  .experience li:nth-child(even) .exp-year {
+    grid-column: 1;
+    flex-direction: row-reverse;
+    padding: 0 8px 0 0;
+  }
+
+  .exp-star {
+    display: none;
+  }
+
+  /* the star sits on the outer side of the year */
+  .exp-year::after {
+    font-size: 26px;
+    line-height: 0.6;
+    color: var(--color-highlight);
+  }
+
+  /* role and description go underneath, across the whole card */
+  .exp-role,
+  .exp-body p {
+    grid-column: 1 / -1;
+  }
+
+  .exp-role {
+    margin: 6px 0 3px;
+  }
+
+  /* zig-zag trim top and bottom (replaces the desktop square) */
+  .experience li::before,
+  .experience li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 8px;
+    width: auto;
+    border: none;
+    display: block;
+  }
+
+  .experience li::before {
+    top: -8px;
+    background:
+      linear-gradient(315deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px,
+      linear-gradient(45deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px;
+  }
+
+  .experience li::after {
+    bottom: -8px;
+    background:
+      linear-gradient(135deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px,
+      linear-gradient(225deg, var(--background-color) 25%, transparent 25%) -4px 0 / 8px 8px;
+  }
+
+  /* a different star on each card */
+  .experience li:nth-child(7n+1) .exp-year::after { content: "✦"; }
+  .experience li:nth-child(7n+2) .exp-year::after { content: "✴"; }
+  .experience li:nth-child(7n+3) .exp-year::after { content: "✷"; }
+  .experience li:nth-child(7n+4) .exp-year::after { content: "✶"; }
+  .experience li:nth-child(7n+5) .exp-year::after { content: "★"; }
+  .experience li:nth-child(7n+6) .exp-year::after { content: "❤"; }
+  .experience li:nth-child(7n+7) .exp-year::after { content: "✩"; }
 }

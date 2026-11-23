@@ -7,6 +7,9 @@
     --dark-color: #EE2677;
 
     --main-font: 'source-sans-pro', sans-serif;
+
+    /* height of the cat ears, used to line the whiskers up with the photo */
+    --ear-height: clamp(2.4rem, 8.5vw, 4.8rem);
 }
 
 @font-face {
@@ -45,7 +48,7 @@ header {
 
 @font-face {
     font-family: 'zou';
-    src: url('index-assets/fonts/zou.ttf');
+    src: url('index-assets/fonts/Zou.ttf');
 }
 
 h1 {
@@ -69,14 +72,47 @@ h1 {
 #left, #right {
     display: flex;
     flex-direction:column;
+    gap: 0.75rem;
     width: max-content;
+    /* skip past the ears so the links are centered on the photo, not photo + ears */
+    margin-top: var(--ear-height);
 }
 
 #left a, #right a {
-    width: 5em;
-    margin-top: 0.75rem;
+    min-width: 5em;
+    padding: 0 0.3em;
+    white-space: nowrap; /* "Little Sites" stays on one line */
     text-align: center;
 }
+
+/* whiskers: each link fans out from the side of the photo.
+   The inner end tucks behind the frame (negative margin) so tilted
+   links never show a gap next to the photo. */
+#left a {
+    transform-origin: right center;
+    min-width: calc(5em + 0.75rem);
+    margin-right: -0.75rem;
+    padding-right: 0.75rem;
+}
+
+#right a {
+    transform-origin: left center;
+    min-width: calc(5em + 0.75rem);
+    margin-left: -0.75rem;
+    padding-left: 0.75rem;
+}
+
+/* keep the photo on top of the tucked-in whisker ends */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+#left a:nth-child(1) { transform: rotate(8deg); }
+#left a:nth-child(3) { transform: rotate(-8deg); }
+
+#right a:nth-child(1) { transform: rotate(-5deg); }
+#right a:nth-child(2) { transform: rotate(5deg); }
 
 #left {
     justify-self: end;
@@ -102,7 +138,7 @@ main {
     height: 0;
     border-left: clamp(1.2rem, 4.2vw, 2.4rem) solid transparent;
     border-right: clamp(1.2rem, 4.2vw, 2.4rem) solid transparent;
-    border-bottom: clamp(2.4rem, 8.5vw, 4.8rem) solid var(--black);
+    border-bottom: var(--ear-height) solid var(--black);
 }
 img {
     width: 100%;
@@ -112,6 +148,8 @@ img {
     border-width: clamp(0.75rem, 2.2vw, 1.5rem);
     border-style: double;
     border-color: var(--black);
+    /* fills the stripe inside the double border so tucked whisker ends don't show through */
+    background-color: var(--white);
 }
 a {
     background-color: var(--black);
@@ -138,19 +176,23 @@ a:hover {
         justify-content: center;
     }
 
+    #left, #right {
+        gap: 0.5rem;
+    }
+
     #left a, #right a {
-        max-width: 100%;
-        overflow-wrap: anywhere;
         font-size: clamp(0.75rem, 3.6vw, 1rem);
-        margin-top: 0.5rem;
     }
 }
 
 @media (min-width: 42.001rem) {
+    :root {
+        --ear-height: clamp(4.2rem, 9.5vw, 5.7rem);
+    }
+
     #left-ear, #right-ear {
         border-left-width: clamp(2.1rem, 4.75vw, 2.85rem);
         border-right-width: clamp(2.1rem, 4.75vw, 2.85rem);
-        border-bottom-width: clamp(4.2rem, 9.5vw, 5.7rem);
     }
 
     img {
